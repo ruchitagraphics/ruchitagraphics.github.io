@@ -72,33 +72,36 @@
         }
         
         .contact-info-card h3, .location-clean-card h3 { font-size: 22px; margin-bottom: 20px; font-weight: 800; color: var(--ink); }
-        .contact-item { display: flex; align-items: center; gap: 15px; padding: 15px 0; border-bottom: 1px solid #f1f5f9; }
+        .contact-item { display: flex; align-items: center; gap: 15px; padding: 12px 0; border-bottom: 1px solid #f1f5f9; }
         .contact-item:last-child { border-bottom: none; }
         .contact-icon { font-size: 24px; background: #f0fdf4; padding: 8px 12px; border-radius: 12px; display: inline-flex; }
         .contact-details { display: flex; flex-direction: column; text-align: left; }
         .contact-details strong { font-size: 13px; color: #64748b; text-transform: uppercase; }
-        .contact-details a { font-size: 16px; color: #16a34a; text-decoration: none; font-weight: 700; }
+        .contact-details a { font-size: 16px; color: #16a34a; text-decoration: none; font-weight: 700; word-break: break-all; }
         
         .address-text { text-align: left; font-size: 15px; color: #475569; padding: 15px 0; line-height: 1.8; }
         .address-text span { font-weight: 700; color: var(--ink); }
 
-        /* EMBEDDED MAP BOX STYLE */
+        /* VISUAL MAP SOLUTION */
         .map-box {
             width: 100%;
-            height: 250px;
+            height: 200px;
             border-radius: 12px;
             overflow: hidden;
             border: 1px solid #e2e8f0;
             margin-top: 15px;
+            position: relative;
         }
-        .map-box iframe {
+        .map-box img {
             width: 100%;
             height: 100%;
-            border: 0;
+            object-fit: cover;
         }
 
         .btns { display: flex; gap: 12px; margin-top: 20px; justify-content: center; }
         .btn-wa { display: inline-block; padding: 12px 25px; border-radius: 999px; background: #16a34a; color: white; font-weight: 800; text-decoration: none; box-shadow: 0 4px 6px rgba(22,163,74,0.15); text-align: center; width: 100%; }
+        .btn-map-link { display: inline-block; padding: 12px 25px; border-radius: 999px; background: #2563eb; color: white; font-weight: 800; text-decoration: none; box-shadow: 0 4px 6px rgba(37,99,235,0.15); text-align: center; width: 100%; transition: 0.2s; }
+        .btn-map-link:hover { background: #1d4ed8; }
         
         footer { background: #0f172a; color: #cbd5e1; text-align: center; padding: 20px; margin-top: 50px; font-size: 14px; }
 
@@ -163,7 +166,7 @@
             </div>
             
             <div class="contact-map-grid">
-                <!-- LEFT SIDE: CONTACT DETAILS CARD -->
+                <!-- LEFT SIDE: CONTACT DETAILS CARD (ADDED EMAIL ID) -->
                 <div class="contact-info-card">
                     <h3>Contact Ruchita Graphics</h3>
                     <div class="contact-item">
@@ -180,12 +183,20 @@
                             <a href="https://wa.me" target="_blank">+91 77990 36524</a>
                         </div>
                     </div>
+                    <!-- కొత్తగా యాడ్ చేసిన ఈమెయిల్ బాక్స్ -->
+                    <div class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <div class="contact-details">
+                            <strong>Email ID:</strong>
+                            <a href="mailto:ruchitagraphics@gmail.com">ruchitagraphics@gmail.com</a>
+                        </div>
+                    </div>
                     <div class="btns">
                         <a href="https://wa.me" target="_blank" class="btn-wa">Chat on WhatsApp</a>
                     </div>
                 </div>
 
-                <!-- RIGHT SIDE: INTERACTIVE GOOGLE MAP BOX -->
+                <!-- RIGHT SIDE: LOCATION & WORKING MAP SOLUTION -->
                 <div class="location-clean-card">
                     <h3>Our Location</h3>
                     <div class="address-text">
@@ -194,24 +205,3 @@
                         Beside Bus Station, Ghanpur Station,<br>
                         Jangaon Dist., Telangana - 506144.
                     </div>
-                    
-                    <!-- గిట్‌హబ్‌ పేజీలలో ఖచ్చితంగా లోడ్ అయ్యే స్టాండర్డ్ గూగుల్ మ్యాప్ ఎంబెడ్ సిస్టమ్ -->
-                    <div class="map-box">
-                        <iframe 
-                            src="https://google.com" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Ruchita Graphics. All Rights Reserved.</p>
-    </footer>
-
-</body>
-</html>
