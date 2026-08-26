@@ -154,16 +154,17 @@
         }
 
         .portfolio {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
         }
 
-        /* FIXED PORTFOLIO IMAGE VIEW (FULL VIEW WITHOUT CROP) */
+        /* FIXED PORTFOLIO IMAGE VIEW (FULL IMAGE ASPECT RATIO) */
         .portfolio img {
             width: 100%;
+            max-width: 1000px;
             height: auto;
-            max-height: none;
             object-fit: contain;
             border-radius: 16px;
             background: #fff;
@@ -306,7 +307,8 @@
                 <p>Sample templates and recent projects delivered.</p>
             </div>
             <div class="portfolio">
-                <img src="RGFX 2026 Calendar Advertisement.jpg" alt="Featured Work">
+                <!-- URL Encoded Image Path to Fix Broken Link -->
+                <img src="RGFX%202026%20Calendar%20Advertisement.jpg" alt="Featured Work">
             </div>
         </div>
     </section>
