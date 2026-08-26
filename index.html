@@ -50,26 +50,28 @@
         .portfolio-display { display: flex; justify-content: center; width: 100%; }
         .portfolio-display img { width: 100%; max-width: 950px; height: auto; object-fit: contain; border-radius: 16px; box-shadow: 0 8px 25px rgba(0,0,0,0.05); }
 
-        /* FIXED SIDE-BY-SIDE CONTACT & MAP LAYOUT */
+        /* SIDE-BY-SIDE WORKING LAYOUT */
         .contact-map-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 30px;
-            align-items: start;
+            align-items: stretch;
             margin-top: 20px;
         }
         
-        .contact-info-card {
+        .contact-info-card, .location-clean-card {
             background: #ffffff;
             border: 1px solid #e2e8f0;
             border-radius: 16px;
             padding: 30px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
             text-align: center;
-            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         
-        .contact-info-card h3 { font-size: 22px; margin-bottom: 20px; font-weight: 800; }
+        .contact-info-card h3, .location-clean-card h3 { font-size: 22px; margin-bottom: 20px; font-weight: 800; color: var(--ink); }
         .contact-item { display: flex; align-items: center; gap: 15px; padding: 15px 0; border-bottom: 1px solid #f1f5f9; }
         .contact-item:last-child { border-bottom: none; }
         .contact-icon { font-size: 24px; background: #f0fdf4; padding: 8px 12px; border-radius: 12px; display: inline-flex; }
@@ -77,25 +79,23 @@
         .contact-details strong { font-size: 13px; color: #64748b; text-transform: uppercase; }
         .contact-details a { font-size: 16px; color: #16a34a; text-decoration: none; font-weight: 700; }
         
-        .btns { display: flex; gap: 12px; margin-top: 25px; justify-content: center; }
-        .btn-wa { display: inline-block; padding: 12px 20px; border-radius: 999px; background: #16a34a; color: white; font-weight: 800; text-decoration: none; box-shadow: 0 4px 6px rgba(22,163,74,0.15); }
+        .address-text { text-align: left; font-size: 16px; color: #475569; padding: 15px 0; line-height: 1.8; }
+        .address-text span { font-weight: 700; color: var(--ink); }
 
-        /* RIGHT SIDE LOCATION MAP */
-        .map-container { width: 100%; height: 100%; }
-        .map-frame { width: 100%; height: 410px; border: 0; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+        .btns { display: flex; gap: 12px; margin-top: 25px; justify-content: center; }
+        .btn-wa { display: inline-block; padding: 12px 25px; border-radius: 999px; background: #16a34a; color: white; font-weight: 800; text-decoration: none; box-shadow: 0 4px 6px rgba(22,163,74,0.15); }
+        .btn-map-link { display: inline-block; padding: 12px 25px; border-radius: 999px; background: #2563eb; color: white; font-weight: 800; text-decoration: none; box-shadow: 0 4px 6px rgba(37,99,235,0.15); transition: 0.2s; }
+        .btn-map-link:hover { background: #1d4ed8; }
 
         footer { background: #0f172a; color: #cbd5e1; text-align: center; padding: 20px; margin-top: 50px; font-size: 14px; }
 
-        /* RESPONSIVE LAYOUT FOR MOBILE PHONES */
         @media(max-width: 768px) {
             .contact-map-grid { grid-template-columns: 1fr; gap: 20px; }
-            .map-frame { height: 350px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- STYLISH HEADER -->
     <header>
         <div class="wrap nav-container">
             <a href="#" class="brand">
@@ -110,32 +110,29 @@
         </div>
     </header>
 
-    <!-- TOP HERO BANNER -->
     <div class="hero wrap">
         <img src="assets/RUCHITA%20GRAPHICS%20WEB%2001.jpg" alt="Main Banner">
         <h1>RUCHITA GRAPHICS</h1>
         <p>SINGLE STEP - SIMPLE SOLUTIONS</p>
     </div>
 
-    <!-- OUR SERVICES -->
     <section id="services">
         <div class="wrap">
-            <div class="section-title">
+            <div class="title">
                 <h2>Our Services</h2>
                 <p>Quality design and creative printing solutions.</p>
             </div>
             <div class="grid">
-                <div class="card"><div class="num">01</div><h3>Invitation Cards</h3><p>Wedding & Event Cards</p></div>
-                <div class="card"><div class="num">02</div><h3>Commercial Print</h3><p>Posters, Bill Books, Visiting Cards</p></div>
-                <div class="card"><div class="num">03</div><h3>Flex Printing</h3><p>Banners & LED Sign Boards</p></div>
+                <div class="card"><div class="num">01</div>...<h3>Invitation Cards</h3><p>Wedding & Event Cards</p></div>
+                <div class="card"><div class="num">02</div>...<h3>Commercial Print</h3><p>Posters, Bill Books, Visiting Cards</p></div>
+                <div class="card"><div class="num">03</div>...<h3>Flex Printing</h3><p>Banners & LED Sign Boards</p></div>
             </div>
         </div>
     </section>
 
-    <!-- FEATURED PORTFOLIO -->
     <section id="portfolio" style="background: #fff;">
         <div class="wrap">
-            <div class="section-title">
+            <div class="title">
                 <h2>Featured Work</h2>
                 <p>Sample templates and recent projects delivered.</p>
             </div>
@@ -145,10 +142,9 @@
         </div>
     </section>
 
-    <!-- CONTACT & SIDE-BY-SIDE MAP SECTION -->
     <section id="contact">
         <div class="wrap">
-            <div class="section-title">
+            <div class="title">
                 <h2>Get In Touch</h2>
                 <p>Visit our press or reach out online instantly.</p>
             </div>
@@ -183,15 +179,24 @@
                     </div>
                 </div>
 
-                <!-- RIGHT SIDE: LIVE GOOGLE MAP PROFILE -->
-                <div class="map-container">
-                    <iframe class="map-frame" src="https://google.com" loading="lazy" allowfullscreen=""></iframe>
+                <!-- RIGHT SIDE: CLEAN DIGITAL LOCATION CARD WITH LIVE ROUTE BUTTON -->
+                <div class="location-clean-card">
+                    <h3>Our Location</h3>
+                    <p class="address-text">
+                        <span>🏢 Address:</span><br>
+                        H.No. 4-44/B2, Beside Bus Station,<br>
+                        Opp: Small Gate, Ghanpur Station,<br>
+                        Jangaon District, Telangana - 506144.
+                    </p>
+                    <div class="btns">
+                        <!-- LINK TARGETED PERFECTLY TO YOUR OFFCIAL STREET VIEW POINT -->
+                        <a href="https://google.com" class="btn-map-link" target="_blank">🗺️ Open Live Route Map</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CLEAN FOOTER -->
     <footer>
         <p>© 2026 RUCHITA GRAPHICS. All Rights Reserved.</p>
     </footer>
