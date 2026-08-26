@@ -82,46 +82,19 @@
         .address-text { text-align: left; font-size: 15px; color: #475569; padding: 15px 0; line-height: 1.8; }
         .address-text span { font-weight: 700; color: var(--ink); }
 
-        /* 100% WORKING DIGITAL ROUTE MAP CARD */
-        .map-badge-link {
-            display: block;
-            text-decoration: none;
-            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
-            border: 2px dashed #3b82f6;
+        /* 100% WORKING GOOGLE MAP EMBDED SOLUTION FOR GITHUB */
+        .map-box {
+            width: 100%;
+            height: 220px;
             border-radius: 12px;
-            padding: 20px;
-            margin: 15px 0;
-            transition: all 0.3s ease;
-            cursor: pointer;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            margin-top: 15px;
         }
-        .map-badge-link:hover {
-            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-            border-color: #2563eb;
-            transform: translateY(-2px);
-        }
-        .map-badge-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-            color: #1e40af;
-        }
-        .map-badge-icon {
-            font-size: 36px;
-            animation: bounce 2s infinite;
-        }
-        .map-badge-text {
-            font-weight: 700;
-            font-size: 16px;
-        }
-        .map-badge-sub {
-            font-size: 13px;
-            color: #1d4ed8;
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-5px); }
+        .map-box iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
         }
 
         .btns { display: flex; gap: 12px; margin-top: 10px; justify-content: center; }
@@ -191,8 +164,10 @@
                 <p>Visit our press or reach out online instantly.</p>
             </div>
             
+            <!-- గ్రిడ్ లేఅవుట్ కరెక్ట్ చేయబడింది -->
             <div class="contact-map-grid">
-                <!-- LEFT SIDE: CONTACT DETAILS CARD -->
+                
+                <!-- ఎడమవైపు కార్డ్: కాంటాక్ట్ వివరాలు -->
                 <div class="contact-info-card">
                     <h3>Contact Ruchita Graphics</h3>
                     <div class="contact-item">
@@ -217,3 +192,16 @@
                         </div>
                     </div>
                     <div class="btns">
+                        <a href="https://wa.me" target="_blank" class="btn-wa">Chat on WhatsApp</a>
+                    </div>
+                </div>
+
+                <!-- కుడివైపే సరిగ్గా వచ్చేలా ఫిక్స్ చేసిన లొకేషన్ కార్డ్ -->
+                <div class="location-clean-card">
+                    <h3>Our Location</h3>
+                    <div class="address-text">
+                        <span>Address:</span><br>
+                        H.No: 4-44/B2, Opp: Small Gate,<br>
+                        Beside Bus Station, Ghanpur Station,<br>
+                        Jangaon Dist., Telangana - 506144.
+                    </div>
