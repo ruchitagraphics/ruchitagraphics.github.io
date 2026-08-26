@@ -55,6 +55,7 @@
             padding: 15px 20px;
         }
 
+        /* FIXED BRAND LOGO STYLING */
         .brand {
             display: flex;
             align-items: center;
@@ -63,6 +64,12 @@
             font-size: 22px;
             color: var(--ink);
             text-decoration: none;
+        }
+
+        .brand img {
+            height: 45px;
+            width: auto;
+            object-fit: contain;
         }
 
         nav {
@@ -272,7 +279,11 @@
 
     <header>
         <div class="wrap nav">
-            <a href="#" class="brand">RUCHITA GRAPHICS</a>
+            <!-- FIXED HEADER: Added your exact logo.png path here -->
+            <a href="#" class="brand">
+                <img src="assets/logo.png" alt="Logo">
+                RUCHITA GRAPHICS
+            </a>
             <nav>
                 <a href="#services">Services</a>
                 <a href="#portfolio">Portfolio</a>
@@ -307,7 +318,7 @@
                 <p>Sample templates and recent projects delivered.</p>
             </div>
             <div class="portfolio">
-                <!-- EXACT MATCH WITH YOUR NEW ASSETS FILE PATH -->
+                <!-- EXACT PATH MATCH WITH NEW NEW ASSETS CALENDAR FILE -->
                 <img src="assets/RGFX%20NEW%20YEAR%20CALENDARS.jpg" alt="Featured Work">
             </div>
         </div>
@@ -349,7 +360,3 @@
 
     <footer>
         <p>© 2026 RUCHITA GRAPHICS. All Rights Reserved.</p>
-    </footer>
-
-</body>
-</html>
