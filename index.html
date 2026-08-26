@@ -3,33 +3,332 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruchita Graphics | Ghanpur Station</title>
+    <meta name="description" content="Ruchita Graphics provides graphic design, digital printing, flex printing, visiting cards, banners, wedding cards and printing services in Ghanpur Station, Jangaon District, Telangana.">
+    <meta name="author" content="Ruchita Graphics">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="IN-TS">
+    <meta name="geo.placename" content="Ghanpur Station, Telangana">
+    <title>Ruchita Graphics | Graphic Design & Printing Press in Ghanpur Station</title>
+
     <style>
-        /* - Corrected CSS Structure for Contact Section */
-        :root { --main: #16a34a; --ink: #0f172a; }
-        body { font-family: sans-serif; background: #f8fafc; }
-        .contact-box-container { max-width: 500px; margin: 30px auto; padding: 0 15px; }
-        .contact-info-card { background: #fff; border-radius: 16px; padding: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); text-align: center; }
-        .contact-item { display: flex; align-items: center; gap: 15px; padding: 12px 0; border-bottom: 1px solid #f1f5f9; }
-        .contact-icon { font-size: 24px; background: #f0fdf4; padding: 10px; border-radius: 12px; }
-        .contact-details a { color: var(--main); text-decoration: none; font-weight: 700; }
-        .btn.green { display: inline-block; padding: 12px 18px; background: #16a34a; color: white; text-decoration: none; border-radius: 999px; margin-top: 15px; }
+        :root {
+            --main: #16a34a;
+            --ink: #0f172a;
+            --card: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f8fafc;
+            color: var(--ink);
+            line-height: 1.6;
+        }
+
+        .wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: #fff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .wrap.nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 800;
+            font-size: 22px;
+            color: var(--ink);
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #475569;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--main);
+        }
+
+        .hero {
+            padding: 60px 0;
+            background: #fff;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 900;
+            margin-bottom: 10px;
+            color: var(--ink);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #64748b;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .title h2 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: 18px;
+            padding: 24px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+            text-align: center;
+        }
+
+        .num {
+            font-size: 14px;
+            color: var(--main);
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .portfolio {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        /* FIXED IMAGES VIEW */
+        .portfolio img {
+            width: 100%;
+            height: auto;
+            max-height: none;
+            object-fit: contain;
+            border-radius: 16px;
+            background: #fff;
+            box-shadow: 0 8px 28px rgba(0,0,0,0.05);
+        }
+
+        /* FIXED CONTACT BOX CSS */
+        .contact-box-container {
+            max-width: 500px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+
+        .contact-info-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-info-card h3 {
+            font-size: 22px;
+            color: #0f172a;
+            margin-bottom: 24px;
+            text-align: center;
+            font-weight: 800;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+
+        .contact-icon {
+            font-size: 24px;
+            background: #f0fdf4;
+            padding: 10px;
+            border-radius: 12px;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .contact-details strong {
+            font-size: 14px;
+            color: #64748b;
+        }
+
+        .contact-details a {
+            font-size: 16px;
+            color: #16a34a;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .btns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 18px;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 18px;
+            border-radius: 999px;
+            background: #fff;
+            color: var(--ink);
+            font-weight: 800;
+            text-decoration: none;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .btn.green {
+            background: #16a34a;
+            color: white;
+        }
+
+        footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 22px 10px;
+            margin-top: 60px;
+        }
     </style>
 </head>
 <body>
-    <div class="contact-box-container">
-        <div class="contact-info-card">
-            <h3>Contact Us</h3>
-            <div class="contact-item">
-                <span class="contact-icon">📞</span>
-                <div class="contact-details"><strong>Phone</strong><br><a href="tel:+919441536524">+91 94415 36524</a></div>
-            </div>
-            <div class="contact-item">
-                <span class="contact-icon">💬</span>
-                <div class="contact-details"><strong>WhatsApp</strong><br><a href="https://wa.me" target="_blank">+91 77990 36524</a></div>
-            </div>
-            <a href="https://wa.me" class="btn green" target="_blank">Chat on WhatsApp</a>
+
+    <header>
+        <div class="wrap nav">
+            <a href="#" class="brand">RUCHITA GRAPHICS</a>
+            <nav>
+                <a href="#services">Services</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </nav>
         </div>
+    </header>
+
+    <div class="hero wrap">
+        <h1>RUCHITA GRAPHICS</h1>
+        <p>SINGLE STEP - SIMPLE SOLUTIONS</p>
     </div>
+
+    <section id="services">
+        <div class="wrap">
+            <div class="title">
+                <h2>Our Services</h2>
+                <p>Quality design and creative printing solutions.</p>
+            </div>
+            <div class="grid">
+                <div class="card"><div class="num">01</div><h3>Invitation Cards</h3><p>Wedding & Event Cards</p></div>
+                <div class="card"><div class="num">02</div><h3>Commercial Print</h3><p>Posters, Bill Books, Visiting Cards</p></div>
+                <div class="card"><div class="num">03</div><h3>Flex Printing</h3><p>Banners & LED Sign Boards</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <div class="wrap">
+            <div class="title">
+                <h2>Featured Work</h2>
+                <p>Sample templates and recent projects delivered.</p>
+            </div>
+            <div class="portfolio">
+                <img src="RGFX 2026 Calendar Advertisement.jpg" alt="Featured Work">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="wrap">
+            <div class="contact-box-container">
+                <div class="contact-info-card">
+                    <h3>Contact Ruchita Graphics</h3>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <div class="contact-details">
+                            <strong>Phone Number:</strong>
+                            <a href="tel:+919441536524">+91 94415 36524</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">💬</span>
+                        <div class="contact-details">
+                            <strong>WhatsApp:</strong>
+                            <a href="https://wa.me" target="_blank">+91 77990 36524</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <div class="contact-details">
+                            <strong>Email Address:</strong>
+                            <a href="mailto:ruchitagraphics@gmail.com">ruchitagraphics@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="btns">
+                        <a href="https://wa.me" class="btn green" target="_blank">Chat on WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 RUCHITA GRAPHICS. All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>
