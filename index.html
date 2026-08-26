@@ -55,7 +55,6 @@
             padding: 15px 20px;
         }
 
-        /* FIXED BRAND LOGO STYLING */
         .brand {
             display: flex;
             align-items: center;
@@ -88,10 +87,21 @@
             color: var(--main);
         }
 
+        /* FIXED MAIN HERO BANNER STYLING */
         .hero {
-            padding: 60px 0;
+            padding: 40px 0;
             background: #fff;
             text-align: center;
+        }
+
+        .hero img {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
         }
 
         .hero h1 {
@@ -121,10 +131,6 @@
             font-size: 32px;
             font-weight: 800;
             margin-bottom: 10px;
-        }
-
-        .title p {
-            color: #64748b;
         }
 
         .grid {
@@ -167,7 +173,6 @@
             width: 100%;
         }
 
-        /* FIXED FULL IMAGE VIEW WITHOUT CROP */
         .portfolio img {
             width: 100%;
             max-width: 1000px;
@@ -178,7 +183,6 @@
             box-shadow: 0 8px 28px rgba(0,0,0,0.05);
         }
 
-        /* CONTACT CARD BOX WITH ICONS */
         .contact-box-container {
             max-width: 500px;
             margin: 30px auto;
@@ -279,7 +283,6 @@
 
     <header>
         <div class="wrap nav">
-            <!-- FIXED HEADER: Added your exact logo.png path here -->
             <a href="#" class="brand">
                 <img src="assets/logo.png" alt="Logo">
                 RUCHITA GRAPHICS
@@ -292,7 +295,9 @@
         </div>
     </header>
 
+    <!-- FIXED MAIN BANNER PLACEMENT RIGHT HERE -->
     <div class="hero wrap">
+        <img src="assets/RUCHITA%20GRAPHICS%20WEB%2001.jpg" alt="Ruchita Graphics Main Banner">
         <h1>RUCHITA GRAPHICS</h1>
         <p>SINGLE STEP - SIMPLE SOLUTIONS</p>
     </div>
@@ -318,7 +323,6 @@
                 <p>Sample templates and recent projects delivered.</p>
             </div>
             <div class="portfolio">
-                <!-- EXACT PATH MATCH WITH NEW NEW ASSETS CALENDAR FILE -->
                 <img src="assets/RGFX%20NEW%20YEAR%20CALENDARS.jpg" alt="Featured Work">
             </div>
         </div>
@@ -354,9 +358,3 @@
                         <a href="https://wa.me" class="btn green" target="_blank">Chat on WhatsApp</a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2026 RUCHITA GRAPHICS. All Rights Reserved.</p>
