@@ -5,50 +5,178 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ruchita Graphics provides graphic design, digital printing, flex printing, banners and printing services in Ghanpur Station, Telangana.">
     <title>Ruchita Graphics | Graphic Design & Printing Press</title>
+
     <style>
         :root {
             --main: #16a34a;
             --ink: #0f172a;
             --bg: #f8fafc;
         }
+
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', system-ui, sans-serif;
         }
-        html { scroll-behavior: smooth; }
-        body { background: var(--bg); color: var(--ink); line-height: 1.6; }
-        .wrap { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--ink);
+            line-height: 1.6;
+        }
+
+        .wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
         /* HEADER SECTION */
-        header { background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
-        .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 22px; text-decoration: none; color: var(--ink); }
-        .brand img { height: 45px; width: auto; object-fit: contain; }
-        nav a { text-decoration: none; color: #475569; font-weight: 600; margin-left: 24px; transition: 0.2s; }
-        nav a:hover { color: var(--main); }
+        header {
+            background: #fff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 800;
+            font-size: 22px;
+            text-decoration: none;
+            color: var(--ink);
+        }
+
+        .brand img {
+            height: 45px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #475569;
+            font-weight: 600;
+            margin-left: 24px;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--main);
+        }
 
         /* HERO BANNER SECTION */
-        .hero { padding: 30px 0; text-align: center; background: #fff; }
-        .hero img { width: 100%; height: auto; max-height: 480px; object-fit: contain; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); margin-bottom: 20px; }
-        .hero h1 { font-size: 38px; font-weight: 900; margin-bottom: 8px; }
-        .hero p { font-size: 18px; color: #64748b; font-weight: 600; letter-spacing: 0.5px; }
+        .hero {
+            padding: 30px 0;
+            text-align: center;
+            background: #fff;
+        }
+
+        .hero img {
+            width: 100%;
+            height: auto;
+            max-height: 480px;
+            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            font-weight: 900;
+            margin-bottom: 8px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #64748b;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
 
         /* SERVICES SECTION */
-        section { padding: 60px 0; }
-        .title { text-align: center; margin-bottom: 40px; }
-        .title h2 { font-size: 32px; font-weight: 800; margin-bottom: 10px; }
-        .title p { color: #64748b; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-        .card { background: #fff; border-radius: 16px; padding: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.02); border: 1px solid #e2e8f0; text-align: center; }
-        .card .num { font-size: 14px; color: var(--main); font-weight: 800; margin-bottom: 8px; }
-        .card h3 { font-size: 20px; margin-bottom: 8px; }
-        .card p { color: #56266d; font-weight: 500; }
+        section {
+            padding: 60px 0;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .title h2 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .title p {
+            color: #64748b;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            border: 1px solid #e2e8f0;
+            text-align: center;
+        }
+
+        .card .num {
+            font-size: 14px;
+            color: var(--main);
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .card h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            color: #56266d;
+            font-weight: 500;
+        }
 
         /* PORTFOLIO SECTION */
-        .portfolio-display { display: flex; justify-content: center; width: 100%; }
-        .portfolio-display img { width: 100%; max-width: 950px; height: auto; object-fit: contain; border-radius: 16px; box-shadow: 0 8px 25px rgba(0,0,0,0.05); }
+        .portfolio-display {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .portfolio-display img {
+            width: 100%;
+            max-width: 950px;
+            height: auto;
+            object-fit: contain;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+        }
 
         /* SIDE-BY-SIDE WORKING LAYOUT */
         .contact-map-grid {
@@ -58,8 +186,9 @@
             align-items: stretch;
             margin-top: 20px;
         }
-        
-        .contact-info-card, .location-clean-card {
+
+        .contact-info-card,
+        .location-clean-card {
             background: #ffffff;
             border: 1px solid #e2e8f0;
             border-radius: 16px;
@@ -70,19 +199,69 @@
             flex-direction: column;
             justify-content: space-between;
         }
-        
-        .contact-info-card h3, .location-clean-card h3 { font-size: 22px; margin-bottom: 20px; font-weight: 800; color: var(--ink); }
-        .contact-item { display: flex; align-items: center; gap: 15px; padding: 12px 0; border-bottom: 1px solid #f1f5f9; }
-        .contact-item:last-child { border-bottom: none; }
-        .contact-icon { font-size: 24px; background: #f0fdf4; padding: 8px 12px; border-radius: 12px; display: inline-flex; }
-        .contact-details { display: flex; flex-direction: column; text-align: left; }
-        .contact-details strong { font-size: 13px; color: #64748b; text-transform: uppercase; }
-        .contact-details a { font-size: 16px; color: #16a34a; text-decoration: none; font-weight: 700; word-break: break-all; }
-        
-        .address-text { text-align: left; font-size: 15px; color: #475569; padding: 15px 0; line-height: 1.8; }
-        .address-text span { font-weight: 700; color: var(--ink); }
 
-        /* 100% WORKING GOOGLE MAP EMBDED SOLUTION FOR GITHUB */
+        .contact-info-card h3,
+        .location-clean-card h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            font-weight: 800;
+            color: var(--ink);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+
+        .contact-icon {
+            font-size: 24px;
+            background: #f0fdf4;
+            padding: 8px 12px;
+            border-radius: 12px;
+            display: inline-flex;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .contact-details strong {
+            font-size: 13px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+
+        .contact-details a {
+            font-size: 16px;
+            color: #16a34a;
+            text-decoration: none;
+            font-weight: 700;
+            word-break: break-all;
+        }
+
+        .address-text {
+            text-align: left;
+            font-size: 15px;
+            color: #475569;
+            padding: 15px 0;
+            line-height: 1.8;
+        }
+
+        .address-text span {
+            font-weight: 700;
+            color: var(--ink);
+        }
+
+        /* GOOGLE MAP */
         .map-box {
             width: 100%;
             height: 220px;
@@ -91,117 +270,335 @@
             border: 1px solid #e2e8f0;
             margin-top: 15px;
         }
+
         .map-box iframe {
             width: 100%;
             height: 100%;
             border: 0;
         }
 
-        .btns { display: flex; gap: 12px; margin-top: 10px; justify-content: center; }
-        .btn-wa { display: inline-block; padding: 12px 25px; border-radius: 999px; background: #16a34a; color: white; font-weight: 800; text-decoration: none; box-shadow: 0 4px 6px rgba(22,163,74,0.15); text-align: center; width: 100%; }
-        .btn-map-link { display: inline-block; padding: 12px 25px; border-radius: 999px; background: #2563eb; color: white; font-weight: 800; text-decoration: none; box-shadow: 0 4px 6px rgba(37,99,235,0.15); text-align: center; width: 100%; transition: 0.2s; }
-        .btn-map-link:hover { background: #1d4ed8; }
-        
-        footer { background: #0f172a; color: #cbd5e1; text-align: center; padding: 20px; margin-top: 50px; font-size: 14px; }
+        /* BUTTONS */
+        .btns {
+            display: flex;
+            gap: 12px;
+            margin-top: 10px;
+            justify-content: center;
+        }
 
+        .btn-wa {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 999px;
+            background: #16a34a;
+            color: white;
+            font-weight: 800;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(22,163,74,0.15);
+            text-align: center;
+            width: 100%;
+        }
+
+        .btn-map-link {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 999px;
+            background: #2563eb;
+            color: white;
+            font-weight: 800;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(37,99,235,0.15);
+            text-align: center;
+            width: 100%;
+            transition: 0.2s;
+        }
+
+        .btn-map-link:hover {
+            background: #1d4ed8;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+
+        /* MOBILE */
         @media(max-width: 768px) {
-            .contact-map-grid { grid-template-columns: 1fr; gap: 20px; }
+
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav a {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .contact-map-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
         }
     </style>
 </head>
+
 <body>
 
+    <!-- HEADER -->
     <header>
         <div class="wrap nav-container">
+
             <a href="#" class="brand">
                 <img src="assets/logo.png" alt="Logo">
                 RUCHITA GRAPHICS
             </a>
+
             <nav>
                 <a href="#services">Services</a>
                 <a href="#portfolio">Portfolio</a>
                 <a href="#contact">Contact</a>
             </nav>
+
         </div>
     </header>
 
+
+    <!-- HERO -->
     <div class="hero wrap">
-        <img src="assets/RUCHITA%20GRAPHICS%20WEB%2001.jpg" alt="Main Banner">
+
+        <img
+            src="assets/RUCHITA%20GRAPHICS%20WEB%2001.jpg"
+            alt="Main Banner">
+
         <h1>RUCHITA GRAPHICS</h1>
+
         <p>SINGLE STEP - SIMPLE SOLUTIONS</p>
+
     </div>
 
+
+    <!-- SERVICES -->
     <section id="services">
+
         <div class="wrap">
+
             <div class="title">
                 <h2>Our Services</h2>
                 <p>Quality design and creative printing solutions.</p>
             </div>
+
             <div class="grid">
-                <div class="card"><div class="num">01</div><h3>Invitation Cards</h3><p>Wedding & Event Cards</p></div>
-                <div class="card"><div class="num">02</div><h3>Commercial Print</h3><p>Posters, Bill Books, Visiting Cards</p></div>
-                <div class="card"><div class="num">03</div><h3>Flex Printing</h3><p>Banners & LED Sign Boards</p></div>
+
+                <div class="card">
+                    <div class="num">01</div>
+                    <h3>Invitation Cards</h3>
+                    <p>Wedding & Event Cards</p>
+                </div>
+
+                <div class="card">
+                    <div class="num">02</div>
+                    <h3>Commercial Print</h3>
+                    <p>Posters, Bill Books, Visiting Cards</p>
+                </div>
+
+                <div class="card">
+                    <div class="num">03</div>
+                    <h3>Flex Printing</h3>
+                    <p>Banners & LED Sign Boards</p>
+                </div>
+
             </div>
+
         </div>
+
     </section>
 
+
+    <!-- PORTFOLIO -->
     <section id="portfolio" style="background: #fff;">
+
         <div class="wrap">
+
             <div class="title">
                 <h2>Featured Work</h2>
                 <p>Sample templates and recent projects delivered.</p>
             </div>
+
             <div class="portfolio-display">
-                <img src="assets/RGFX%20NEW%20YEAR%20CALENDARS.jpg" alt="Featured Calendar Work">
+
+                <img
+                    src="assets/RGFX%20NEW%20YEAR%20CALENDARS.jpg"
+                    alt="Featured Calendar Work">
+
             </div>
+
         </div>
+
     </section>
 
+
+    <!-- CONTACT -->
     <section id="contact">
+
         <div class="wrap">
+
             <div class="title">
                 <h2>Get In Touch</h2>
                 <p>Visit our press or reach out online instantly.</p>
             </div>
-            
-            <!-- గ్రిడ్ లేఅవుట్ కరెక్ట్ చేయబడింది -->
+
+
             <div class="contact-map-grid">
-                
-                <!-- ఎడమవైపు కార్డ్: కాంటాక్ట్ వివరాలు -->
+
+
+                <!-- LEFT: CONTACT DETAILS -->
                 <div class="contact-info-card">
+
                     <h3>Contact Ruchita Graphics</h3>
+
+
                     <div class="contact-item">
+
                         <span class="contact-icon">📞</span>
+
                         <div class="contact-details">
+
                             <strong>Phone Number:</strong>
-                            <a href="tel:+919441536524">+91 94415 36524</a>
+
+                            <a href="tel:+919441536524">
+                                +91 94415 36524
+                            </a>
+
                         </div>
+
                     </div>
+
+
                     <div class="contact-item">
+
                         <span class="contact-icon">💬</span>
+
                         <div class="contact-details">
+
                             <strong>WhatsApp:</strong>
-                            <a href="https://wa.me" target="_blank">+91 77990 36524</a>
+
+                            <a
+                                href="https://wa.me/917799036524"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                +91 77990 36524
+
+                            </a>
+
                         </div>
+
                     </div>
+
+
                     <div class="contact-item">
+
                         <span class="contact-icon">✉️</span>
+
                         <div class="contact-details">
+
                             <strong>Email ID:</strong>
-                            <a href="mailto:ruchitagraphics@gmail.com">ruchitagraphics@gmail.com</a>
+
+                            <a href="mailto:ruchitagraphics@gmail.com">
+                                ruchitagraphics@gmail.com
+                            </a>
+
                         </div>
+
                     </div>
+
+
                     <div class="btns">
-                        <a href="https://wa.me" target="_blank" class="btn-wa">Chat on WhatsApp</a>
+
+                        <a
+                            href="https://wa.me/917799036524"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn-wa">
+
+                            Chat on WhatsApp
+
+                        </a>
+
                     </div>
+
                 </div>
 
-                <!-- కుడివైపే సరిగ్గా వచ్చేలా ఫిక్స్ చేసిన లొకేషన్ కార్డ్ -->
+
+                <!-- RIGHT: LOCATION -->
                 <div class="location-clean-card">
+
                     <h3>Our Location</h3>
+
+
                     <div class="address-text">
+
                         <span>Address:</span><br>
+
                         H.No: 4-44/B2, Opp: Small Gate,<br>
                         Beside Bus Station, Ghanpur Station,<br>
                         Jangaon Dist., Telangana - 506144.
+
                     </div>
+
+
+                    <!-- EXACT GOOGLE MAP LOCATION -->
+                    <div class="map-box">
+
+                        <iframe
+                            src="https://www.google.com/maps?q=17.8533897,79.3709229&z=17&output=embed"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+
+                    <!-- GOOGLE MAP BUTTON -->
+                    <div class="btns">
+
+                        <a
+                            href="https://maps.app.goo.gl/nTUodvxdDervrTZ77"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn-map-link">
+
+                            Open Location in Google Maps
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        © 2026 Ruchita Graphics. All Rights Reserved.
+
+    </footer>
+
+</body>
+</html>
