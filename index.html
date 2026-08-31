@@ -32,42 +32,78 @@
 
         /* HERO BANNER SECTION */
         .hero { padding: 30px 0; text-align: center; background: #fff; }
-        .hero img { width: 100%; height: auto; max-height: 480px; object-fit: contain; border-radius: 12px; box-shadow: 0 10px 25 rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .hero img { width: 100%; height: auto; max-height: 480px; object-fit: contain; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); margin-bottom: 20px; }
         .hero h1 { font-size: 38px; font-weight: 900; margin-bottom: 8px; }
         .hero p { font-size: 18px; color: #64748b; font-weight: 600; letter-spacing: 0.5px; }
 
-        /* SERVICES SECTION */
+        /* SERVICES SECTION (PATHA DESIGN AS IT IS) */
         section { padding: 60px 0; }
         .section-title { text-align: center; margin-bottom: 40px; }
         .section-title h2 { font-size: 32px; font-weight: 800; margin-bottom: 10px; }
         .section-title p { color: #64748b; }
         
-        /* PATHA AS IT IS GRID */
+        /* PATHA 3 CARDS LAYOUT */
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-        .card { background: #fff; border-radius: 16px; padding: 25px; box-shadow: 0 4px 10 rgba(0,0,0,0.02); border: 1px solid #e2e8f0; text-align: center; }
+        .card { background: #fff; border-radius: 16px; padding: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.02); border: 1px solid #e2e8f0; text-align: center; }
         .card .num { font-size: 14px; color: var(--main); font-weight: 800; margin-bottom: 8px; }
         .card h3 { font-size: 20px; margin-bottom: 8px; font-weight: 800; }
         .card p { color: #56266d; font-weight: 500; margin-bottom: 15px; }
 
-        /* NEW READ MORE SYSTEM */
+        /* READ DETAILS BUTTON */
         .btn-details { display: inline-block; padding: 6px 15px; font-size: 13px; font-weight: 700; color: var(--blue); background: #eff6ff; border: 1px dashed var(--blue); border-radius: 999px; text-decoration: none; cursor: pointer; }
         .btn-details:hover { background: var(--blue); color: #fff; }
 
-        .panes-container { margin-top: 10px; width: 100%; }
-        .details-pane { display: none; background: #fff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 30px; margin-top: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: left; }
-        .details-pane:target { display: block; scroll-margin-top: 110px; }
+        /* MODAL POPUP SYSTEM */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .modal-overlay:target { display: flex; }
         
-        .pane-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #f1f5f9; padding-bottom: 10px; margin-bottom: 20px; }
-        .pane-header h4 { font-size: 20px; font-weight: 800; color: var(--ink); }
-        .btn-close { font-size: 14px; text-decoration: none; color: #64748b; font-weight: 700; background: #f1f5f9; padding: 4px 12px; border-radius: 999px; }
+        .modal-content {
+            background: #fff;
+            width: 100%;
+            max-width: 650px;
+            max-height: 85vh;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+            overflow-y: auto;
+            position: relative;
+            text-align: left;
+        }
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 12px;
+            margin-bottom: 15px;
+        }
+        .modal-header h4 { font-size: 20px; font-weight: 800; color: var(--ink); }
+        .btn-close {
+            font-size: 18px;
+            text-decoration: none;
+            color: #64748b;
+            font-weight: 700;
+            background: #f1f5f9;
+            width: 32px; height: 32px;
+            display: flex; justify-content: center; align-items: center;
+            border-radius: 50%;
+        }
         .btn-close:hover { background: #e2e8f0; color: var(--ink); }
         
-        .sub-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .sub-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; }
-        .sub-card h5 { font-size: 16px; font-weight: 800; margin-bottom: 10px; color: var(--blue); }
-        .sub-card ul { list-style: none; }
-        .sub-card ul li { position: relative; padding-left: 15px; margin-bottom: 6px; font-size: 14px; font-weight: 500; color: #475569; }
-        .sub-card ul li::before { content: "•"; color: var(--main); position: absolute; left: 0; font-weight: bold; }
+        .modal-body h5 { font-size: 16px; font-weight: 800; margin-top: 15px; margin-bottom: 8px; color: var(--blue); }
+        .modal-body ul { list-style: none; margin-bottom: 10px; }
+        .modal-body ul li { position: relative; padding-left: 18px; margin-bottom: 6px; font-size: 14px; font-weight: 500; color: #475569; }
+        .modal-body ul li::before { content: "•"; color: var(--main); position: absolute; left: 0; font-weight: bold; font-size: 16px; }
 
         /* PORTFOLIO SECTION */
         .portfolio-display { display: flex; justify-content: center; width: 100%; }
@@ -154,7 +190,6 @@
         <p>SINGLE STEP - SIMPLE SOLUTIONS</p>
     </div>
 
-    <!-- SERVICES SECTION (PATHA DESIGN AS IT IS) -->
     <section id="services">
         <div class="wrap">
             <div class="section-title">
@@ -162,33 +197,186 @@
                 <p>Quality design and creative printing solutions.</p>
             </div>
             
-            <!-- PATHA 3 CARDS AS IT IS -->
             <div class="grid">
                 <div class="card">
                     <div class="num">01</div>
                     <h3>Invitation Cards</h3>
                     <p>Wedding & Event Cards</p>
-                    <a href="#pane-01" class="btn-details">Read Details →</a>
+                    <a href="#modal-01" class="btn-details">Read Details →</a>
                 </div>
                 <div class="card">
                     <div class="num">02</div>
                     <h3>Commercial Print</h3>
                     <p>Posters, Bill Books, Visiting Cards</p>
-                    <a href="#pane-02" class="btn-details">Read Details →</a>
+                    <a href="#modal-02" class="btn-details">Read Details →</a>
                 </div>
                 <div class="card">
                     <div class="num">03</div>
                     <h3>Flex Printing</h3>
                     <p>Banners & LED Sign Boards</p>
-                    <a href="#pane-03" class="btn-details">Read Details →</a>
+                    <!-- MODAL 01: CREATIVITY & DIGITAL OBJ -->
+    <div id="modal-01" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>01) Creativity & Invitation Media</h4>
+                <a href="#services" class="btn-close">×</a>
+            </div>
+            <div class="modal-body">
+                <h5>01. Creativity Section</h5>
+                <ul>
+                    <li><strong>A) D.T.P:</strong> Telugu, English, Hindi & Urdu Languages</li>
+                    <li><strong>B) Designing:</strong> Creative Logos, Business Cards, Pamphlets, Posters, Letter Heads</li>
+                    <li><strong>C) Invitation Cards:</strong> Business Opening, Birthday, Celebrations, Ceremonies, Events, Engagements and Wedding Cards</li>
+                    <li><strong>D) Social Media:</strong> Posters and Advertisements</li>
+                    <li><strong>E) Multimedia:</strong> MP4 Video Creations and Professional Editing</li>
+                </ul>
+                <h5>02. Digital Printing Invitations</h5>
+                <ul>
+                    <li>Selective Objects & Digital Printing (RGB/CMYK)</li>
+                    <li>High-Quality Photos, Posters & Invitations</li>
+                    <li>Custom Stickers & Corporate Certificates</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 02: COMMERCIAL & OFFSET BULK -->
+    <div id="modal-02" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>02) Commercial & Offset Print Media</h4>
+                <a href="#services" class="btn-close">×</a>
+            </div>
+            <div class="modal-body">
+                <h5>Digital & Commercial Press</h5>
+                <ul>
+                    <li>Official Certificates, Corporate Print & Premium Letter Heads</li>
+                    <li>All types of Commercial Digital Printing</li>
+                </ul>
+                <h5>04. Offset & Baby Offset Printing (Bulk)</h5>
+                <ul>
+                    <li>Customized Business Bill Books & Cash Vouchers</li>
+                    <li>Mass Advertisement Posters & Pamphlets</li>
+                    <li>Product Label Stickers & Custom Flyers</li>
+                    <li>Educational & Official Record Books</li>
+                    <li>Professional Book Publishing & Booklet Printing</li>
+                    <li>Available in Multi-Colour, Two-Color & Single-Colour Printing</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 03: FLEX & POST-PRESS PROCESSING -->
+    <div id="modal-03" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>03) Large Format Flex & Finishing Services</h4>
+                <a href="#services" class="btn-close">×</a>
+            </div>
+            <div class="modal-body">
+                <h5>03. Flex & Sign Banners</h5>
+                <ul>
+                    <li>Heavy Duty Outdoor Flex Printing & Event Banners</li>
+                    <li>Premium Star Flex Prints for Ultra-Sharp Graphics</li>
+                    <li>Illuminated Back-Light Board Printing</li>
+                    <li>Glossy & Matte Vinyl Branding Films</li>
+                    <li>One Way Vision See-Through Glass Prints</li>
+                </ul>
+                <h5>05. Post-Press Processing & Finishing</h5>
+                <ul>
+                    <li>Glossy & Matte Lamination Protection</li>
+                    <li>Precision Creasing, Paper Reaming & Heavy Machine Punching</li>
+                    <li>Accurate Paper Cutting, Durable Book Binding & Framing Finishing</li>
+                </ul>
+                <h5>06. Packing & Transport</h5>
+                <ul>
+                    <li>Moisture-Proof Secure Packing System</li>
+                    <li>Fast, Express and 100% Safe Delivery Guarantee</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- PORTFOLIO SECTION -->
+    <section id="portfolio" style="background: #fff;">
+        <div class="wrap">
+            <div class="title" style="text-align: center; margin-bottom: 40px;">
+                <h2>Featured Work</h2>
+                <p>Sample templates and recent projects delivered.</p>
+            </div>
+            <div class="portfolio-display">
+                <img src="assets/RGFX%20NEW%20YEAR%20CALENDARS.jpg" alt="Featured Calendar Work">
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & MAP SECTION -->
+    <section id="contact">
+        <div class="wrap">
+            <div class="title" style="text-align: center; margin-bottom: 40px;">
+                <h2>Get In Touch</h2>
+                <p>Visit our press or reach out online instantly.</p>
+            </div>
+            <div class="contact-map-grid">
+                <!-- LEFT SIDE: CONTACT DETAILS CARD WITH EMAIL ID -->
+                <div class="contact-info-card">
+                    <h3>Contact Ruchita Graphics</h3>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <div class="contact-details">
+                            <strong>Phone Number:</strong>
+                            <a href="tel:+919441536524">+91 94415 36524</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">💬</span>
+                        <div class="contact-details">
+                            <strong>WhatsApp:</strong>
+                            <a href="https://wa.me" target="_blank">+91 77990 36524</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <div class="contact-details">
+                            <strong>Email ID:</strong>
+                            <a href="mailto:ruchitagraphics@gmail.com">ruchitagraphics@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="btns">
+                        <a href="https://wa.me" target="_blank" class="btn-wa">Chat on WhatsApp</a>
+                    </div>
+                </div>
+
+                <!-- RIGHT SIDE: LOCATION & WORKING MAP -->
+                <div class="location-clean-card">
+                    <h3>Our Location</h3>
+                    <div class="address-text">
+                        <span>Address:</span><br>
+                        H.No: 4-44/B2, Opp: Small Gate,<br>
+                        Beside Bus Station, Ghanpur Station,<br>
+                        Jangaon Dist., Telangana - 506144.
+                    </div>
+                    
+                    <div class="map-box">
+                        <iframe 
+                            src="https://google.com" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                    <div class="btns">
+                        <a href="https://google.com" target="_blank" class="btn-map-link">Open Google Maps</a>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- KOTTHA 6 POINTS PANES CONTAINER -->
-            <div class="panes-container">
-                
-                <!-- 01 PANELS (CREATIVITY & DIGITAL OBJ) -->
-                <div id="pane-01" class="details-pane">
-                    <div class="pane-header">
-                        <h4>01) Creativity & Digital Print Media</h4>
-                        <a href="#services" class="btn-close">✖ Close</a>
+    <footer>
+        <p>&copy; 2026 Ruchita Graphics. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
