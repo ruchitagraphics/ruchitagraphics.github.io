@@ -36,129 +36,52 @@
         .hero h1 { font-size: 38px; font-weight: 900; margin-bottom: 8px; }
         .hero p { font-size: 18px; color: #64748b; font-weight: 600; letter-spacing: 0.5px; }
 
-        /* SERVICES SECTION (PATHA DESIGN AS IT IS) */
+        /* SERVICES SECTION - 2 ROWS x 3 BOXES */
         section { padding: 60px 0; }
         .section-title { text-align: center; margin-bottom: 40px; }
         .section-title h2 { font-size: 32px; font-weight: 800; margin-bottom: 10px; }
         .section-title p { color: #64748b; }
         
-        /* PATHA 3 CARDS LAYOUT */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-        .card { background: #fff; border-radius: 16px; padding: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.02); border: 1px solid #e2e8f0; text-align: center; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
+        .card { background: #fff; border-radius: 16px; padding: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.02); border: 1px solid #e2e8f0; text-align: center; transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
         .card .num { font-size: 14px; color: var(--main); font-weight: 800; margin-bottom: 8px; }
         .card h3 { font-size: 20px; margin-bottom: 8px; font-weight: 800; }
-        .card p { color: #56266d; font-weight: 500; margin-bottom: 15px; }
-
-        /* READ DETAILS BUTTON */
-        .btn-details { display: inline-block; padding: 6px 15px; font-size: 13px; font-weight: 700; color: var(--blue); background: #eff6ff; border: 1px dashed var(--blue); border-radius: 999px; text-decoration: none; cursor: pointer; }
-        .btn-details:hover { background: var(--blue); color: #fff; }
-
-        /* MODAL POPUP SYSTEM */
-        .modal-overlay {
-            display: none;
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(15, 23, 42, 0.6);
-            backdrop-filter: blur(4px);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-        .modal-overlay:target { display: flex; }
-        
-        .modal-content {
-            background: #fff;
-            width: 100%;
-            max-width: 650px;
-            max-height: 85vh;
-            border-radius: 16px;
-            padding: 25px;
-            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
-            overflow-y: auto;
-            position: relative;
-            text-align: left;
-        }
-        .modal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 2px solid #f1f5f9;
-            padding-bottom: 12px;
-            margin-bottom: 15px;
-        }
-        .modal-header h4 { font-size: 20px; font-weight: 800; color: var(--ink); }
-        .btn-close {
-            font-size: 18px;
-            text-decoration: none;
-            color: #64748b;
-            font-weight: 700;
-            background: #f1f5f9;
-            width: 32px; height: 32px;
-            display: flex; justify-content: center; align-items: center;
-            border-radius: 50%;
-        }
-        .btn-close:hover { background: #e2e8f0; color: var(--ink); }
-        
-        .modal-body h5 { font-size: 16px; font-weight: 800; margin-top: 15px; margin-bottom: 8px; color: var(--blue); }
-        .modal-body ul { list-style: none; margin-bottom: 10px; }
-        .modal-body ul li { position: relative; padding-left: 18px; margin-bottom: 6px; font-size: 14px; font-weight: 500; color: #475569; }
-        .modal-body ul li::before { content: "•"; color: var(--main); position: absolute; left: 0; font-weight: bold; font-size: 16px; }
+        .card p { color: #56266d; font-weight: 500; font-size: 14px; text-align: justify; text-justify: inter-word; }
 
         /* PORTFOLIO SECTION */
-        .portfolio-display { display: flex; justify-content: center; width: 100%; }
+        .portfolio-display { display: flex; flex-direction: column; align-items: center; gap: 20px; width: 100%; }
         .portfolio-display img { width: 100%; max-width: 950px; height: auto; object-fit: contain; border-radius: 16px; box-shadow: 0 8px 25px rgba(0,0,0,0.05); }
 
-        /* SIDE-BY-SIDE WORKING LAYOUT */
-        .contact-map-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            align-items: stretch;
-            margin-top: 20px;
-        }
-        
-        .contact-info-card, .location-clean-card {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 16px;
-            padding: 30px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        
+        /* INTERACTIVE CONTACT GRID STYLE */
+        .contact-map-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: stretch; margin-top: 20px; }
+        .contact-info-card, .location-clean-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 30px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); text-align: center; }
         .contact-info-card h3, .location-clean-card h3 { font-size: 22px; margin-bottom: 20px; font-weight: 800; color: var(--ink); }
-        .contact-item { display: flex; align-items: center; gap: 15px; padding: 15px 0; border-bottom: 1px solid #f1f5f9; }
-        .contact-item:last-child { border-bottom: none; }
-        .contact-icon { font-size: 24px; background: #f0fdf4; padding: 8px 12px; border-radius: 12px; display: inline-flex; }
-        .contact-details { display: flex; flex-direction: column; text-align: left; }
-        .contact-details strong { font-size: 13px; color: #64748b; text-transform: uppercase; }
-        .contact-details a { font-size: 16px; color: #16a34a; text-decoration: none; font-weight: 700; word-break: break-all; }
         
+        /* SEPARATE ACCORDION CLICK SYSTEM FOR CONTACTS */
+        .click-box { border: 1px solid #e2e8f0; border-radius: 12px; margin-bottom: 12px; text-align: left; background: #f8fafc; overflow: hidden; }
+        .click-btn { display: block; width: 100%; padding: 15px; font-size: 15px; font-weight: 700; color: #475569; text-decoration: none; background: #f1f5f9; cursor: pointer; transition: 0.2s; border-bottom: 1px solid #e2e8f0; }
+        .click-btn:hover { background: #e2e8f0; color: var(--ink); }
+        
+        .click-content { display: none; padding: 15px; background: #fff; font-size: 16px; font-weight: 700; }
+        .click-content a { color: var(--main); text-decoration: none; }
+        
+        /* TARGETS FOR CLICK TO OPEN */
+        #show-phone:target #phone-content,
+        #show-wa:target #wa-content,
+        #show-email:target #email-content,
+        #show-web:target #web-content,
+        #show-map:target #map-content { display: block; }
+
         .address-text { text-align: left; font-size: 16px; color: #475569; padding: 15px 0; line-height: 1.8; }
         .address-text span { font-weight: 700; color: var(--ink); }
 
-        /* GOOGLE MAP BOX */
-        .map-box {
-            width: 100%;
-            height: 220px;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid #e2e8f0;
-            margin-top: 15px;
-        }
-        .map-box iframe {
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
+        .map-box { width: 100%; height: 220px; border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0; margin-top: 15px; }
+        .map-box iframe { width: 100%; height: 100%; border: 0; }
 
         .btns { display: flex; gap: 12px; margin-top: 25px; justify-content: center; }
-        .btn-wa { display: inline-block; padding: 12px 25px; border-radius: 999px; background: #16a34a; color: white; font-weight: 800; text-decoration: none; box-shadow: 0 4px 6px rgba(22,163,74,0.15); text-align: center; width: 100%; }
-        .btn-map-link { display: inline-block; padding: 12px 25px; border-radius: 999px; background: #2563eb; color: white; font-weight: 800; text-decoration: none; box-shadow: 0 4px 6px rgba(37,99,235,0.15); text-align: center; width: 100%; transition: 0.2s; }
+        .btn-wa { display: inline-block; padding: 12px 25px; border-radius: 999px; background: #16a34a; color: white; font-weight: 800; text-decoration: none; box-shadow: 0 4px 6px rgba(22,163,74,0.15); }
+        .btn-map-link { display: inline-block; padding: 12px 25px; border-radius: 999px; background: #2563eb; color: white; font-weight: 800; text-decoration: none; box-shadow: 0 4px 6px rgba(37,99,235,0.15); transition: 0.2s; }
         .btn-map-link:hover { background: #1d4ed8; }
 
         footer { background: #0f172a; color: #cbd5e1; text-align: center; padding: 20px; margin-top: 50px; font-size: 14px; }
@@ -189,7 +112,7 @@
         <h1>RUCHITA GRAPHICS</h1>
         <p>SINGLE STEP - SIMPLE SOLUTIONS</p>
     </div>
-
+     <!-- SERVICES SECTION (2 ROWS WITH 3 BOXES EACH) -->
     <section id="services">
         <div class="wrap">
             <div class="section-title">
@@ -198,158 +121,113 @@
             </div>
             
             <div class="grid">
+                <!-- ROW 1 - BOX 01 -->
                 <div class="card">
                     <div class="num">01</div>
-                    <h3>Invitation Cards</h3>
-                    <p>Wedding & Event Cards</p>
-                    <a href="#modal-01" class="btn-details">Read Details →</a>
+                    <h3>Creativity & Design</h3>
+                    <p><strong>A) D.T.P:</strong> Telugu, English, Hindi & Urdu Languages.<br><strong>B) Designing:</strong> Creative Brand Logos, Professional Business Cards, Pamphlets, Posters, Letter Heads & Exclusive Invitation Cards (Weddings, Birthdays, Events, Ceremonies).<br><strong>C) Social Media:</strong> Ad Posters & Advertisements.<br><strong>D) Video:</strong> MP4 Video Invitations & Professional Editing.</p>
                 </div>
+                
+                <!-- ROW 1 - BOX 02 -->
                 <div class="card">
                     <div class="num">02</div>
-                    <h3>Commercial Print</h3>
-                    <p>Posters, Bill Books, Visiting Cards</p>
-                    <a href="#modal-02" class="btn-details">Read Details →</a>
+                    <h3>Digital Printing</h3>
+                    <p>High-Resolution Digital Color Calibration in RGB & CMYK formats. We provide premium quality Photo Printing, High-Res Custom Posters, Precision Die-Cut Stickers, Corporate Certificates, Official Letter Heads and elegant Invitation Prints. Fully optimized express commercial digital print solutions.</p>
                 </div>
+                
+                <!-- ROW 1 - BOX 03 -->
                 <div class="card">
                     <div class="num">03</div>
                     <h3>Flex Printing</h3>
-                    <p>Banners & LED Sign Boards</p>
-                    <!-- MODAL 01: CREATIVITY & DIGITAL OBJ -->
-    <div id="modal-01" class="modal-overlay">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4>01) Creativity & Invitation Media</h4>
-                <a href="#services" class="btn-close">×</a>
-            </div>
-            <div class="modal-body">
-                <h5>01. Creativity Section</h5>
-                <ul>
-                    <li><strong>A) D.T.P:</strong> Telugu, English, Hindi & Urdu Languages</li>
-                    <li><strong>B) Designing:</strong> Creative Logos, Business Cards, Pamphlets, Posters, Letter Heads</li>
-                    <li><strong>C) Invitation Cards:</strong> Business Opening, Birthday, Celebrations, Ceremonies, Events, Engagements and Wedding Cards</li>
-                    <li><strong>D) Social Media:</strong> Posters and Advertisements</li>
-                    <li><strong>E) Multimedia:</strong> MP4 Video Creations and Professional Editing</li>
-                </ul>
-                <h5>02. Digital Printing Invitations</h5>
-                <ul>
-                    <li>Selective Objects & Digital Printing (RGB/CMYK)</li>
-                    <li>High-Quality Photos, Posters & Invitations</li>
-                    <li>Custom Stickers & Corporate Certificates</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <!-- MODAL 02: COMMERCIAL & OFFSET BULK -->
-    <div id="modal-02" class="modal-overlay">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4>02) Commercial & Offset Print Media</h4>
-                <a href="#services" class="btn-close">×</a>
-            </div>
-            <div class="modal-body">
-                <h5>Digital & Commercial Press</h5>
-                <ul>
-                    <li>Official Certificates, Corporate Print & Premium Letter Heads</li>
-                    <li>All types of Commercial Digital Printing</li>
-                </ul>
-                <h5>04. Offset & Baby Offset Printing (Bulk)</h5>
-                <ul>
-                    <li>Customized Business Bill Books & Cash Vouchers</li>
-                    <li>Mass Advertisement Posters & Pamphlets</li>
-                    <li>Product Label Stickers & Custom Flyers</li>
-                    <li>Educational & Official Record Books</li>
-                    <li>Professional Book Publishing & Booklet Printing</li>
-                    <li>Available in Multi-Colour, Two-Color & Single-Colour Printing</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <!-- MODAL 03: FLEX & POST-PRESS PROCESSING -->
-    <div id="modal-03" class="modal-overlay">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4>03) Large Format Flex & Finishing Services</h4>
-                <a href="#services" class="btn-close">×</a>
-            </div>
-            <div class="modal-body">
-                <h5>03. Flex & Sign Banners</h5>
-                <ul>
-                    <li>Heavy Duty Outdoor Flex Printing & Event Banners</li>
-                    <li>Premium Star Flex Prints for Ultra-Sharp Graphics</li>
-                    <li>Illuminated Back-Light Board Printing</li>
-                    <li>Glossy & Matte Vinyl Branding Films</li>
-                    <li>One Way Vision See-Through Glass Prints</li>
-                </ul>
-                <h5>05. Post-Press Processing & Finishing</h5>
-                <ul>
-                    <li>Glossy & Matte Lamination Protection</li>
-                    <li>Precision Creasing, Paper Reaming & Heavy Machine Punching</li>
-                    <li>Accurate Paper Cutting, Durable Book Binding & Framing Finishing</li>
-                </ul>
-                <h5>06. Packing & Transport</h5>
-                <ul>
-                    <li>Moisture-Proof Secure Packing System</li>
-                    <li>Fast, Express and 100% Safe Delivery Guarantee</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <!-- PORTFOLIO SECTION -->
-    <section id="portfolio" style="background: #fff;">
-        <div class="wrap">
-            <div class="title" style="text-align: center; margin-bottom: 40px;">
-                <h2>Featured Work</h2>
-                <p>Sample templates and recent projects delivered.</p>
-            </div>
-            <div class="portfolio-display">
-                <img src="assets/RGFX%20NEW%20YEAR%20CALENDARS.jpg" alt="Featured Calendar Work">
+                    <p>Heavy-Duty Large Format Outdoor Flex Prints and Eye-Catching Event Display Banners. Specialized Star Flex Printing for Ultra-Sharp and HD Graphics. We offer illuminated Back-Light Board Printing, Glossy & Matte Vinyl Branding Films and One Way Vision See-Through Glass Prints.</p>
+                </div>
+                
+                <!-- ROW 2 - BOX 04 -->
+                <div class="card">
+                    <div class="num">04</div>
+                    <h3>Offset Printing</h3>
+                    <p>Premium Scale Offset and Baby Offset Print Solutions available in Multi-Color, Two-Color & Single-Color Options. Customized Commercial Bill Books, Cash Vouchers, Receipt Books, Mass Advertisement Pamphlets, Flyers, Office Registers, Educational Record Books, Book Publishing & Booklets.</p>
+                </div>
+                
+                <!-- ROW 2 - BOX 05 -->
+                <div class="card">
+                    <div class="num">05</div>
+                    <h3>Post-Press Finishing</h3>
+                    <p>Advanced Post-Press Processing including Glossy & Matte Protection Lamination, Precision Paper Creasing, Paper Reaming and Heavy Machine Punching. Accurate Paper Cutting, Durable Book Binding (Spiral, Spico, Hard Binding), Elegant Frame Making and Final Project Finishing.</p>
+                </div>
+                
+                <!-- ROW 2 - BOX 06 -->
+                <div class="card" style="background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%); border-color: #bbf7d0;">
+                    <div class="num" style="background: #16a34a; color: white; display: inline-block; padding: 2px 10px; border-radius: 20px;">06</div>
+                    <h3 style="color: #14532d;">Packing & Transport</h3>
+                    <p>Moisture-Proof and Damage-Resistant Secure Layered Packaging. Safe and careful loading for bulk Offset, Booklets and Large Flex Shipments. Integrated with Fast, Express, and 100% Safe Logistics Connectivity ensuring On-Time Doorstep Destination Delivery Guarantee.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT & MAP SECTION -->
+    <!-- PORTFOLIO SECTION -->
+    <section id="portfolio" style="background: #fff;">
+        <div class="wrap">
+            <div class="section-title">
+                <h2>Featured Work</h2>
+                <p>Sample templates and recent projects delivered.</p>
+            </div>
+            <div class="portfolio-display">
+                <!-- Current Featured Calendar Work -->
+                <img src="assets/RGFX%20NEW%20YEAR%20CALENDARS.jpg" alt="Featured Calendar Work">
+            </div>
+        </div>
+    </section>
+    <!-- INTERACTIVE CONTACT SECTION -->
     <section id="contact">
         <div class="wrap">
-            <div class="title" style="text-align: center; margin-bottom: 40px;">
+            <div class="section-title">
                 <h2>Get In Touch</h2>
-                <p>Visit our press or reach out online instantly.</p>
+                <p>Click on any section below to instantly view our verified contact channels.</p>
             </div>
+            
             <div class="contact-map-grid">
-                <!-- LEFT SIDE: CONTACT DETAILS CARD WITH EMAIL ID -->
+                <!-- LEFT SIDE: SEPARATE CLICK TO VISIBLE CONTACTS -->
                 <div class="contact-info-card">
-                    <h3>Contact Ruchita Graphics</h3>
-                    <div class="contact-item">
-                        <span class="contact-icon">📞</span>
-                        <div class="contact-details">
-                            <strong>Phone Number:</strong>
+                    <h3>Contact Information</h3>
+                    
+                    <!-- PHONE BOX -->
+                    <div class="click-box" id="show-phone">
+                        <a href="#show-phone" class="click-btn">📞 Click to View Phone Number</a>
+                        <div class="click-content" id="phone-content">
                             <a href="tel:+919441536524">+91 94415 36524</a>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">💬</span>
-                        <div class="contact-details">
-                            <strong>WhatsApp:</strong>
+
+                    <!-- WHATSAPP BOX -->
+                    <div class="click-box" id="show-wa">
+                        <a href="#show-wa" class="click-btn">💬 Click to View WhatsApp Link</a>
+                        <div class="click-content" id="wa-content">
                             <a href="https://wa.me" target="_blank">+91 77990 36524</a>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">✉️</span>
-                        <div class="contact-details">
-                            <strong>Email ID:</strong>
+
+                    <!-- EMAIL BOX -->
+                    <div class="click-box" id="show-email">
+                        <a href="#show-email" class="click-btn">✉️ Click to View Email ID</a>
+                        <div class="click-content" id="email-content">
                             <a href="mailto:ruchitagraphics@gmail.com">ruchitagraphics@gmail.com</a>
                         </div>
                     </div>
-                    <div class="btns">
-                        <a href="https://wa.me" target="_blank" class="btn-wa">Chat on WhatsApp</a>
+
+                    <!-- WEBSITE BOX -->
+                    <div class="click-box" id="show-web">
+                        <a href="#show-web" class="click-btn">🌐 Click to View Website URL</a>
+                        <div class="click-content" id="web-content">
+                            <a href="https://github.io" target="_blank">ruchitagraphics.github.io</a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- RIGHT SIDE: LOCATION & WORKING MAP -->
+                <!-- RIGHT SIDE: ADDRESS & INTERACTIVE MAP VIEW -->
                 <div class="location-clean-card">
-                    <h3>Our Location</h3>
+                    <h3>Our Location & Address</h3>
                     <div class="address-text">
                         <span>Address:</span><br>
                         H.No: 4-44/B2, Opp: Small Gate,<br>
@@ -357,17 +235,23 @@
                         Jangaon Dist., Telangana - 506144.
                     </div>
                     
-                    <div class="map-box">
-                        <iframe 
-                            src="https://google.com" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
+                    <!-- MAP SEPARATE CLICK SYSTEM -->
+                    <div class="click-box" id="show-map">
+                        <a href="#show-map" class="click-btn">📍 Click to View Google Map Box</a>
+                        <div class="click-content" id="map-content" style="padding: 0;">
+                            <div class="map-box" style="margin-top: 0; border-radius: 0; border: none;">
+                                <iframe 
+                                    src="https://google.com" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="btns">
-                        <a href="https://google.com" target="_blank" class="btn-map-link">Open Google Maps</a>
+                        <a href="https://google.com" target="_blank" class="btn-map-link">Open Google Maps App</a>
                     </div>
                 </div>
             </div>
