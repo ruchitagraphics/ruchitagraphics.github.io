@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services | Ruchita Graphics</title>
     <style>
-        :root { --main: #16a34a; --ink: #0f172a; --bg: #f8fafc; --blue: #2563eb; }
+        :root { --main: #16a34a; --ink: #0f172a; --bg: #f8fafc; }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, sans-serif; }
         body { background: var(--bg); color: var(--ink); line-height: 1.6; }
         .wrap { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         header { background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
         .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
         .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 22px; text-decoration: none; color: var(--ink); }
-        .brand img { height: 45px; width: auto; object-fit: contain; }
         nav a { text-decoration: none; color: #475569; font-weight: 600; margin-left: 24px; transition: 0.2s; }
         nav a:hover, nav a.active { color: var(--main); }
         .section-title { text-align: center; margin: 40px 0; }
@@ -29,10 +28,11 @@
 <body>
     <header>
         <div class="wrap nav-container">
-            <a href="index.html" class="brand"><img src="assets/logo.png" alt="Logo"> RUCHITA GRAPHICS</a>
+            <a href="index.html" class="brand">RUCHITA GRAPHICS</a>
             <nav>
                 <a href="index.html">Home</a>
                 <a href="services.html" class="active">Services</a>
+                <a href="gallery.html">Gallery</a>
                 <a href="portfolio.html">Portfolio</a>
                 <a href="contact.html">Contact</a>
             </nav>
