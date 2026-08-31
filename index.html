@@ -32,28 +32,28 @@
 
         /* HERO BANNER SECTION */
         .hero { padding: 30px 0; text-align: center; background: #fff; }
-        .hero img { width: 100%; height: auto; max-height: 480px; object-fit: contain; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .hero img { width: 100%; height: auto; max-height: 480px; object-fit: contain; border-radius: 12px; box-shadow: 0 10px 25 rgba(0,0,0,0.05); margin-bottom: 20px; }
         .hero h1 { font-size: 38px; font-weight: 900; margin-bottom: 8px; }
         .hero p { font-size: 18px; color: #64748b; font-weight: 600; letter-spacing: 0.5px; }
 
-        /* MAIN CLEAN SERVICES SECTION */
-        section { padding: 50px 0; }
-        .title { text-align: center; margin-bottom: 40px; }
-        .title h2 { font-size: 32px; font-weight: 800; margin-bottom: 10px; }
-        .title p { color: #64748b; font-size: 16px; }
+        /* SERVICES SECTION */
+        section { padding: 60px 0; }
+        .section-title { text-align: center; margin-bottom: 40px; }
+        .section-title h2 { font-size: 32px; font-weight: 800; margin-bottom: 10px; }
+        .section-title p { color: #64748b; }
         
+        /* PATHA AS IT IS GRID */
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-        .card { background: #fff; border-radius: 16px; padding: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.02); border: 1px solid #e2e8f0; text-align: center; transition: 0.3s; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .card { background: #fff; border-radius: 16px; padding: 25px; box-shadow: 0 4px 10 rgba(0,0,0,0.02); border: 1px solid #e2e8f0; text-align: center; }
         .card .num { font-size: 14px; color: var(--main); font-weight: 800; margin-bottom: 8px; }
-        .card h3 { font-size: 22px; margin-bottom: 8px; font-weight: 800; }
-        .card p { color: #56266d; font-weight: 600; font-size: 15px; margin-bottom: 15px; }
-        
+        .card h3 { font-size: 20px; margin-bottom: 8px; font-weight: 800; }
+        .card p { color: #56266d; font-weight: 500; margin-bottom: 15px; }
+
+        /* NEW READ MORE SYSTEM */
         .btn-details { display: inline-block; padding: 6px 15px; font-size: 13px; font-weight: 700; color: var(--blue); background: #eff6ff; border: 1px dashed var(--blue); border-radius: 999px; text-decoration: none; cursor: pointer; }
         .btn-details:hover { background: var(--blue); color: #fff; }
 
-        /* PANES FIXED INLINE SECTION */
-        .panes-container { margin-top: 10px; }
+        .panes-container { margin-top: 10px; width: 100%; }
         .details-pane { display: none; background: #fff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 30px; margin-top: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: left; }
         .details-pane:target { display: block; scroll-margin-top: 110px; }
         
@@ -70,16 +70,16 @@
         .sub-card ul li::before { content: "•"; color: var(--main); position: absolute; left: 0; font-weight: bold; }
 
         /* PORTFOLIO SECTION */
-        .portfolio-display { display: flex; justify-content: center; width: 100%; margin-top: 20px; }
+        .portfolio-display { display: flex; justify-content: center; width: 100%; }
         .portfolio-display img { width: 100%; max-width: 950px; height: auto; object-fit: contain; border-radius: 16px; box-shadow: 0 8px 25px rgba(0,0,0,0.05); }
 
-        /* CONTACT & MAP LEAYOUT (FIXED DISPLAY) */
+        /* SIDE-BY-SIDE WORKING LAYOUT */
         .contact-map-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 30px;
             align-items: stretch;
-            margin-top: 30px;
+            margin-top: 20px;
         }
         
         .contact-info-card, .location-clean-card {
@@ -95,17 +95,17 @@
         }
         
         .contact-info-card h3, .location-clean-card h3 { font-size: 22px; margin-bottom: 20px; font-weight: 800; color: var(--ink); }
-        .contact-item { display: flex; align-items: center; gap: 15px; padding: 12px 0; border-bottom: 1px solid #f1f5f9; }
+        .contact-item { display: flex; align-items: center; gap: 15px; padding: 15px 0; border-bottom: 1px solid #f1f5f9; }
         .contact-item:last-child { border-bottom: none; }
         .contact-icon { font-size: 24px; background: #f0fdf4; padding: 8px 12px; border-radius: 12px; display: inline-flex; }
         .contact-details { display: flex; flex-direction: column; text-align: left; }
         .contact-details strong { font-size: 13px; color: #64748b; text-transform: uppercase; }
         .contact-details a { font-size: 16px; color: #16a34a; text-decoration: none; font-weight: 700; word-break: break-all; }
         
-        .address-text { text-align: left; font-size: 15px; color: #475569; padding: 15px 0; line-height: 1.8; }
+        .address-text { text-align: left; font-size: 16px; color: #475569; padding: 15px 0; line-height: 1.8; }
         .address-text span { font-weight: 700; color: var(--ink); }
 
-        /* GOOGLE MAP IFRAME BOX */
+        /* GOOGLE MAP BOX */
         .map-box {
             width: 100%;
             height: 220px;
@@ -120,11 +120,11 @@
             border: 0;
         }
 
-        .btns { display: flex; gap: 12px; margin-top: 10px; justify-content: center; }
+        .btns { display: flex; gap: 12px; margin-top: 25px; justify-content: center; }
         .btn-wa { display: inline-block; padding: 12px 25px; border-radius: 999px; background: #16a34a; color: white; font-weight: 800; text-decoration: none; box-shadow: 0 4px 6px rgba(22,163,74,0.15); text-align: center; width: 100%; }
         .btn-map-link { display: inline-block; padding: 12px 25px; border-radius: 999px; background: #2563eb; color: white; font-weight: 800; text-decoration: none; box-shadow: 0 4px 6px rgba(37,99,235,0.15); text-align: center; width: 100%; transition: 0.2s; }
         .btn-map-link:hover { background: #1d4ed8; }
-        
+
         footer { background: #0f172a; color: #cbd5e1; text-align: center; padding: 20px; margin-top: 50px; font-size: 14px; }
 
         @media(max-width: 768px) {
@@ -154,39 +154,41 @@
         <p>SINGLE STEP - SIMPLE SOLUTIONS</p>
     </div>
 
-    <!-- MAIN SERVICES SECTION -->
+    <!-- SERVICES SECTION (PATHA DESIGN AS IT IS) -->
     <section id="services">
         <div class="wrap">
-            <div class="title">
+            <div class="section-title">
                 <h2>Our Services</h2>
                 <p>Quality design and creative printing solutions.</p>
             </div>
             
+            <!-- PATHA 3 CARDS AS IT IS -->
             <div class="grid">
-                <!-- BOX 1: CREATIVITY -->
                 <div class="card">
                     <div class="num">01</div>
-                    <h3>Creativity & Design</h3>
-                    <p>D.T.P, Custom Logos, Invitations & Social Ads</p>
-                    <a href="#creativity-details" class="btn-details">Read Details →</a>
+                    <h3>Invitation Cards</h3>
+                    <p>Wedding & Event Cards</p>
+                    <a href="#pane-01" class="btn-details">Read Details →</a>
                 </div>
-
-                <!-- BOX 2: DIGITAL & FLEX -->
                 <div class="card">
                     <div class="num">02</div>
-                    <h3>Digital & Flex Printing</h3>
-                    <p>RGB/CMYK Prints, Large Banners & Vinyl</p>
-                    <a href="#printing-details" class="btn-details">Read Details →</a>
+                    <h3>Commercial Print</h3>
+                    <p>Posters, Bill Books, Visiting Cards</p>
+                    <a href="#pane-02" class="btn-details">Read Details →</a>
                 </div>
-
-                <!-- BOX 3: OFFSET & FINISHING -->
                 <div class="card">
                     <div class="num">03</div>
-                    <h3>Offset & Finishing</h3>
-                    <p>Bulk Bill Books, Binding, Lamination & Safe Transport</p>
-                    <a href="#offset-details" class="btn-details">Read Details →</a>
+                    <h3>Flex Printing</h3>
+                    <p>Banners & LED Sign Boards</p>
+                    <a href="#pane-03" class="btn-details">Read Details →</a>
                 </div>
             </div>
 
-            <!-- PANES CONTAINER (FIXED POSITION BETWEEN SERVICES & PORTFOLIO) -
-    
+            <!-- KOTTHA 6 POINTS PANES CONTAINER -->
+            <div class="panes-container">
+                
+                <!-- 01 PANELS (CREATIVITY & DIGITAL OBJ) -->
+                <div id="pane-01" class="details-pane">
+                    <div class="pane-header">
+                        <h4>01) Creativity & Digital Print Media</h4>
+                        <a href="#services" class="btn-close">✖ Close</a>
