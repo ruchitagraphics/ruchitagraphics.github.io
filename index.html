@@ -36,8 +36,8 @@
         .hero h1 { font-size: 38px; font-weight: 900; margin-bottom: 8px; }
         .hero p { font-size: 18px; color: #64748b; font-weight: 600; letter-spacing: 0.5px; }
 
-        /* OLD STYLE CLEAN SERVICES SECTION */
-        section { padding: 60px 0; }
+        /* MAIN CLEAN SERVICES SECTION */
+        section { padding: 50px 0; }
         .title { text-align: center; margin-bottom: 40px; }
         .title h2 { font-size: 32px; font-weight: 800; margin-bottom: 10px; }
         .title p { color: #64748b; font-size: 16px; }
@@ -52,12 +52,13 @@
         .btn-details { display: inline-block; padding: 6px 15px; font-size: 13px; font-weight: 700; color: var(--blue); background: #eff6ff; border: 1px dashed var(--blue); border-radius: 999px; text-decoration: none; cursor: pointer; }
         .btn-details:hover { background: var(--blue); color: #fff; }
 
-        /* HIDDEN DETAILED SECTIONS (OPENS ON CLICK) */
-        .details-pane { display: none; background: #fff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 30px; margin-top: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: left; }
-        .details-pane:target { display: block; scroll-margin-top: 100px; }
+        /* PANES FIXED INLINE SECTION */
+        .panes-container { margin-top: 10px; }
+        .details-pane { display: none; background: #fff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 30px; margin-top: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: left; }
+        .details-pane:target { display: block; scroll-margin-top: 110px; }
         
         .pane-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #f1f5f9; padding-bottom: 10px; margin-bottom: 20px; }
-        .pane-header h4 { font-size: 22px; font-weight: 800; color: var(--ink); }
+        .pane-header h4 { font-size: 20px; font-weight: 800; color: var(--ink); }
         .btn-close { font-size: 14px; text-decoration: none; color: #64748b; font-weight: 700; background: #f1f5f9; padding: 4px 12px; border-radius: 999px; }
         .btn-close:hover { background: #e2e8f0; color: var(--ink); }
         
@@ -69,16 +70,16 @@
         .sub-card ul li::before { content: "•"; color: var(--main); position: absolute; left: 0; font-weight: bold; }
 
         /* PORTFOLIO SECTION */
-        .portfolio-display { display: flex; justify-content: center; width: 100%; }
+        .portfolio-display { display: flex; justify-content: center; width: 100%; margin-top: 20px; }
         .portfolio-display img { width: 100%; max-width: 950px; height: auto; object-fit: contain; border-radius: 16px; box-shadow: 0 8px 25px rgba(0,0,0,0.05); }
 
-        /* SIDE-BY-SIDE WORKING LAYOUT */
+        /* CONTACT & MAP LEAYOUT (FIXED DISPLAY) */
         .contact-map-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 30px;
             align-items: stretch;
-            margin-top: 20px;
+            margin-top: 30px;
         }
         
         .contact-info-card, .location-clean-card {
@@ -153,7 +154,7 @@
         <p>SINGLE STEP - SIMPLE SOLUTIONS</p>
     </div>
 
-    <!-- CLEAN OLD LOOK MAIN SERVICES SECTION -->
+    <!-- MAIN SERVICES SECTION -->
     <section id="services">
         <div class="wrap">
             <div class="title">
@@ -162,7 +163,7 @@
             </div>
             
             <div class="grid">
-                <!-- BOX 1: CREATIVITY & DESIGN -->
+                <!-- BOX 1: CREATIVITY -->
                 <div class="card">
                     <div class="num">01</div>
                     <h3>Creativity & Design</h3>
@@ -170,13 +171,11 @@
                     <a href="#creativity-details" class="btn-details">Read Details →</a>
                 </div>
 
-                <!-- BOX 2: DIGITAL & FLEX PRINT -->
+                <!-- BOX 2: DIGITAL & FLEX -->
                 <div class="card">
                     <div class="num">02</div>
                     <h3>Digital & Flex Printing</h3>
-                    <ul>
-                        <p>RGB/CMYK Prints, Large Banners & Vinyl</p>
-                    </ul>
+                    <p>RGB/CMYK Prints, Large Banners & Vinyl</p>
                     <a href="#printing-details" class="btn-details">Read Details →</a>
                 </div>
 
@@ -189,4 +188,5 @@
                 </div>
             </div>
 
-            <!-- DYNAMIC PANELS: OPENS ONLY WHEN CLICKED -->
+            <!-- PANES CONTAINER (FIXED POSITION BETWEEN SERVICES & PORTFOLIO) -
+    
