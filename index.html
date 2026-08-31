@@ -4,263 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ruchita Graphics provides graphic design, digital printing, flex printing, banners and printing services in Ghanpur Station, Telangana.">
-    <title>Ruchita Graphics | Graphic Design & Printing Press</title>
+    <title>Ruchita Graphics | Home</title>
     <style>
-        :root {
-            --main: #16a34a;
-            --ink: #0f172a;
-            --bg: #f8fafc;
-            --blue: #2563eb;
-        }
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', system-ui, sans-serif;
-        }
-        html { scroll-behavior: smooth; }
+        :root { --main: #16a34a; --ink: #0f172a; --bg: #f8fafc; --blue: #2563eb; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, sans-serif; }
         body { background: var(--bg); color: var(--ink); line-height: 1.6; }
         .wrap { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        
-        /* HEADER SECTION */
         header { background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
         .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
         .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 22px; text-decoration: none; color: var(--ink); }
         .brand img { height: 45px; width: auto; object-fit: contain; }
         nav a { text-decoration: none; color: #475569; font-weight: 600; margin-left: 24px; transition: 0.2s; }
-        nav a:hover { color: var(--main); }
-
-        /* HERO BANNER SECTION */
-        .hero { padding: 30px 0; text-align: center; background: #fff; }
-        .hero img { width: 100%; height: auto; max-height: 480px; object-fit: contain; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        nav a:hover, nav a.active { color: var(--main); }
+        .hero { padding: 40px 0; text-align: center; background: #fff; margin-bottom: 40px; }
+        .hero img { width: 100%; height: auto; max-height: 440px; object-fit: contain; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); margin-bottom: 20px; }
         .hero h1 { font-size: 38px; font-weight: 900; margin-bottom: 8px; }
         .hero p { font-size: 18px; color: #64748b; font-weight: 600; letter-spacing: 0.5px; }
-
-        /* SERVICES SECTION - 2 ROWS x 3 BOXES */
-        section { padding: 60px 0; }
-        .section-title { text-align: center; margin-bottom: 40px; }
-        .section-title h2 { font-size: 32px; font-weight: 800; margin-bottom: 10px; }
-        .section-title p { color: #64748b; }
-        
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
-        .card { background: #fff; border-radius: 16px; padding: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.02); border: 1px solid #e2e8f0; text-align: center; transition: 0.3s; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-        .card .num { font-size: 14px; color: var(--main); font-weight: 800; margin-bottom: 8px; }
-        .card h3 { font-size: 20px; margin-bottom: 8px; font-weight: 800; }
-        .card p { color: #56266d; font-weight: 500; font-size: 14px; text-align: justify; text-justify: inter-word; }
-
-        /* PORTFOLIO SECTION */
-        .portfolio-display { display: flex; flex-direction: column; align-items: center; gap: 20px; width: 100%; }
-        .portfolio-display img { width: 100%; max-width: 950px; height: auto; object-fit: contain; border-radius: 16px; box-shadow: 0 8px 25px rgba(0,0,0,0.05); }
-
-        /* INTERACTIVE CONTACT GRID STYLE */
-        .contact-map-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: stretch; margin-top: 20px; }
-        .contact-info-card, .location-clean-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 30px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); text-align: center; }
-        .contact-info-card h3, .location-clean-card h3 { font-size: 22px; margin-bottom: 20px; font-weight: 800; color: var(--ink); }
-        
-        /* SEPARATE ACCORDION CLICK SYSTEM FOR CONTACTS */
-        .click-box { border: 1px solid #e2e8f0; border-radius: 12px; margin-bottom: 12px; text-align: left; background: #f8fafc; overflow: hidden; }
-        .click-btn { display: block; width: 100%; padding: 15px; font-size: 15px; font-weight: 700; color: #475569; text-decoration: none; background: #f1f5f9; cursor: pointer; transition: 0.2s; border-bottom: 1px solid #e2e8f0; }
-        .click-btn:hover { background: #e2e8f0; color: var(--ink); }
-        
-        .click-content { display: none; padding: 15px; background: #fff; font-size: 16px; font-weight: 700; }
-        .click-content a { color: var(--main); text-decoration: none; }
-        
-        /* TARGETS FOR CLICK TO OPEN */
-        #show-phone:target #phone-content,
-        #show-wa:target #wa-content,
-        #show-email:target #email-content,
-        #show-web:target #web-content,
-        #show-map:target #map-content { display: block; }
-
-        .address-text { text-align: left; font-size: 16px; color: #475569; padding: 15px 0; line-height: 1.8; }
-        .address-text span { font-weight: 700; color: var(--ink); }
-
-        .map-box { width: 100%; height: 220px; border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0; margin-top: 15px; }
-        .map-box iframe { width: 100%; height: 100%; border: 0; }
-
-        .btns { display: flex; gap: 12px; margin-top: 25px; justify-content: center; }
-        .btn-wa { display: inline-block; padding: 12px 25px; border-radius: 999px; background: #16a34a; color: white; font-weight: 800; text-decoration: none; box-shadow: 0 4px 6px rgba(22,163,74,0.15); }
-        .btn-map-link { display: inline-block; padding: 12px 25px; border-radius: 999px; background: #2563eb; color: white; font-weight: 800; text-decoration: none; box-shadow: 0 4px 6px rgba(37,99,235,0.15); transition: 0.2s; }
-        .btn-map-link:hover { background: #1d4ed8; }
-
-        footer { background: #0f172a; color: #cbd5e1; text-align: center; padding: 20px; margin-top: 50px; font-size: 14px; }
-
-        @media(max-width: 768px) {
-            .contact-map-grid { grid-template-columns: 1fr; gap: 20px; }
-        }
+        .welcome-box { text-align: center; padding: 40px 20px; max-width: 800px; margin: 0 auto; background: #fff; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 4px 10px rgba(0,0,0,0.02); }
+        .welcome-box h2 { font-size: 28px; font-weight: 800; margin-bottom: 15px; }
+        .btn-explore { display: inline-block; padding: 12px 30px; background: var(--main); color: #fff; text-decoration: none; font-weight: 700; border-radius: 999px; margin-top: 15px; box-shadow: 0 4px 6px rgba(22,163,74,0.2); }
+        footer { background: #0f172a; color: #cbd5e1; text-align: center; padding: 20px; margin-top: 60px; font-size: 14px; }
     </style>
 </head>
 <body>
-
     <header>
         <div class="wrap nav-container">
-            <a href="#" class="brand">
-                <img src="assets/logo.png" alt="Logo">
-                RUCHITA GRAPHICS
-            </a>
+            <a href="index.html" class="brand"><img src="assets/logo.png" alt="Logo"> RUCHITA GRAPHICS</a>
             <nav>
-                <a href="#services">Services</a>
-                <a href="#portfolio">Portfolio</a>
-                <a href="#contact">Contact</a>
+                <a href="index.html" class="active">Home</a>
+                <a href="services.html">Services</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="contact.html">Contact</a>
             </nav>
         </div>
     </header>
-
-    <div class="hero wrap">
-        <img src="assets/RUCHITA%20GRAPHICS%20WEB%2001.jpg" alt="Main Banner">
-        <h1>RUCHITA GRAPHICS</h1>
-        <p>SINGLE STEP - SIMPLE SOLUTIONS</p>
+    <div class="hero wrap"><img src="assets/RUCHITA%20GRAPHICS%20WEB%2001.jpg" alt="Main Banner"><h1>RUCHITA GRAPHICS</h1><p>SINGLE STEP - SIMPLE SOLUTIONS</p></div>
+    <div class="wrap">
+        <div class="welcome-box">
+            <h2>Welcome to Ruchita Graphics</h2>
+            <p>We are your premier graphic designing and high-quality printing destination in Ghanpur Station. Explore our multi-language DTP, modern signage flex, offset bulk printing, and premium digital press services by navigating through our pages.</p>
+            <a href="services.html" class="btn-explore">Explore Our Services →</a>
+        </div>
     </div>
-     <!-- SERVICES SECTION (2 ROWS WITH 3 BOXES EACH) -->
-    <section id="services">
-        <div class="wrap">
-            <div class="section-title">
-                <h2>Our Services</h2>
-                <p>Quality design and creative printing solutions.</p>
-            </div>
-            
-            <div class="grid">
-                <!-- ROW 1 - BOX 01 -->
-                <div class="card">
-                    <div class="num">01</div>
-                    <h3>Creativity & Design</h3>
-                    <p><strong>A) D.T.P:</strong> Telugu, English, Hindi & Urdu Languages.<br><strong>B) Designing:</strong> Creative Brand Logos, Professional Business Cards, Pamphlets, Posters, Letter Heads & Exclusive Invitation Cards (Weddings, Birthdays, Events, Ceremonies).<br><strong>C) Social Media:</strong> Ad Posters & Advertisements.<br><strong>D) Video:</strong> MP4 Video Invitations & Professional Editing.</p>
-                </div>
-                
-                <!-- ROW 1 - BOX 02 -->
-                <div class="card">
-                    <div class="num">02</div>
-                    <h3>Digital Printing</h3>
-                    <p>High-Resolution Digital Color Calibration in RGB & CMYK formats. We provide premium quality Photo Printing, High-Res Custom Posters, Precision Die-Cut Stickers, Corporate Certificates, Official Letter Heads and elegant Invitation Prints. Fully optimized express commercial digital print solutions.</p>
-                </div>
-                
-                <!-- ROW 1 - BOX 03 -->
-                <div class="card">
-                    <div class="num">03</div>
-                    <h3>Flex Printing</h3>
-                    <p>Heavy-Duty Large Format Outdoor Flex Prints and Eye-Catching Event Display Banners. Specialized Star Flex Printing for Ultra-Sharp and HD Graphics. We offer illuminated Back-Light Board Printing, Glossy & Matte Vinyl Branding Films and One Way Vision See-Through Glass Prints.</p>
-                </div>
-                
-                <!-- ROW 2 - BOX 04 -->
-                <div class="card">
-                    <div class="num">04</div>
-                    <h3>Offset Printing</h3>
-                    <p>Premium Scale Offset and Baby Offset Print Solutions available in Multi-Color, Two-Color & Single-Color Options. Customized Commercial Bill Books, Cash Vouchers, Receipt Books, Mass Advertisement Pamphlets, Flyers, Office Registers, Educational Record Books, Book Publishing & Booklets.</p>
-                </div>
-                
-                <!-- ROW 2 - BOX 05 -->
-                <div class="card">
-                    <div class="num">05</div>
-                    <h3>Post-Press Finishing</h3>
-                    <p>Advanced Post-Press Processing including Glossy & Matte Protection Lamination, Precision Paper Creasing, Paper Reaming and Heavy Machine Punching. Accurate Paper Cutting, Durable Book Binding (Spiral, Spico, Hard Binding), Elegant Frame Making and Final Project Finishing.</p>
-                </div>
-                
-                <!-- ROW 2 - BOX 06 -->
-                <div class="card" style="background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%); border-color: #bbf7d0;">
-                    <div class="num" style="background: #16a34a; color: white; display: inline-block; padding: 2px 10px; border-radius: 20px;">06</div>
-                    <h3 style="color: #14532d;">Packing & Transport</h3>
-                    <p>Moisture-Proof and Damage-Resistant Secure Layered Packaging. Safe and careful loading for bulk Offset, Booklets and Large Flex Shipments. Integrated with Fast, Express, and 100% Safe Logistics Connectivity ensuring On-Time Doorstep Destination Delivery Guarantee.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PORTFOLIO SECTION -->
-    <section id="portfolio" style="background: #fff;">
-        <div class="wrap">
-            <div class="section-title">
-                <h2>Featured Work</h2>
-                <p>Sample templates and recent projects delivered.</p>
-            </div>
-            <div class="portfolio-display">
-                <!-- Current Featured Calendar Work -->
-                <img src="assets/RGFX%20NEW%20YEAR%20CALENDARS.jpg" alt="Featured Calendar Work">
-            </div>
-        </div>
-    </section>
-     <!-- 100% WORKING INTERACTIVE CONTACT SECTION -->
-    <section id="contact">
-        <div class="wrap">
-            <div class="section-title">
-                <h2>Get In Touch</h2>
-                <p>Click on any section below to instantly view our verified contact channels.</p>
-            </div>
-            
-            <div class="contact-map-grid">
-                <!-- LEFT SIDE: SEPARATE CLICK TO VISIBLE CONTACTS -->
-                <div class="contact-info-card">
-                    <h3>Contact Information</h3>
-                    
-                    <!-- PHONE BOX -->
-                    <details class="click-box">
-                        <summary class="click-btn">📞 Click to View Phone Number</summary>
-                        <div class="click-content">
-                            <span>📞</span> <a href="tel:+919441536524">+91 94415 36524</a>
-                        </div>
-                    </details>
-
-                    <!-- WHATSAPP BOX -->
-                    <details class="click-box">
-                        <summary class="click-btn">💬 Click to View WhatsApp Link</summary>
-                        <div class="click-content">
-                            <span>💬</span> <a href="https://wa.me" target="_blank">+91 77990 36524</a>
-                        </div>
-                    </details>
-
-                    <!-- EMAIL BOX -->
-                    <details class="click-box">
-                        <summary class="click-btn">✉️ Click to View Email ID</summary>
-                        <div class="click-content">
-                            <span>✉️</span> <a href="mailto:ruchitagraphics@gmail.com">ruchitagraphics@gmail.com</a>
-                        </div>
-                    </details>
-
-                    <!-- WEBSITE BOX -->
-                    <details class="click-box">
-                        <summary class="click-btn">🌐 Click to View Website URL</summary>
-                        <div class="click-content">
-                            <span>🌐</span> <a href="https://github.io" target="_blank">ruchitagraphics.github.io</a>
-                        </div>
-                    </details>
-                </div>
-
-                <!-- RIGHT SIDE: ADDRESS & INTERACTIVE MAP VIEW -->
-                <div class="location-clean-card">
-                    <h3>Our Location & Address</h3>
-                    <div class="address-text">
-                        <span>Address:</span><br>
-                        H.No: 4-44/B2, Opp: Small Gate,<br>
-                        Beside Bus Station, Ghanpur Station,<br>
-                        Jangaon Dist., Telangana - 506144.
-                    </div>
-                    
-                    <!-- 100% GUARANTEED WORKING MAP CLICK SYSTEM -->
-                    <details class="click-box">
-                        <summary class="click-btn">📍 Click to View Google Map Box</summary>
-                        <div class="click-content" style="padding: 10px;">
-                            <div class="map-box" style="margin-top: 0;">
-                                <iframe 
-                                    src="https://google.com" 
-                                    allowfullscreen="" 
-                                    loading="lazy" 
-                                    referrerpolicy="no-referrer-when-downgrade">
-                                </iframe>
-                            </div>
-                        </div>
-                    </details>
-
-                    <div class="btns">
-                        <a href="https://google.com" target="_blank" class="btn-map-link">Open Google Maps App</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Ruchita Graphics. All Rights Reserved.</p>
-    </footer>
-
+    <footer><p>&copy; 2026 Ruchita Graphics. All Rights Reserved.</p></footer>
 </body>
 </html>
