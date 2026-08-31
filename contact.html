@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+html<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -40,7 +40,7 @@
         .click-btn { display: block; width: 100%; padding: 15px; font-size: 15px; font-weight: 700; color: #334155; cursor: pointer; background: #f8fafc; outline: none; border: none; transition: 0.2s; }
         .click-box[open] .click-btn { border-bottom: 1px solid #e2e8f0; background: #f1f5f9; color: var(--ink); }
         
-        /* LOGO BACKDROPS */
+        /* BACKDROPS */
         .metal-icon {
             display: inline-flex;
             justify-content: center;
@@ -60,16 +60,12 @@
         .click-content { padding: 18px; background: #fff; font-size: 16px; font-weight: 700; display: flex; align-items: center; gap: 15px; }
         .click-content a { color: var(--main); text-decoration: none; word-break: break-all; font-size: 17px; }
         
-        .address-text { text-align: left; font-size: 15px; color: #475569; padding: 15px 0; line-height: 1.8; }
+        .address-text { text-align: left; font-size: 15px; color: #475569; padding: 15px 0; line-height: 1.8; margin-bottom: 20px; }
         .address-text span { font-weight: 700; color: var(--ink); }
-        
-        /* GOOGLE MAP BOX */
-        .map-box { width: 100%; height: 230px; border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0; background: #e5e7eb; margin-bottom: 15px; }
-        .map-box iframe { width: 100%; height: 100%; border: 0; }
         
         .btns { display: flex; gap: 12px; margin-top: 20px; justify-content: center; }
         .btn-wa { display: inline-block; padding: 12px 25px; border-radius: 999px; background: #16a34a; color: white; font-weight: 800; text-decoration: none; box-shadow: 0 4px 6px rgba(22,163,74,0.15); text-align: center; width: 100%; }
-        .btn-map-link { display: inline-block; padding: 12px 25px; border-radius: 999px; background: #2563eb; color: white; font-weight: 800; text-decoration: none; box-shadow: 0 4px 6px rgba(37,99,235,0.15); text-align: center; width: 100%; transition: 0.2s; }
+        .btn-map-link { display: inline-block; padding: 15px 25px; border-radius: 999px; background: #2563eb; color: white; font-weight: 800; text-decoration: none; box-shadow: 0 4px 6px rgba(37,99,235,0.15); text-align: center; width: 100%; transition: 0.2s; font-size: 16px; }
         .btn-map-link:hover { background: #1d4ed8; }
         
         /* FLOATING BUTTON */
@@ -108,7 +104,8 @@
                 <a href="contact.html" class="active">Contact</a>
             </nav>
         </div>
-    </header><div class="wrap">
+    </header>
+     <div class="wrap">
         <div class="section-title">
             <h1>Contact Us</h1>
             <p>Click on any section below to instantly reveal our verified communication channels.</p>
@@ -132,7 +129,6 @@
                     <summary class="click-btn">💬 WhatsApp Connect</summary>
                     <div class="click-content">
                         <span class="metal-icon icon-wa">💬</span>
-                        <!-- ఇక్కడ లింక్ సరిచేయబడింది - నేరుగా చాట్ ఓపెన్ అవుతుంది -->
                         <a href="https://whatsapp.com" target="_blank" style="margin-left: 5px;">+91 77990 36524</a>
                     </div>
                 </details>
@@ -151,8 +147,7 @@
                     <summary class="click-btn">🌐 Official Website URL</summary>
                     <div class="click-content">
                         <span class="metal-icon icon-web">🌐</span>
-                        <!-- ఇక్కడ వెబ్‌సైట్ ఒరిజినల్ గిట్‌హబ్ లింక్ సరిచేయబడింది -->
-                        <a href="https://ruchitagraphics.github.io" target="_blank" style="margin-left: 5px;">ruchitagraphics.github.io</a>
+                        <a href="https://github.io" target="_blank" style="margin-left: 5px;">ruchitagraphics.github.io</a>
                     </div>
                 </details>
                 
@@ -170,14 +165,12 @@
                     Jangaon Dist., Telangana - 506144.
                 </div>
                 
-                <!-- MAP BOX - కట్ అయిన గూగుల్ మ్యాప్ ఇక్కడ పూర్తిగా చేర్చబడింది -->
+                <!-- MAP BOX - ఎర్రర్ వచ్చే ఇంబెడ్ ఐఫ్రేమ్‌ను పూర్తిగా తీసేసి పర్‌ఫెక్ట్ డైరెక్ట్ బటన్‌ను పెట్టాను -->
                 <details class="click-box" open>
                     <summary class="click-btn">📍 Google Map Site View</summary>
-                    <div class="click-content" style="display: block; padding: 15px;">
-                        <div class="map-box">
-                            <iframe src="https://google.com" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                        <a href="https://google.com" target="_blank" class="btn-map-link">Open in Google Maps</a>
+                    <div class="click-content" style="display: block; padding: 25px; text-align: center;">
+                        <p style="margin-bottom: 15px; color: #475569; font-size: 15px;">ఘన్‌పూర్ స్టేషన్ బస్ స్టాప్ లొకేషన్ గూగుల్ మ్యాప్స్ యాప్‌లో నేరుగా ఓపెన్ చేయడానికి కింద ఉన్న బటన్‌ను క్లిక్ చేయండి.</p>
+                        <a href="https://goo.gl" target="_blank" class="btn-map-link">📍 Open in Google Maps</a>
                     </div>
                 </details>
             </div>
@@ -188,7 +181,7 @@
         <p>&copy; 2026 Ruchita Graphics. All Rights Reserved.</p>
     </footer>
 
-    <!-- FLOATING WHATSAPP BUTTON - స్క్రీన్ కుడివైపు కింద ఉండే ఐకాన్ -->
+    <!-- FLOATING WHATSAPP BUTTON -->
     <a href="https://whatsapp.com" class="whatsapp-float" target="_blank" rel="noopener noreferrer">💬</a>
 </body>
 </html>
