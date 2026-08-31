@@ -5,73 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Ruchita Graphics</title>
     <style>
-        :root { 
-            --main: #16a34a; 
-            --ink: #0f172a; 
-            --bg: #f8fafc; 
-            --blue: #2563eb; 
-            --green-light: #f0fdf4;
-            --silver-light: #f1f5f9;
-            --pink-light: #fff0f6;
-        }
+        :root { --main: #16a34a; --ink: #0f172a; --bg: #f8fafc; --blue: #2563eb; }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, sans-serif; }
         body { background: var(--bg); color: var(--ink); line-height: 1.6; }
         .wrap { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        
-        /* HEADER SECTION */
         header { background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
         .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
         .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 22px; text-decoration: none; color: var(--ink); }
-        .brand img { height: 45px; width: auto; object-fit: contain; }
         nav a { text-decoration: none; color: #475569; font-weight: 600; margin-left: 24px; transition: 0.2s; }
         nav a:hover, nav a.active { color: var(--main); }
-        
         .section-title { text-align: center; margin: 40px 0; }
         .section-title h1 { font-size: 32px; font-weight: 800; margin-bottom: 10px; }
         .section-title p { color: #64748b; }
-        
-        /* CONTACT MAP GRID */
         .contact-map-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: stretch; margin-bottom: 40px; }
         .contact-info-card, .location-clean-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); text-align: center; }
         .contact-info-card h3, .location-clean-card h3 { font-size: 22px; margin-bottom: 20px; font-weight: 800; color: var(--ink); }
-        
-        /* PREMIUM CLICK BOX STYLE */
         .click-box { border: 1px solid #e2e8f0; border-radius: 12px; margin-bottom: 15px; text-align: left; background: #fff; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
-        .click-btn { display: block; width: 100%; padding: 15px; font-size: 15px; font-weight: 700; color: #334155; cursor: pointer; background: #f8fafc; outline: none; border: none; transition: 0.2s; }
-        .click-box[open] .click-btn { border-bottom: 1px solid #e2e8f0; background: #f1f5f9; color: var(--ink); }
-        
-        /* ORIGINAL COLOR EMOJI BACKDROPS */
-        .metal-icon {
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            font-size: 22px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-        
-        .icon-phone { background: var(--green-light); border: 1px solid #bbf7d0; }
-        .icon-wa { background: var(--green-light); border: 1px solid #bbf7d0; }
-        .icon-email { background: var(--pink-light); border: 1px solid #fbcfe8; }
-        .icon-web { background: var(--silver-light); border: 1px solid #cbd5e1; }
-        
+        .click-btn { display: block; width: 100%; padding: 15px; font-size: 15px; font-weight: 700; color: #334155; cursor: pointer; background: #f8fafc; outline: none; border: none; }
+        .click-box[open] .click-btn { border-bottom: 1px solid #e2e8f0; background: #f1f5f9; }
+        .metal-icon { display: inline-flex; justify-content: center; align-items: center; width: 44px; height: 44px; border-radius: 50%; font-size: 22px; background: #f1f5f9; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
         .click-content { padding: 18px; background: #fff; font-size: 16px; font-weight: 700; display: flex; align-items: center; gap: 15px; }
         .click-content a { color: var(--main); text-decoration: none; word-break: break-all; font-size: 17px; }
-        
         .address-text { text-align: left; font-size: 15px; color: #475569; padding: 15px 0; line-height: 1.8; }
         .address-text span { font-weight: 700; color: var(--ink); }
-        
-        /* 100% GUARANTEED LIVE MAP BOX */
         .map-box { width: 100%; height: 230px; border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0; background: #e5e7eb; }
         .map-box iframe { width: 100%; height: 100%; border: 0; }
-        
         .btns { display: flex; gap: 12px; margin-top: 20px; justify-content: center; }
         .btn-wa { display: inline-block; padding: 12px 25px; border-radius: 999px; background: #16a34a; color: white; font-weight: 800; text-decoration: none; box-shadow: 0 4px 6px rgba(22,163,74,0.15); text-align: center; width: 100%; }
-        .btn-map-link { display: inline-block; padding: 12px 25px; border-radius: 999px; background: #2563eb; color: white; font-weight: 800; text-decoration: none; box-shadow: 0 4px 6px rgba(37,99,235,0.15); text-align: center; width: 100%; transition: 0.2s; }
-        .btn-map-link:hover { background: #1d4ed8; }
-        
+        .btn-map-link { display: inline-block; padding: 12px 25px; border-radius: 999px; background: #2563eb; color: white; font-weight: 800; text-decoration: none; box-shadow: 0 4px 6px rgba(37,99,235,0.15); text-align: center; width: 100%; }
         footer { background: #0f172a; color: #cbd5e1; text-align: center; padding: 20px; margin-top: 60px; font-size: 14px; }
         @media(max-width: 768px) { .contact-map-grid { grid-template-columns: 1fr; gap: 20px; } }
     </style>
@@ -79,7 +40,7 @@
 <body>
     <header>
         <div class="wrap nav-container">
-            <a href="index.html" class="brand"><img src="assets/logo.png" alt="Logo"> RUCHITA GRAPHICS</a>
+            <a href="index.html" class="brand">RUCHITA GRAPHICS</a>
             <nav>
                 <a href="index.html">Home</a>
                 <a href="services.html">Services</a>
@@ -89,70 +50,20 @@
             </nav>
         </div>
     </header>
-     <div class="wrap">
+    <div class="wrap">
         <div class="section-title"><h1>Contact Us</h1><p>Click on any section below to instantly reveal our verified communication channels.</p></div>
         <div class="contact-map-grid">
             <div class="contact-info-card">
                 <h3>Contact Information</h3>
-                
-                <!-- PHONE BOX -->
-                <details class="click-box">
-                    <summary class="click-btn">📞 Phone Number Info</summary>
-                    <div class="click-content">
-                        <span class="metal-icon icon-phone">📞</span>
-                        <a href="tel:+919441536524" style="margin-left: 5px;">+91 94415 36524</a>
-                    </div>
-                </details>
-                
-                <!-- WHATSAPP BOX -->
-                <details class="click-box">
-                    <summary class="click-btn">💬 WhatsApp Connect</summary>
-                    <div class="click-content">
-                        <span class="metal-icon icon-wa">💬</span>
-                        <a href="https://wa.me" target="_blank" style="margin-left: 5px;">+91 77990 36524</a>
-                    </div>
-                </details>
-                
-                <!-- EMAIL BOX -->
-                <details class="click-box">
-                    <summary class="click-btn">✉️ Official Email ID</summary>
-                    <div class="click-content">
-                        <span class="metal-icon icon-email">✉️</span>
-                        <a href="mailto:ruchitagraphics@gmail.com" style="margin-left: 5px;">ruchitagraphics@gmail.com</a>
-                    </div>
-                </details>
-                
-                <!-- WEBSITE BOX -->
-                <details class="click-box">
-                    <summary class="click-btn">🌐 Official Website URL</summary>
-                    <div class="click-content">
-                        <span class="metal-icon icon-web">🌐</span>
-                        <a href="https://github.io" target="_blank" style="margin-left: 5px;">ruchitagraphics.github.io</a>
-                    </div>
-                </details>
-                
-                <div class="btns"><a href="https://wa.me" target="_blank" class="btn-wa">Chat on WhatsApp</a></div>
+                <details class="click-box"><summary class="click-btn">📞 Phone Number Info</summary><div class="click-content"><span class="metal-icon">📞</span><a href="tel:+919441536524">+91 94415 36524</a></div></details>
+                <details class="click-box"><summary class="click-btn">💬 WhatsApp Connect</summary><div class="click-content"><span class="metal-icon">💬</span><a href="https://wa.me" target="_blank">+91 77990 36524</a></div></details>
+                <details class="click-box"><summary class="click-btn">✉️ Official Email ID</summary><div class="click-content"><span class="metal-icon">✉️</span><a href="mailto:ruchitagraphics@gmail.com">ruchitagraphics@gmail.com</a></div></details>
+                <details class="click-box"><summary class="click-btn">🌐 Official Website URL</summary><div class="click-content"><span class="metal-icon">🌐</span><a href="https://github.io" target="_blank">ruchitagraphics.github.io</a></div></details>
             </div>
-            
             <div class="location-clean-card">
                 <h3>Our Location & Address</h3>
                 <div class="address-text"><span>Address:</span><br>H.No: 4-44/B2, Opp: Small Gate,<br>Beside Bus Station, Ghanpur Station,<br>Jangaon Dist., Telangana - 506144.</div>
-                
-                <!-- MAP BOX (100% FIXED GOOGLE EMBED) -->
-                <details class="click-box">
-                    <summary class="click-btn">📍 Google Map Site Window</summary>
-                    <div class="click-content" style="padding: 10px;">
-                        <div class="map-box">
-                            <iframe 
-                                src="https://google.com" 
-                                allowfullscreen="" 
-                                loading="lazy" 
-                                referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
-                        </div>
-                    </div>
-                </details>
-                
+                <details class="click-box"><summary class="click-btn">📍 Google Map Site Window</summary><div class="click-content" style="padding: 10px;"><div class="map-box"><iframe src="https://google.com" allowfullscreen="" loading="lazy"></iframe></div></div></details>
                 <div class="btns"><a href="https://google.com" target="_blank" class="btn-map-link">Open Google Maps App</a></div>
             </div>
         </div>
