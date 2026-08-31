@@ -1,4 +1,4 @@
-html<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -36,22 +36,37 @@ html<!DOCTYPE html>
         .hero h1 { font-size: 38px; font-weight: 900; margin-bottom: 8px; }
         .hero p { font-size: 18px; color: #64748b; font-weight: 600; letter-spacing: 0.5px; }
 
-        /* DETAILED SERVICES SECTION */
+        /* OLD STYLE CLEAN SERVICES SECTION */
         section { padding: 60px 0; }
         .title { text-align: center; margin-bottom: 40px; }
         .title h2 { font-size: 32px; font-weight: 800; margin-bottom: 10px; }
         .title p { color: #64748b; font-size: 16px; }
         
-        .services-detailed-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; margin-bottom: 40px; }
-        .service-detail-card { background: #fff; border-radius: 16px; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.02); border: 1px solid #e2e8f0; text-align: left; }
-        .service-detail-card .num-tag { font-size: 14px; color: var(--main); font-weight: 800; background: #f0fdf4; display: inline-block; padding: 2px 10px; border-radius: 20px; margin-bottom: 10px; }
-        .service-detail-card h3 { font-size: 19px; margin-bottom: 12px; color: var(--ink); font-weight: 800; border-bottom: 2px solid #f1f5f9; padding-bottom: 8px; }
-        .service-detail-card ul { list-style: none; }
-        .service-detail-card ul li { position: relative; padding-left: 20px; margin-bottom: 8px; color: #475569; font-size: 14px; font-weight: 500; }
-        .service-detail-card ul li::before { content: "•"; color: var(--main); font-weight: bold; font-size: 18px; position: absolute; left: 0; top: -2px; }
-        .service-detail-card .sub-list { padding-left: 15px; margin-top: 5px; margin-bottom: 5px; list-style: none; }
-        .service-detail-card .sub-list li { font-size: 13px; color: #64748b; padding-left: 15px; position: relative; }
-        .service-detail-card .sub-list li::before { content: "-"; color: var(--blue); font-weight: bold; position: absolute; left: 0; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .card { background: #fff; border-radius: 16px; padding: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.02); border: 1px solid #e2e8f0; text-align: center; transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .card .num { font-size: 14px; color: var(--main); font-weight: 800; margin-bottom: 8px; }
+        .card h3 { font-size: 22px; margin-bottom: 8px; font-weight: 800; }
+        .card p { color: #56266d; font-weight: 600; font-size: 15px; margin-bottom: 15px; }
+        
+        .btn-details { display: inline-block; padding: 6px 15px; font-size: 13px; font-weight: 700; color: var(--blue); background: #eff6ff; border: 1px dashed var(--blue); border-radius: 999px; text-decoration: none; cursor: pointer; }
+        .btn-details:hover { background: var(--blue); color: #fff; }
+
+        /* HIDDEN DETAILED SECTIONS (OPENS ON CLICK) */
+        .details-pane { display: none; background: #fff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 30px; margin-top: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: left; }
+        .details-pane:target { display: block; scroll-margin-top: 100px; }
+        
+        .pane-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #f1f5f9; padding-bottom: 10px; margin-bottom: 20px; }
+        .pane-header h4 { font-size: 22px; font-weight: 800; color: var(--ink); }
+        .btn-close { font-size: 14px; text-decoration: none; color: #64748b; font-weight: 700; background: #f1f5f9; padding: 4px 12px; border-radius: 999px; }
+        .btn-close:hover { background: #e2e8f0; color: var(--ink); }
+        
+        .sub-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .sub-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; }
+        .sub-card h5 { font-size: 16px; font-weight: 800; margin-bottom: 10px; color: var(--blue); }
+        .sub-card ul { list-style: none; }
+        .sub-card ul li { position: relative; padding-left: 15px; margin-bottom: 6px; font-size: 14px; font-weight: 500; color: #475569; }
+        .sub-card ul li::before { content: "•"; color: var(--main); position: absolute; left: 0; font-weight: bold; }
 
         /* PORTFOLIO SECTION */
         .portfolio-display { display: flex; justify-content: center; width: 100%; }
@@ -138,50 +153,40 @@ html<!DOCTYPE html>
         <p>SINGLE STEP - SIMPLE SOLUTIONS</p>
     </div>
 
-    <!-- MAIN SERVICES SECTION -->
+    <!-- CLEAN OLD LOOK MAIN SERVICES SECTION -->
     <section id="services">
         <div class="wrap">
             <div class="title">
-                <h2>Our Premium Services & Core Expertise</h2>
-                <p>Complete professional solutions from creative designing to high-end digital and bulk printing.</p>
+                <h2>Our Services</h2>
+                <p>Quality design and creative printing solutions.</p>
             </div>
             
-            <div class="services-detailed-grid">
-                <!-- 01) CREATIVITY CARD -->
-                <div class="service-detail-card">
-                    <span class="num-tag">01</span>
-                    <h3>Creativity & Multi-Language Design</h3>
-                    <ul>
-                        <li><strong>A) Multi-Language D.T.P:</strong> Telugu, English, Hindi & Urdu</li>
-                        <li><strong>B) Designing Works:</strong>
-                            <ul class="sub-list">
-                                <li>Creative Brand Logos</li>
-                                <li>Professional Business Cards</li>
-                                <li>Attractive Pamphlets & Posters</li>
-                                <li>Official Letter Heads</li>
-                                <li>Invitation Cards (Business Openings, Birthdays, Celebrations, Ceremonies, Events, Engagements & Weddings)</li>
-                            </ul>
-                        </li>
-                        <li><strong>C) Digital Banners:</strong> Social Media Posters & Advertisements</li>
-                        <li><strong>D) Multimedia Media:</strong> MP4 Video Creations & Professional Editing</li>
-                    </ul>
+            <div class="grid">
+                <!-- BOX 1: CREATIVITY & DESIGN -->
+                <div class="card">
+                    <div class="num">01</div>
+                    <h3>Creativity & Design</h3>
+                    <p>D.T.P, Custom Logos, Invitations & Social Ads</p>
+                    <a href="#creativity-details" class="btn-details">Read Details →</a>
                 </div>
 
-                <!-- 02) DIGITAL PRINTING CARD -->
-                <div class="service-detail-card">
-                    <span class="num-tag">02</span>
-                    <h3>Digital Printing & Selective Objects</h3>
+                <!-- BOX 2: DIGITAL & FLEX PRINT -->
+                <div class="card">
+                    <div class="num">02</div>
+                    <h3>Digital & Flex Printing</h3>
                     <ul>
-                        <li>High-Resolution Digital Color Calibration (RGB / CMYK)</li>
-                        <li>Premium Quality Photo Prints</li>
-                        <li>Custom Designed Posters & Banners</li>
-                        <li>Precision Die-Cut Stickers</li>
-                        <li>Official Certificates & Corporate Print Media</li>
-                        <li>Elegant Invitation Cards & Professional Letter Heads</li>
-                        <li>Express Commercial Printing Solutions</li>
+                        <p>RGB/CMYK Prints, Large Banners & Vinyl</p>
                     </ul>
+                    <a href="#printing-details" class="btn-details">Read Details →</a>
                 </div>
 
-                <!-- 03) FLEX & LARGE FORMAT CARD -->
-                <div class="service-detail-card">
-                    <span class="num-tag">03</span>
+                <!-- BOX 3: OFFSET & FINISHING -->
+                <div class="card">
+                    <div class="num">03</div>
+                    <h3>Offset & Finishing</h3>
+                    <p>Bulk Bill Books, Binding, Lamination & Safe Transport</p>
+                    <a href="#offset-details" class="btn-details">Read Details →</a>
+                </div>
+            </div>
+
+            <!-- DYNAMIC PANELS: OPENS ONLY WHEN CLICKED -->
