@@ -23,31 +23,26 @@
         .welcome-box h2 { font-size: 28px; font-weight: 800; margin-bottom: 15px; }
         .btn-explore { display: inline-block; padding: 12px 30px; background: var(--main); color: #fff; text-decoration: none; font-weight: 700; border-radius: 999px; margin-top: 15px; box-shadow: 0 4px 6px rgba(22,163,74,0.2); }
         footer { background: #0f172a; color: #cbd5e1; text-align: center; padding: 20px; margin-top: 60px; font-size: 14px; }
+        
         .whatsapp-sticky {
-  position: fixed;
-  bottom: 20px; /* స్క్రీన్ కింద నుండి దూరం */
-  right: 20px;  /* స్క్రీన్ కుడి వైపు నుండి దూరం */
-  z-index: 9999; /* ఐకాన్ అన్నిటికంటే పైన కనిపించడానికి */
-  width: 60px;
-  height: 60px;
-  transition: transform 0.3s ease;
-}
-
-.whatsapp-sticky img {
-  width: 100%;
-  height: 100%;
-  filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.2));
-}
-
-.whatsapp-sticky:hover {
-  transform: scale(1.1); /* మౌస్ పెట్టినప్పుడు కొద్దిగా పెద్దదవుతుంది */
-}
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            width: 60px;
+            height: 60px;
+            transition: transform 0.3s ease;
+        }
+        .whatsapp-sticky img {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.2));
+        }
+        .whatsapp-sticky:hover {
+            transform: scale(1.1);
+        }
     </style>
 </head>
-    <!-- WhatsApp ఫ్లోటింగ్ బటన్ -->
-<a href="https://wa.me." class="whatsapp-sticky" target="_blank" rel="noopener noreferrer">
-  <img src="https://wikimedia.org" alt="WhatsApp Chat" />
-</a>
 <body>
     <header>
         <div class="wrap nav-container">
@@ -61,7 +56,13 @@
             </nav>
         </div>
     </header>
-    <div class="hero wrap"><img src="assets/RUCHITA%20GRAPHICS%20WEB%2001.jpg" alt="Main Banner"><h1>RUCHITA GRAPHICS</h1><p>SINGLE STEP - SIMPLE SOLUTIONS</p></div>
+
+    <div class="hero wrap">
+        <img src="assets/RUCHITA%20GRAPHICS%20WEB%2001.jpg" alt="Main Banner">
+        <h1>RUCHITA GRAPHICS</h1>
+        <p>SINGLE STEP - SIMPLE SOLUTIONS</p>
+    </div>
+
     <div class="wrap">
         <div class="welcome-box">
             <h2>Welcome to Ruchita Graphics</h2>
@@ -69,6 +70,14 @@
             <a href="services.html" class="btn-explore">Explore Our Services →</a>
         </div>
     </div>
-    <footer><p>&copy; 2026 Ruchita Graphics. All Rights Reserved.</p></footer>
+
+    <footer>
+        <p>&copy; 2026 Ruchita Graphics. All Rights Reserved.</p>
+    </footer>
+
+    <!-- మీ మొబైల్ నంబర్ 7799036524 తో సరిచేసిన అధికారిక వాట్సాప్ ఫ్లోటింగ్ బటన్ -->
+    <a href="https://wa.me" class="whatsapp-sticky" target="_blank" rel="noopener noreferrer">
+        <img src="https://wikimedia.org" alt="WhatsApp Chat" />
+    </a>
 </body>
 </html>
