@@ -12,7 +12,11 @@
         .wrap { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         header { background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
         .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
+        
+        /* లోగో స్టైలింగ్ మళ్లీ యాడ్ చేసాను */
         .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 22px; text-decoration: none; color: var(--ink); }
+        .brand img { height: 45px; width: auto; object-fit: contain; }
+        
         nav a { text-decoration: none; color: #475569; font-weight: 600; margin-left: 24px; transition: 0.2s; }
         nav a:hover, nav a.active { color: var(--main); }
         .hero { padding: 40px 0; text-align: center; background: #fff; margin-bottom: 40px; }
@@ -42,11 +46,14 @@
             transform: scale(1.1);
         }
     </style>
-</head>
-<body>
+</head><body>
+    <!-- HEADER (ఇక్కడ లోగో ఇమేజ్ ట్యాగ్ వెనక్కి తెచ్చాను) -->
     <header>
         <div class="wrap nav-container">
-            <a href="index.html" class="brand">RUCHITA GRAPHICS</a>
+            <a href="index.html" class="brand">
+                <img src="assets/logo.png" alt="Ruchita Graphics Logo">
+                RUCHITA GRAPHICS
+            </a>
             <nav>
                 <a href="index.html" class="active">Home</a>
                 <a href="services.html">Services</a>
@@ -71,12 +78,10 @@
         </div>
     </div>
 
-    <footer>
-        <p>&copy; 2026 Ruchita Graphics. All Rights Reserved.</p>
-    </footer>
+    <footer><p>&copy; 2026 Ruchita Graphics. All Rights Reserved.</p></footer>
 
-    <!-- మీ మొబైల్ నంబర్ 7799036524 తో సరిచేసిన అధికారిక వాట్సాప్ ఫ్లోటింగ్ బటన్ -->
-    <a href="https://wa.me" class="whatsapp-sticky" target="_blank" rel="noopener noreferrer">
+    <!-- సరిచేసిన అధికారిక వాట్సాప్ ఫ్లోటింగ్ బటన్ (కొత్త నంబర్ 9441536524 తో) -->
+    <a href="https://whatsapp.com" class="whatsapp-sticky" target="_blank" rel="noopener noreferrer">
         <img src="https://wikimedia.org" alt="WhatsApp Chat" />
     </a>
 </body>
