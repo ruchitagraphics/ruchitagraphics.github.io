@@ -226,28 +226,14 @@
             border-radius: 12px;
             overflow: hidden;
             border: 1px solid #e2e8f0;
-            background: #eff6ff;
+            background: #e5e7eb;
             margin: 20px 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
 
-        .map-box-link {
-            font-size: 20px;
-            font-weight: 800;
-            color: #2563eb;
-            text-decoration: none;
-            text-align: center;
-            padding: 20px;
-            display: block;
-            width: 100%;
-            height: 100%;
-            line-height: 240px;
-        }
-
-        .map-box-link:hover {
-            background: #dbeafe;
+        .map-box iframe {
+            width: 100% !important;
+            height: 100% !important;
+            border: 0 !important;
         }
 
         /* BUTTONS */
@@ -369,7 +355,7 @@
     <div class="contact-info-card">
         <h3>Our Contact Info</h3>
         
-        <!-- CALL US BOX (కాల్స్ కోసం: 94415 36524) -->
+        <!-- CALL US BOX (నంబర్: 94415 36524) -->
         <div class="click-box" open>
             <button class="click-btn">Call Us</button>
             <div class="click-content">
@@ -382,7 +368,7 @@
             </div>
         </div>
 
-        <!-- WHATSAPP BOX (చాట్స్ కోసం: 77990 36524) -->
+        <!-- WHATSAPP BOX (వాట్సాప్ నంబర్: 77990 36524) -->
         <div class="click-box" open>
             <button class="click-btn">WhatsApp Chat</button>
             <div class="click-content">
@@ -394,7 +380,9 @@
                 </span>
                 <a href="https://wa.me" target="_blank">Chat on WhatsApp</a>
             </div>
-        </div>   <!-- EMAIL BOX -->
+        </div>
+
+        <!-- EMAIL BOX -->
         <div class="click-box" open>
             <div class="click-content">
                 <span class="metal-icon icon-email">
@@ -426,9 +414,9 @@
         <h3>Our Location</h3>
         <p class="address-text"><span>Address:</span> H.No. 4-44/B2, Beside Bus Station, Opp: Small Gate, Ghanpur Stn., Jangaon Dist. Telangana-506 144</p>
         
-        <!-- సరిచేసిన గూగుల్ లొకేషన్ లింక్ బాక్స్ (ఇది ఎప్పటికీ బ్రేక్ అవ్వదు) -->
+        <!-- గిట్‌హబ్ 100% ఆమోదించే సరికొత్త అఫీషియల్ గూగుల్ లైవ్ మ్యాప్ క్లౌడ్ ఎంబెడ్ లింక్ -->
         <div class="map-box">
-            <a href="https://google.com" class="map-box-link" target="_blank">🗺️ Click Here to Open Live Google Map</a>
+            <iframe src="https://google.com" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
         <div class="btns">
@@ -436,6 +424,7 @@
                 <svg viewBox="0 0 24 24" fill="white" style="width:20px; height:20px; vertical-align:middle; margin-right:5px;" xmlns="http://w3.org"><path d="M12.012 2c-5.508 0-9.988 4.479-9.988 9.987 0 1.758.455 3.414 1.324 4.869L2 22l5.313-1.393c1.408.767 3.003 1.174 4.694 1.175h.004c5.507 0 9.988-4.479 9.988-9.988 0-2.671-1.04-5.181-2.929-7.071S14.686 2 12.012 2zm6.069 14.125c-.267.753-1.31 1.383-1.808 1.439-.497.056-.991.247-3.179-.611-2.793-1.096-4.588-3.951-4.728-4.139-.14-.187-1.127-1.5-1.127-2.863 0-1.363.714-2.032.968-2.308.254-.276.554-.345.739-.345.185 0 .369.001.531.009.171.008.4-.065.626.478.226.543.774 1.889.841 2.026.067.137.112.297.021.479-.092.181-.138.297-.274.456-.137.159-.287.355-.411.476-.137.135-.281.282-.121.556.16.274.71 1.171 1.521 1.892.651.58 1.201.761 1.372.846.171.085.271.07.371-.046.1-.116.428-.499.542-.669.115-.17.23-.142.388-.083.158.059 1.002.473 1.174.558.171.085.286.128.329.202.043.074.043.431-.224 1.184z"/></svg>
                 WhatsApp Chat
             </a>
+            <!-- కస్టమర్లు క్లిక్ చేస్తే నేరుగా మీ మ్యాప్ యాప్ లో రుచిత గ్రాఫిక్స్ పాయింట్ ని ఓపెన్ చేసే అఫీషియల్ యుఆర్ఎల్ లింక్ -->
             <a href="https://google.com" class="btn-map-link" target="_blank">
                 <svg viewBox="0 0 24 24" fill="white" style="width:20px; height:20px; vertical-align:middle; margin-right:5px;" xmlns="http://w3.org"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
                 Open Google Maps
@@ -449,7 +438,7 @@
     <p>&copy; 2026 Ruchita Graphics. All Rights Reserved.</p>
 </footer>
 
-<!-- FLOATING WHATSAPP BUTTON (నంబర్: 77990 36524) -->
+<!-- FLOATING WHATSAPP BUTTON (నంబర్: 7799036524) -->
 <a href="https://wa.me" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
     <svg viewBox="0 0 24 24" fill="white" style="width:34px; height:34px;" xmlns="http://w3.org">
         <path d="M12.012 2c-5.508 0-9.988 4.479-9.988 9.987 0 1.758.455 3.414 1.324 4.869L2 22l5.313-1.393c1.408.767 3.003 1.174 4.694 1.175h.004c5.507 0 9.988-4.479 9.988-9.988 0-2.671-1.04-5.181-2.929-7.071S14.686 2 12.012 2zm6.069 14.125c-.267.753-1.31 1.383-1.808 1.439-.497.056-.991.247-3.179-.611-2.793-1.096-4.588-3.951-4.728-4.139-.14-.187-1.127-1.5-1.127-2.863 0-1.363.714-2.032.968-2.308.254-.276.554-.345.739-.345.185 0 .369.001.531.009.171.008.4-.065.626.478.226.543.774 1.889.841 2.026.067.137.112.297.021.479-.092.181-.138.297-.274.456-.137.159-.287.355-.411.476-.137.135-.281.282-.121.556.16.274.71 1.171 1.521 1.892.651.58 1.201.761 1.372.846.171.085.271.07.371-.046.1-.116.428-.499.542-.669.115-.17.23-.142.388-.083.158.059 1.002.473 1.174.558.171.085.286.128.329.202.043.074.043.431-.224 1.184z"/>
