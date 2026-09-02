@@ -11,7 +11,7 @@
             --ink: #0f172a;
             --bg: #f8fafc;
             --blue: #2563eb;
-            --blue-light: #eff6ff;
+            --blue-light: #eff6ff; /* ఫోన్ కోసం బ్లూ బ్యాక్‌గ్రౌండ్ */
             --green-light: #f0fdf4;
             --silver-light: #f1f5f9;
         }
@@ -417,7 +417,7 @@
     <div class="contact-info-card">
         <h3>Our Contact Info</h3>
         
-        <!-- CALL US BOX (సరిచేసిన బ్లూ ఐకాన్) -->
+        <!-- CALL US BOX -->
         <div class="click-box" open>
             <button class="click-btn">Call Us</button>
             <div class="click-content">
@@ -442,12 +442,56 @@
                 <a href="https://wa.me" target="_blank">Chat with Us</a>
             </div>
         </div>
+
+        <!-- EMAIL BOX -->
+        <div class="click-box" open>
+            <button class="click-btn">Email Us</button>
+            <div class="click-content">
+                <span class="metal-icon icon-email">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://w3.org">
+                        <path d="M22 4H2C0.9 4 0 4.9 0 6V18C0 19.1 0.9 20 2 20H22C23.1 20 24 19.1 24 18V6C24 4.9 23.1 4 22 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" fill="#ef4444"/>
+                    </svg>
+                </span>
+                <a href="mailto:ruchitagraphics01@gmail.com">ruchitagraphics01@gmail.com</a>
+            </div>
+        </div>
+
+        <!-- WEB BOX -->
+        <div class="click-box" open>
+            <button class="click-btn">Visit Website</button>
+            <div class="click-content">
+                <span class="metal-icon icon-web">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://w3.org">
+                        <circle cx="12" cy="12" r="10" stroke="#3b82f6" stroke-width="2"/>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="#3b82f6" stroke-width="2"/>
+                        <path d="M2 12h20" stroke="#3b82f6" stroke-width="2"/>
+                    </svg>
+                </span>
+                <a href="https://github.io" target="_blank">ruchitagraphics.github.io</a>
+            </div>
+        </div>
     </div>
 
-    <!-- Location Clean Card -->
+    <!-- Location Clean Card (Map మరియు Address) -->
     <div class="location-clean-card">
         <h3>Our Location</h3>
-        <p class="address-text"><span>Address:</span> Station Ghanpur, Jangaon, Telangana - 506144</p>
+        <p class="address-text"><span>Address:</span> Opp: Police Station, Station Ghanpur, Jangaon, Telangana - 506144</p>
+        
+        <!-- గూగుల్ మ్యాప్ బాక్స్ -->
+        <div class="map-box">
+            <iframe src="https://google.com" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <div class="btns">
+            <a href="https://wa.me" class="btn-wa" target="_blank">
+                <svg viewBox="0 0 24 24" fill="white" xmlns="http://w3.org"><path d="M12 2C6.48 2 2 6.48 2 12C2 13.92 2.54 15.71 3.48 17.24L2 22L6.92 20.64C8.39 21.51 10.14 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2Z"/></svg>
+                WhatsApp Chat
+            </a>
+            <a href="https://goo.gl" class="btn-map-link" target="_blank">
+                <svg viewBox="0 0 24 24" fill="white" xmlns="http://w3.org"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                Open Google Maps
+            </a>
+        </div>
     </div>
 </div>
 
