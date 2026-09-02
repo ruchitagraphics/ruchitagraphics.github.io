@@ -123,7 +123,7 @@
 
         .contact-info-card h3,
         .location-clean-card h3 {
-            font-size: 24px;
+            font-size: 26px;
             margin-bottom: 25px;
             font-weight: 800;
             color: var(--ink);
@@ -144,7 +144,7 @@
             display: block;
             width: 100%;
             padding: 15px;
-            font-size: 17px;
+            font-size: 18px;
             font-weight: 700;
             color: #334155;
             cursor: pointer;
@@ -160,14 +160,14 @@
             color: var(--ink);
         }
 
-        /* ICON CIRCLE */
+        /* ICON SYSTEM FIXES */
         .metal-icon {
             display: inline-flex !important;
             justify-content: center;
             align-items: center;
-            width: 46px;
-            height: 46px;
-            min-width: 46px;
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
             border-radius: 50%;
             box-shadow: 0 2px 4px rgba(0,0,0,0.08);
         }
@@ -178,12 +178,12 @@
             display: block !important;
         }
 
-        .icon-phone { background: var(--blue-light); border: 1px solid #bfdbfe; }
-        .icon-wa { background: #e8f5e9; border: 1px solid #c8e6c9; }
-        .icon-email { background: #ffebee; border: 1px solid #ffcdd2; }
-        .icon-web { background: #e3f2fd; border: 1px solid #bbdefb; }
+        .icon-phone { background: var(--blue-light) !important; border: 1px solid #bfdbfe !important; }
+        .icon-wa { background: #e8f5e9 !important; border: 1px solid #c8e6c9 !important; }
+        .icon-email { background: #ffebee !important; border: 1px solid #ffcdd2 !important; }
+        .icon-web { background: #e3f2fd !important; border: 1px solid #bbdefb !important; }
 
-        /* CONTENT (ఫాంట్ సైజ్ ఇక్కడ పెద్దది చేసాను) */
+        /* CONTENT */
         .click-content {
             padding: 18px;
             background: #fff;
@@ -196,7 +196,7 @@
             color: var(--ink);
             text-decoration: none;
             word-break: break-all;
-            font-size: 19px; /* టెక్స్ట్ ఫాంట్ సైజ్ పెంచబడింది */
+            font-size: 20px;
             font-weight: 700;
         }
 
@@ -204,11 +204,11 @@
             color: var(--main);
         }
 
-        /* ADDRESS (అడ్రస్ ఫాంట్ సైజ్ పెద్దది చేసాను) */
+        /* ADDRESS */
         .address-text {
             text-align: left;
-            font-size: 18px; /* అడ్రస్ ఫాంట్ సైజ్ పెంచబడింది */
-            color: #334155;
+            font-size: 19px;
+            color: #1e293b;
             padding: 15px 0;
             line-height: 1.8;
         }
@@ -218,7 +218,7 @@
             color: var(--ink);
         }
 
-        /* MAP BOX */
+        /* MAP BOX EMBED FIX */
         .map-box {
             width: 100%;
             height: 280px;
@@ -230,9 +230,9 @@
         }
 
         .map-box iframe {
-            width: 100%;
-            height: 100%;
-            border: 0;
+            width: 100% !important;
+            height: 100% !important;
+            border: 0 !important;
         }
 
         /* BUTTONS */
@@ -257,7 +257,7 @@
             box-shadow: 0 4px 6px rgba(22,163,74,0.15);
             text-align: center;
             width: 100%;
-            font-size: 17px;
+            font-size: 18px;
             transition: 0.2s;
         }
 
@@ -279,7 +279,7 @@
             text-align: center;
             width: 100%;
             transition: 0.2s;
-            font-size: 17px;
+            font-size: 18px;
         }
 
         .btn-map-link:hover { background: #1d4ed8; }
@@ -322,8 +322,8 @@
             .section-title h1 { font-size: 30px; }
             .contact-info-card, .location-clean-card { padding: 22px; }
             .whatsapp-float { width: 55px; height: 55px; right: 18px; bottom: 18px; }
-            .click-content a { font-size: 17px; }
-            .address-text { font-size: 16px; }
+            .click-content a { font-size: 18px; }
+            .address-text { font-size: 17px; }
         }
     </style>
 </head><body>
@@ -376,7 +376,8 @@
             <div class="click-content">
                 <span class="metal-icon icon-wa">
                     <svg viewBox="0 0 24 24" fill="none" xmlns="http://w3.org">
-                        <path d="M12 2C6.48 2 2 6.48 2 12C2 13.92 2.54 15.71 3.48 17.24L2 22L6.92 20.64C8.39 21.51 10.14 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2Z" stroke="#16a34a" stroke-width="2"/>
+                        <path d="M12 2C6.48 2 2 6.48 2 12C2 13.92 2.54 15.71 3.48 17.24L2 22L6.92 20.64C8.39 21.51 10.14 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2Z" fill="#16a34a"/>
+                        <path d="M12.012 5c-3.854 0-6.99 3.136-6.99 6.99 0 1.23.318 2.387.874 3.405L5 19l3.719-.974A6.953 6.953 0 0 0 12.012 19c3.854 0 6.99-3.136 6.99-6.99s-3.136-6.99-6.99-6.99zm4.248 9.887c-.187.527-.917.968-1.265 1.007-.348.039-.694.173-2.225-.428-1.955-.767-3.21-2.766-3.308-2.897-.098-.131-.789-1.05-.789-2.004 0-.954.5-1.422.678-1.615.178-.193.388-.241.517-.241.13 0 .258.001.372.006.12.006.28-.046.438.335.158.38.542 1.322.589 1.418.047.096.078.208.015.335-.064.127-.096.208-.192.319-.096.111-.201.248-.288.333-.096.094-.197.197-.085.389.112.192.497.82 1.065 1.324.456.406.84.533.96.592.12.06.19-.05.26-.13a2.95 2.95 0 0 0 .38-.519c.08-.119.16-.1.27-.058.11.041.701.331.821.39.12.06.2.09.23.14.03.053.03.302-.157.829z" fill="white"/>
                     </svg>
                 </span>
                 <a href="https://wa.me" target="_blank">Chat on WhatsApp</a>
@@ -392,7 +393,7 @@
                         <path d="M22 4H2C0.9 4 0 4.9 0 6V18C0 19.1 0.9 20 2 20H22C23.1 20 24 19.1 24 18V6C24 4.9 23.1 4 22 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" fill="#ef4444"/>
                     </svg>
                 </span>
-                <a href="mailto:ruchitagraphics01@gmail.com">ruchitagraphics01@gmail.com</a>
+                <a href="mailto:ruchitagraphics@gmail.com">ruchitagraphics@gmail.com</a>
             </div>
         </div>
 
@@ -417,9 +418,9 @@
         <h3>Our Location</h3>
         <p class="address-text"><span>Address:</span> H.No. 4-44/B2, Beside Bus Station, Opp: Small Gate, Ghanpur Stn., Jangaon Dist. Telangana-506 144</p>
         
-        <!-- పక్కాగా ఓపెన్ అయ్యే సరికొత్త గూగుల్ లైవ్ మ్యాప్ ఎంబెడ్ కోడ్ -->
+        <!-- గూగుల్ లైవ్ మ్యాప్ ఎంబెడ్ కోడ్ (సురక్షితమైన ఓపెన్ స్ట్రీట్ క్లౌడ్ లింక్) -->
         <div class="map-box">
-            <iframe src="https://google.com" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://google.com" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
 
         <div class="btns">
