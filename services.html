@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our graphic design, flex printing, banners, digital printing, and visiting card services at Ruchita Graphics in Ghanpur Station.">
     <title>Our Services | Ruchita Graphics</title>
     <style>
         :root { --main: #16a34a; --ink: #0f172a; --bg: #f8fafc; }
@@ -11,28 +12,54 @@
         .wrap { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         header { background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
         .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
+        
+        /* లోగో సైజ్ కంట్రోల్ స్టైల్స్ */
         .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 22px; text-decoration: none; color: var(--ink); }
+        .brand img { height: 45px !important; width: auto !important; object-fit: contain !important; }
+        
         nav a { text-decoration: none; color: #475569; font-weight: 600; margin-left: 24px; transition: 0.2s; }
         nav a:hover, nav a.active { color: var(--main); }
+        
         .section-title { text-align: center; margin: 40px 0; }
         .section-title h1 { font-size: 32px; font-weight: 800; margin-bottom: 10px; }
         .section-title p { color: #64748b; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; margin-bottom: 40px; }
-        .card { background: #fff; border-radius: 16px; padding: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.02); border: 1px solid #e2e8f0; text-align: left; }
-        .card .num { font-size: 14px; color: var(--main); font-weight: 800; background: #f0fdf4; display: inline-block; padding: 2px 10px; border-radius: 20px; margin-bottom: 10px; }
-        .card h3 { font-size: 20px; margin-bottom: 12px; font-weight: 800; color: var(--ink); border-bottom: 2px solid #f1f5f9; padding-bottom: 8px; }
-        .card p { color: #475569; font-size: 14px; line-height: 1.7; }
+        
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 60px; }
+        .service-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.02); transition: 0.3s; text-align: center; }
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .service-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 12px; color: var(--ink); }
+        .service-card p { color: #64748b; font-size: 15px; }
+        
         footer { background: #0f172a; color: #cbd5e1; text-align: center; padding: 20px; margin-top: 60px; font-size: 14px; }
+        
+        .whatsapp-sticky {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            width: 60px;
+            height: 60px;
+            transition: transform 0.3s ease;
+        }
+        .whatsapp-sticky img { width: 100%; height: 100%; filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.2)); }
+        .whatsapp-sticky:hover { transform: scale(1.1); }
+        
+        @media(max-width: 768px) {
+            .nav-container { flex-direction: column; gap: 10px; }
+            nav { text-align: center; }
+            nav a { margin-left: 8px; margin-right: 8px; }
+            .section-title h1 { font-size: 28px; }
+        }
     </style>
 </head>
-    
 <body>
+    <!-- HEADER -->
     <header>
         <div class="wrap nav-container">
             <a href="index.html" class="brand">
-    <img src="assets/logo.png" alt="Ruchita Graphics Logo">
-    RUCHITA GRAPHICS
-</a>
+                <img src="assets/logo.png" alt="Ruchita Graphics Logo">
+                RUCHITA GRAPHICS
+            </a>
             <nav>
                 <a href="index.html">Home</a>
                 <a href="services.html" class="active">Services</a>
@@ -42,17 +69,39 @@
             </nav>
         </div>
     </header>
+
+    <!-- CONTENT -->
     <div class="wrap">
-        <div class="section-title"><h1>Our Services & Expertise</h1><p>We provide professional printing and advanced designing services under one roof.</p></div>
-        <div class="grid">
-            <div class="card"><div class="num">01</div><h3>Creativity & Design</h3><p><strong>A) Multi-Language D.T.P:</strong> Telugu, English, Hindi & Urdu.<br><strong>B) Designing:</strong> Creative Brand Logos, Business Cards, Pamphlets, Posters, Letter Heads & Invitation Cards (Weddings, Birthdays, Ceremonies, Events).<br><strong>C) Social Media:</strong> Ad Posters & Advertisements.<br><strong>D) Video:</strong> MP4 Video Invitations & Editing.</p></div>
-            <div class="card"><div class="num">02</div><h3>Digital Printing</h3><p>High-End Color Calibration in RGB & CMYK formats. Premium quality Photo Printing, High-Res Custom Posters, Precision Die-Cut Stickers, Corporate Certificates, Official Letter Heads and elegant Invitation Prints. Fully optimized express commercial digital printing.</p></div>
-            <div class="card"><div class="num">03</div><h3>Flex Printing</h3><p>Heavy-Duty Large Format Outdoor Flex Prints and Display Banners. Specialized Star Flex Printing for Ultra-Sharp and HD Graphics. Back-Light Board Printing, Glossy & Matte Vinyl Branding Films and One Way Vision See-Through Glass Prints.</p></div>
-            <div class="card"><div class="num">04</div><h3>Offset Printing</h3><p>Mass Scale Offset and Baby Offset Multi-Color or Single-Color Prints. Customized Business Bill Books, Cash Vouchers, Receipt Books, mass Advertisement Pamphlets, Flyers, Office Registers, Educational Record Books, Book Publishing & Booklet Printing.</p></div>
-            <div class="card"><div class="num">05</div><h3>Post-Press Finishing</h3><p>Advanced Finishing including Glossy & Matte Lamination Protection, Precision Paper Creasing, Paper Reaming and Machine Punching. Accurate Paper Paper Cutting, Durable Book Binding (Spiral, Spico, Hard Binding) and Frame Making.</p></div>
-            <div class="card" style="background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%); border-color: #bbf7d0;"><div class="num" style="background: #16a34a; color: white;">06</div><h3 style="color: #14532d;">Packing & Transport</h3><p>Moisture-Proof and Damage-Resistant Secure Layered Packaging. Safe handling for bulk Offset and Large Flex Shipments. Fast, Express, and 100% Safe Logistics Connectivity ensuring On-Time Doorstep Delivery Guarantee.</p></div>
+        <div class="section-title">
+            <h1>Our Printing & Designing Services</h1>
+            <p>High-quality printing solutions for all your personal and business needs.</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Flex & Banner Printing</h3>
+                <p>High-quality vinyl flex printing for political, marriage, and business advertisement banners.</p>
+            </div>
+            <div class="service-card">
+                <h3>Graphic Designing</h3>
+                <p>Professional logo design, brochure layouts, social media posters, and branding creations.</p>
+            </div>
+            <div class="service-card">
+                <h3>Digital Printing</h3>
+                <p>Premium multi-color laser printing for visiting cards, wedding cards, and pamphlets.</p>
+            </div>
+            <div class="service-card">
+                <h3>Glow Sign Boards</h3>
+                <p>Custom LED and neon light glow sign boards designed to make your shop stand out.</p>
+            </div>
         </div>
     </div>
+
     <footer><p>&copy; 2026 Ruchita Graphics. All Rights Reserved.</p></footer>
+
+    <!-- సరిచేసిన అధికారిక వాట్సాప్ ఫ్లోటింగ్ బటన్ -->
+    <a href="https://whatsapp.com" class="whatsapp-sticky" target="_blank" rel="noopener noreferrer">
+        <img src="https://wikimedia.org" alt="WhatsApp Chat" />
+    </a>
 </body>
 </html>
