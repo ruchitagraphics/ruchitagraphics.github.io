@@ -13,7 +13,7 @@
         header { background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
         .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
         
-        /* లోగో సైజ్ కంట్రోల్ స్టైల్స్ */
+        /* లోగో సైజ్ లాక్ స్టైల్ */
         .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 22px; text-decoration: none; color: var(--ink); }
         .brand img { height: 45px !important; width: auto !important; object-fit: contain !important; }
         
@@ -24,6 +24,7 @@
         .section-title h1 { font-size: 32px; font-weight: 800; margin-bottom: 10px; }
         .section-title p { color: #64748b; }
         
+        /* 6 బాక్సుల గ్రిడ్ లేఅవుట్ */
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 60px; }
         .service-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.02); transition: 0.3s; text-align: center; }
         .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
@@ -51,9 +52,7 @@
             .section-title h1 { font-size: 28px; }
         }
     </style>
-</head>
-<body>
-    <!-- HEADER -->
+</head><body>
     <header>
         <div class="wrap nav-container">
             <a href="index.html" class="brand">
@@ -70,16 +69,16 @@
         </div>
     </header>
 
-    <!-- CONTENT -->
     <div class="wrap">
         <div class="section-title">
             <h1>Our Printing & Designing Services</h1>
             <p>High-quality printing solutions for all your personal and business needs.</p>
         </div>
 
+        <!-- మీ పాత ఒరిజినల్ 6 సర్వీసెస్ బాక్సులు ఇక్కడ ఉన్నాయి -->
         <div class="services-grid">
             <div class="service-card">
-                <h3>Flex & Banner Printing</h3>
+                <h3>Flex Printing</h3>
                 <p>High-quality vinyl flex printing for political, marriage, and business advertisement banners.</p>
             </div>
             <div class="service-card">
@@ -94,12 +93,20 @@
                 <h3>Glow Sign Boards</h3>
                 <p>Custom LED and neon light glow sign boards designed to make your shop stand out.</p>
             </div>
+            <div class="service-card">
+                <h3>Visiting Cards</h3>
+                <p>Premium quality visiting cards with matte, glossy, and textured finishes for your business.</p>
+            </div>
+            <div class="service-card">
+                <h3>Banners & Posters</h3>
+                <p>Eye-catching custom banners and multi-size posters printed with vibrant, long-lasting colors.</p>
+            </div>
         </div>
     </div>
 
     <footer><p>&copy; 2026 Ruchita Graphics. All Rights Reserved.</p></footer>
 
-    <!-- సరిచేసిన అధికారిక వాట్సాప్ ఫ్లోటింగ్ బటన్ -->
+    <!-- సరిచేసిన వాట్సాప్ డైరెక్ట్ లింక్ (నంబర్: 9441536524) -->
     <a href="https://whatsapp.com" class="whatsapp-sticky" target="_blank" rel="noopener noreferrer">
         <img src="https://wikimedia.org" alt="WhatsApp Chat" />
     </a>
