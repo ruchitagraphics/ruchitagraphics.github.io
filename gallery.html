@@ -8,9 +8,13 @@
     <link rel="stylesheet" href="https://cloudflare.com">
     <style>
         body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f6f9; color: #333; text-align: center; }
+        
+        /* హెడర్ లోగో మరియు ఐకాన్ స్టైల్ */
         .nav-bar { background-color: #002060; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; color: white; }
-        .logo { font-size: 22px; font-weight: bold; }
-        .nav-links a { color: white; text-decoration: none; margin-left: 20px; font-weight: 500; }
+        .logo { font-size: 22px; font-weight: bold; display: flex; align-items: center; gap: 10px; }
+        .logo i { color: #FFD700; font-size: 24px; } /* గోల్డెన్ కలర్ ప్రింటింగ్ ఐకాన్ */
+        .nav-links a { color: white; text-decoration: none; margin-left: 20px; font-weight: 500; transition: 0.3s; }
+        .nav-links a:hover { color: #FFD700; }
         
         /* లేటెస్ట్ అఫీషియల్ బ్యానర్ స్టైల్ */
         .banner-container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
@@ -37,8 +41,9 @@
 </head>
 <body>
 
+    <!-- హెడర్ లోపల లోగో ఐకాన్ `<i class="fa-solid fa-print"></i>` యాడ్ చేసాను -->
     <div class="nav-bar">
-        <div class="logo">RUCHITA GRAPHICS</div>
+        <div class="logo"><i class="fa-solid fa-print"></i> RUCHITA GRAPHICS</div>
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
@@ -48,7 +53,7 @@
         </div>
     </div>
 
-    <!-- మీరు మార్చిన కొత్త పేరు "ruchita_graphics_services.webp" ఇక్కడ అప్‌డేట్ చేశాను -->
+    <!-- మీ అఫీషియల్ బ్యానర్ చిత్రం -->
     <div class="banner-container">
         <img src="Assets/ruchita_graphics_services.webp" alt="Ruchita Graphics Official Services Banner" class="banner-img" onerror="this.src='assets/ruchita_graphics_services.webp'">
     </div>
@@ -110,7 +115,7 @@
         </div>
     </div>
 
-    <!-- బాటమ్ యాక్షన్ బటన్స్ - ఒరిజినల్ ఐకాన్స్ తో -->
+    <!-- బాటమ్ యాక్షన్ బటన్స్ -->
     <div class="div-btns">
         <a href="tel:7799036524" class="btn btn-blue">
             <i class="fa-solid fa-phone"></i> Call Now
@@ -120,7 +125,7 @@
         </a>
     </div>
 
-    <!-- ఫుటర్ సెక్షన్ -->
+    <!-- ფుటర్ సెక్షన్ -->
     <footer>
         <p>&copy; 2026 Ruchita Graphics. All Rights Reserved.</p>
     </footer>
