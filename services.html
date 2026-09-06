@@ -3,167 +3,573 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore our premium graphic design, digital prints, flex banners, corporate stationary, and video editing services at Ruchita Graphics in Ghanpur Station.">
+
+    <meta name="description"
+        content="Explore premium graphic designing, digital printing, Xerox, flex banners, visiting cards, calendars, bill books, social media posters and video editing services at Ruchita Graphics, Ghanpur.">
+
     <title>Our Services | Ruchita Graphics</title>
+
     <style>
-        :root { --main: #16a34a; --ink: #0f172a; --bg: #f8fafc; }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, sans-serif; }
-        body { background: var(--bg); color: var(--ink); line-height: 1.6; }
-        .wrap { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        header { background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
-        
-        /* లోగో సైజ్ పక్కాగా లాక్ చేయబడింది */
-        .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 22px; text-decoration: none; color: var(--ink); }
-        .brand img { height: 45px !important; width: auto !important; object-fit: contain !important; }
-        
-        nav a { text-decoration: none; color: #475569; font-weight: 600; margin-left: 24px; transition: 0.2s; }
-        nav a:hover, nav a.active { color: var(--main); }
-        
-        .section-title { text-align: center; margin: 40px 0; }
-        .section-title h1 { font-size: 32px; font-weight: 800; margin-bottom: 10px; }
-        .section-title p { color: #64748b; }
-        
-        /* 6 బాక్సుల ప్రొఫెషనల్ గ్రిడ్ లేఅవుట్ */
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 60px; }
-        .service-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.02); transition: 0.3s; text-align: center; display: flex; flex-direction: column; justify-content: space-between; }
-        .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-        .service-card h3 { font-size: 21px; font-weight: 800; margin-bottom: 15px; color: var(--ink); line-height: 1.4; }
-        .service-card p { color: #475569; font-size: 15px; text-align: justify; text-justify: inter-word; }
-        
-        footer { background: #0f172a; color: #cbd5e1; text-align: center; padding: 20px; margin-top: 60px; font-size: 14px; }
-        
-        .whatsapp-sticky {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 9999;
-            width: 60px;
-            height: 60px;
-            transition: transform 0.3s ease;
+        :root {
+            --ink: #0f172a;
+            --muted: #64748b;
+            --main: #16a34a;
+            --bg: #f8fafc;
         }
-        .whatsapp-sticky img { width: 100%; height: 100%; filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.2)); }
-        .whatsapp-sticky:hover { transform: scale(1.1); }
-        
-        @media(max-width: 768px) {
-            .nav-container { flex-direction: column; gap: 10px; }
-            nav { text-align: center; }
-            nav a { margin-left: 8px; margin-right: 8px; }
-            .section-title h1 { font-size: 28px; }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", system-ui, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background:
+                radial-gradient(circle at top left, rgba(0, 123, 255, 0.05), transparent 30%),
+                radial-gradient(circle at bottom right, rgba(255, 0, 180, 0.05), transparent 30%),
+                var(--bg);
+            color: var(--ink);
+            line-height: 1.6;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            background: rgba(255, 255, 255, 0.96);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .wrap {
+            max-width: 1250px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 0;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 800;
+            font-size: 22px;
+            text-decoration: none;
+            color: var(--ink);
+            white-space: nowrap;
+        }
+
+        .brand img {
+            height: 45px !important;
+            width: auto !important;
+            object-fit: contain !important;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #475569;
+            font-weight: 650;
+            margin-left: 24px;
+            transition: 0.25s ease;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--main);
+        }
+
+        /* =========================
+           PAGE TITLE
+        ========================= */
+
+        .section-title {
+            text-align: center;
+            padding: 48px 15px 35px;
+        }
+
+        .section-title h1 {
+            font-size: clamp(28px, 4vw, 40px);
+            font-weight: 850;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .section-title p {
+            color: var(--muted);
+            font-size: 16px;
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .title-line {
+            width: 90px;
+            height: 4px;
+            margin: 18px auto 0;
+            border-radius: 10px;
+            background: linear-gradient(
+                90deg,
+                #ff0080,
+                #007bff,
+                #00d4ff,
+                #ff7a00
+            );
+        }
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto 70px;
+            padding: 0 20px;
+        }
+
+        .service-box {
+            position: relative;
+            margin-bottom: 42px;
+            background: #ffffff;
+            padding: 12px;
+            border-radius: 24px;
+
+            box-shadow:
+                0 12px 35px rgba(15, 23, 42, 0.10),
+                0 2px 8px rgba(15, 23, 42, 0.05);
+
+            transition:
+                transform 0.35s ease,
+                box-shadow 0.35s ease;
+        }
+
+        .service-box:hover {
+            transform: translateY(-6px);
+
+            box-shadow:
+                0 20px 50px rgba(15, 23, 42, 0.16),
+                0 4px 12px rgba(15, 23, 42, 0.07);
+        }
+
+        .service-box img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 18px;
+            object-fit: contain;
+        }
+
+        /* Subtle coloured glow around each box */
+
+        .service-box:nth-child(1) {
+            box-shadow:
+                0 12px 35px rgba(255, 122, 0, 0.14),
+                0 2px 8px rgba(15, 23, 42, 0.05);
+        }
+
+        .service-box:nth-child(2) {
+            box-shadow:
+                0 12px 35px rgba(0, 123, 255, 0.14),
+                0 2px 8px rgba(15, 23, 42, 0.05);
+        }
+
+        .service-box:nth-child(3) {
+            box-shadow:
+                0 12px 35px rgba(0, 180, 255, 0.14),
+                0 2px 8px rgba(15, 23, 42, 0.05);
+        }
+
+        .service-box:nth-child(4) {
+            box-shadow:
+                0 12px 35px rgba(114, 9, 183, 0.14),
+                0 2px 8px rgba(15, 23, 42, 0.05);
+        }
+
+        .service-box:nth-child(5) {
+            box-shadow:
+                0 12px 35px rgba(108, 117, 125, 0.16),
+                0 2px 8px rgba(15, 23, 42, 0.05);
+        }
+
+        .service-box:nth-child(6) {
+            box-shadow:
+                0 12px 35px rgba(247, 37, 133, 0.14),
+                0 2px 8px rgba(15, 23, 42, 0.05);
+        }
+
+        /* =========================
+           BOX NUMBER BADGE
+        ========================= */
+
+        .service-number {
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            z-index: 5;
+
+            width: 45px;
+            height: 45px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: rgba(15, 23, 42, 0.85);
+            color: white;
+
+            font-size: 20px;
+            font-weight: 900;
+
+            border: 2px solid rgba(255, 255, 255, 0.9);
+
+            box-shadow:
+                0 5px 15px rgba(0, 0, 0, 0.25);
+
+            opacity: 0;
+            transition: 0.3s ease;
+        }
+
+        .service-box:hover .service-number {
+            opacity: 1;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 22px 15px;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        /* =========================
+           WHATSAPP BUTTON
+        ========================= */
+
+        .whatsapp-button {
+            position: fixed;
+            bottom: 22px;
+            right: 22px;
+
+            width: 62px;
+            height: 62px;
+
+            z-index: 9999;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: #25d366;
+            border-radius: 50%;
+
+            box-shadow:
+                0 5px 18px rgba(0, 0, 0, 0.28);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+
+            text-decoration: none;
+        }
+
+        .whatsapp-button:hover {
+            transform: scale(1.12);
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.35);
+        }
+
+        .whatsapp-button svg {
+            width: 35px;
+            height: 35px;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 768px) {
+
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .brand {
+                font-size: 19px;
+            }
+
+            .brand img {
+                height: 40px !important;
+            }
+
+            nav {
+                text-align: center;
+                line-height: 2;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 14px;
+            }
+
+            .section-title {
+                padding: 35px 15px 25px;
+            }
+
+            .section-title h1 {
+                font-size: 28px;
+            }
+
+            .services-container {
+                padding: 0 10px;
+            }
+
+            .service-box {
+                padding: 6px;
+                border-radius: 17px;
+                margin-bottom: 25px;
+            }
+
+            .service-box img {
+                border-radius: 13px;
+            }
+
+            .service-number {
+                width: 38px;
+                height: 38px;
+                top: 15px;
+                left: 15px;
+                font-size: 17px;
+            }
+
+            .whatsapp-button {
+                width: 56px;
+                height: 56px;
+                right: 16px;
+                bottom: 16px;
+            }
+
+            .whatsapp-button svg {
+                width: 31px;
+                height: 31px;
+            }
         }
     </style>
-</head><body>
-    <!-- HEADER -->
-<header>
-    <div class="wrap nav-container">
-        <a href="index.html" class="brand">
-            <img src="assets/logo.png" alt="Ruchita Graphics Logo">
-            RUCHITA GRAPHICS
-        </a>
+</head>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="gallery.html" class="active">Gallery</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </div>
-</header>
+<body>
 
-    <!-- CONTENT -->
-    <div class="wrap">
-        <div class="section-title">
-            <h1>Our Printing & Designing Services</h1>
-            <p>Single Step - Simple Solutions for all your personal and corporate branding needs.</p>
-        </div>
+    <!-- =========================
+         HEADER
+    ========================= -->
 
-        <!-- మీరు అడిగిన ఖచ్చితమైన ఆర్డర్ లో 6 ప్రొఫెషనల్ బాక్సులు -->
-        <div class="services-grid">
-            
-            <!-- Box 1 -->
-            <div class="service-card">
-                <h3>1. Creative Graphics Designing</h3>
-                <p>We craft unique identity and professional visual aesthetics for your business. Our creative designing services include premium logo creation, corporate brochure layouts, identity branding, multi-color digital posters, and tailored graphic layouts made to elevate your brand presence.</p>
-            </div>
+    <header>
+        <div class="wrap nav-container">
 
-            <!-- Box 2 -->
-            <div class="service-card">
-                <h3>2. Digital, Laser, Prints & Xerox</h3>
-                <p>Get high-definition document processing with our advanced high-speed production systems. We provide high-quality multi-color laser prints, high-volume digital Xerox, precise document scanning, laminated prints, and premium paper multi-size copy services with crisp details.</p>
-            </div>
+            <a href="index.html" class="brand">
+                <img src="assets/logo.png" alt="Ruchita Graphics Logo">
+                RUCHITA GRAPHICS
+            </a>
 
-            <!-- Box 3 -->
-            <div class="service-card">
-                <h3>3. Flex, Banner, Vinyl & Lighting Boards</h3>
-                <p>Make your business stand out with our premium outdoor marketing solutions. We manufacture weather-resistant vinyl flex banners, political hoardings, event backgrounds, customized indoor vinyl prints, commercial glow sign boards, and energy-efficient LED lighting boards.</p>
-            </div>
+            <nav>
+                <a href="index.html">Home</a>
 
-            <!-- Box 4 -->
-            <div class="service-card">
-                <h3>4. Calendars, Visiting Cards & Advertising Materials</h3>
-                <p>Complete marketing materials designed to network effectively. We print high-quality business visiting cards (matte, glossy, textured finishes), corporate customized calendars, multi-size advertising posters, high-volume promotional pamphlets, and premium stickers.</p>
-            </div>
+                <!-- SERVICES ACTIVE -->
+                <a href="services.html" class="active">Services</a>
 
-            <!-- Box 5 -->
-            <div class="service-card">
-                <h3>5. Bill Books, Letter Heads & Corporate Registers</h3>
-                <p>Professional stationery tailored to maintain your internal business operations seamlessly. Our custom printing includes carbonless duplicate bill books, official corporate letterheads, receipt books, company vouchers, and customized accounting registers.</p>
-            </div>
-
-            <!-- Box 6 -->
-            <div class="service-card">
-                <h3>6. Social Media Posters & MP4 Video Editing</h3>
-                <p>Step up your online internet marketing and social media presence. We design high-engagement digital posters for Instagram, Facebook, and WhatsApp Business. We also provide professional MP4 video creation, advertisement animation editing, and cinematic promo video cut services.</p>
-            </div>
+                <a href="gallery.html">Gallery</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="contact.html">Contact</a>
+            </nav>
 
         </div>
-    </div>
+    </header>
 
-    <footer><p>&copy; 2026 Ruchita Graphics. All Rights Reserved.</p></footer>
 
-    <!-- వందశాతం వర్కింగ్ డైరెక్ట్ వాట్సాప్ లింక్ (నంబర్: 7799036524) -->
-  <a href="https://wa.me" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; width: 60px; height: 60px; transition: transform 0.3s ease; display: flex; justify-content: center; align-items: center; background-color: #25d366; border-radius: 50%; box-shadow: 2px 4px 12px rgba(0,0,0,0.3);" target="_blank" rel="noopener noreferrer">
-    <svg viewBox="0 0 24 24" fill="white" style="width: 34px; height: 34px;" xmlns="http://w3.org">
-        <path d="M12.012 2c-5.508 0-9.988 4.479-9.988 9.987 0 1.758.455 3.414 1.324 4.869L2 22l5.313-1.393c1.408.767 3.003 1.174 4.694 1.175h.004c5.507 0 9.988-4.479 9.988-9.988 0-2.671-1.04-5.181-2.929-7.071S14.686 2 12.012 2zm6.069 14.125c-.267.753-1.31 1.383-1.808 1.439-.497.056-.991.247-3.179-.611-2.793-1.096-4.588-3.951-4.728-4.139-.14-.187-1.127-1.5-1.127-2.863 0-1.363.714-2.032.968-2.308.254-.276.554-.345.739-.345.185 0 .369.001.531.009.171.008.4-.065.626.478.226.543.774 1.889.841 2.026.067.137.112.297.021.479-.092.181-.138.297-.274.456-.137.159-.287.355-.411.476-.137.135-.281.282-.121.556.16.274.71 1.171 1.521 1.892.651.58 1.201.761 1.372.846.171.085.271.07.371-.046.1-.116.428-.499.542-.669.115-.17.23-.142.388-.083.158.059 1.002.473 1.174.558.171.085.286.128.329.202.043.074.043.431-.224 1.184z"/>
-    </svg>
-</a>
+    <!-- =========================
+         PAGE TITLE
+    ========================= -->
+
+    <section class="section-title">
+
+        <h1>Our Printing & Designing Services</h1>
+
+        <p>
+            Single Step - Simple Solutions for all your personal,
+            business and corporate branding needs.
+        </p>
+
+        <div class="title-line"></div>
+
+    </section>
+
+
+    <!-- =========================
+         SIX PREMIUM SERVICE BOXES
+    ========================= -->
+
+    <main class="services-container">
+
+        <!-- BOX 1 -->
+        <div class="service-box">
+            <div class="service-number">1</div>
+
+            <img
+                src="assets/box-1.webp"
+                alt="Creative Graphics Designing - Ruchita Graphics"
+                loading="eager"
+            >
+        </div>
+
+
+        <!-- BOX 2 -->
+        <div class="service-box">
+            <div class="service-number">2</div>
+
+            <img
+                src="assets/box-2.webp"
+                alt="Digital Laser Prints and Xerox - Ruchita Graphics"
+                loading="lazy"
+            >
+        </div>
+
+
+        <!-- BOX 3 -->
+        <div class="service-box">
+            <div class="service-number">3</div>
+
+            <img
+                src="assets/box-3.webp"
+                alt="Flex Banner Vinyl and Lighting Boards - Ruchita Graphics"
+                loading="lazy"
+            >
+        </div>
+
+
+        <!-- BOX 4 -->
+        <div class="service-box">
+            <div class="service-number">4</div>
+
+            <img
+                src="assets/box-4.webp"
+                alt="Calendars Visiting Cards and Advertising Materials - Ruchita Graphics"
+                loading="lazy"
+            >
+        </div>
+
+
+        <!-- BOX 5 -->
+        <div class="service-box">
+            <div class="service-number">5</div>
+
+            <img
+                src="assets/box-5.webp"
+                alt="Bill Books Letter Heads and Corporate Registers - Ruchita Graphics"
+                loading="lazy"
+            >
+        </div>
+
+
+        <!-- BOX 6 -->
+        <div class="service-box">
+            <div class="service-number">6</div>
+
+            <!--
+                BOX 6 IMAGE
+                Same premium visual style as Boxes 1-5.
+            -->
+
+            <img
+                src="assets/box-6.webp"
+                alt="Social Media Posters and MP4 Video Editing - Ruchita Graphics"
+                loading="lazy"
+            >
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+        <p>
+            &copy; 2026 Ruchita Graphics. All Rights Reserved.
+        </p>
+    </footer>
+
+
+    <!-- =========================
+         WHATSAPP
+    ========================= -->
+
+    <a
+        href="https://wa.me/917799036524"
+        class="whatsapp-button"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat with Ruchita Graphics on WhatsApp"
+    >
+
+        <svg
+            viewBox="0 0 24 24"
+            fill="white"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+
+            <path d="M12.012 2c-5.508 0-9.988 4.479-9.988 9.987
+            0 1.758.455 3.414 1.324 4.869L2 22l5.313-1.393
+            c1.408.767 3.003 1.174 4.694 1.175h.004
+            c5.507 0 9.988-4.479 9.988-9.988
+            0-2.671-1.04-5.181-2.929-7.071
+            S14.686 2 12.012 2zm6.069 14.125
+            c-.267.753-1.31 1.383-1.808 1.439
+            -.497.056-.991.247-3.179-.611
+            -2.793-1.096-4.588-3.951-4.728-4.139
+            -.14-.187-1.127-1.5-1.127-2.863
+            0-1.363.714-2.032.968-2.308
+            .254-.276.554-.345.739-.345
+            .185 0 .369.001.531.009
+            .171.008.4-.065.626.478
+            .226.543.774 1.889.841 2.026
+            .067.137.112.297.021.479
+            -.092.181-.138.297-.274.456
+            -.137.159-.287.355-.411.476
+            -.137.135-.281.282-.121.556
+            .16.274.71 1.171 1.521 1.892
+            .651.58 1.201.761 1.372.846
+            .171.085.271.07.371-.046
+            .1-.116.428-.499.542-.669
+            .115-.17.23-.142.388-.083
+            .158.059 1.002.473 1.174.558
+            .171.085.286.128.329.202
+            .043.074.043.431-.224 1.184z"/>
+
+        </svg>
+
+    </a>
+
 </body>
-<style>
-.service-card {
-    border-radius: 15px !important;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important;
-    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
-}
-.service-card:hover {
-    transform: translateY(-5px) !important; /* మౌస్ పెడితే కార్డ్ పైకి లేస్తుంది */
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1) !important;
-}
-
-/* ప్రతి బాక్స్‌కు విడివిడిగా రంగులు మరియు ఎడమవైపు థిక్ బోర్డర్ లైన్ */
-div.service-card:nth-of-type(1) {
-    background-color: #fff4ec !important; /* లైట్ ఆరెంజ్ (షాప్ బోర్డు మ్యాచింగ్) */
-    border-left: 6px solid #ff7a00 !important;
-}
-div.service-card:nth-of-type(2) {
-    background-color: #eef7ff !important; /* లైట్ బ్లూ (కార్పొరేట్ జిరాక్స్ లుక్) */
-    border-left: 6px solid #007bff !important;
-}
-div.service-card:nth-of-type(3) {
-    background-color: #e8f9f5 !important; /* లైట్ గ్రీన్/టియల్ (ఫ్లెక్స్ వైబ్రంట్ లుక్) */
-    border-left: 6px solid #00b0ff !important;
-}
-div.service-card:nth-of-type(4) {
-    background-color: #f5f0ff !important; /* లైట్ పర్పుల్ (విజిటింగ్ కార్డ్స్ లుక్) */
-    border-left: 6px solid #7209b7 !important;
-}
-div.service-card:nth-of-type(5) {
-    background-color: #f8f9fa !important; /* లైట్ సిల్వర్ గ్రే (బిల్ బుక్స్ లుక్) */
-    border-left: 6px solid #6c757d !important;
-}
-div.service-card:nth-of-type(6) {
-    background-color: #fff0f5 !important; /* లైట్ రోజ్ పింక్ (సోషల్ మీడియా ట్రెండీ లుక్) */
-    border-left: 6px solid #f72585 !important;
-}
-</style>
 </html>
