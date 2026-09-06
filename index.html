@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ruchita Graphics provides graphic design, digital printing, flex printing, banners and printing services in Ghanpur Station, Telangana.">
+
+    <meta name="description"
+          content="Ruchita Graphics provides graphic design, digital printing, flex printing, banners and printing services in Ghanpur Station, Telangana.">
+
     <title>Ruchita Graphics | Home</title>
 
     <style>
@@ -34,7 +37,7 @@
         }
 
         .nav-container {
-            min-height: 80px;
+            min-height: 90px;
             padding: 10px 30px;
             display: flex;
             justify-content: space-between;
@@ -44,7 +47,7 @@
         .brand {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             color: white;
             text-decoration: none;
             font-size: 22px;
@@ -53,8 +56,8 @@
         }
 
         .brand img {
-            height: 55px;
-            width: auto;
+            height: 65px;
+            width: 65px;
             display: block;
             object-fit: contain;
         }
@@ -78,29 +81,28 @@
             border-bottom: 2px solid white;
         }
 
-        /* ================= HERO ================= */
+        /* ================= NEW OFFICIAL BANNER ================= */
 
         .hero {
-            padding: 30px 20px 40px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 30px auto 40px;
+            padding: 0 20px;
             text-align: center;
-            background: #fff;
-            margin-bottom: 40px;
         }
 
         .hero img {
             width: 100%;
             height: auto;
-            max-height: 440px;
-            object-fit: contain;
+            display: block;
             border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-            margin-bottom: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.14);
         }
 
         .hero h1 {
             font-size: 38px;
             font-weight: 900;
-            margin: 0 0 8px;
+            margin: 25px 0 8px;
             color: #002060;
         }
 
@@ -116,7 +118,7 @@
 
         .welcome-box {
             text-align: center;
-            padding: 40px 20px;
+            padding: 40px 25px;
             max-width: 800px;
             margin: 0 auto;
             background: #fff;
@@ -134,24 +136,25 @@
 
         .welcome-box p {
             color: #475569;
+            margin: 0;
         }
 
         .btn-explore {
             display: inline-block;
             padding: 12px 30px;
             background: #1a73e8;
-            color: #fff;
+            color: white;
             text-decoration: none;
             font-weight: 700;
             border-radius: 999px;
-            margin-top: 15px;
+            margin-top: 20px;
             box-shadow: 0 4px 8px rgba(26,115,232,0.25);
             transition: 0.3s;
         }
 
         .btn-explore:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(26,115,232,0.3);
+            box-shadow: 0 6px 12px rgba(26,115,232,0.30);
         }
 
         /* ================= FOOTER ================= */
@@ -178,13 +181,13 @@
             z-index: 9999;
             width: 60px;
             height: 60px;
-            transition: transform 0.3s ease;
             display: flex;
             justify-content: center;
             align-items: center;
             background-color: #25d366;
             border-radius: 50%;
-            box-shadow: 2px 4px 12px rgba(0,0,0,0.3);
+            box-shadow: 2px 4px 12px rgba(0,0,0,0.30);
+            transition: transform 0.3s ease;
         }
 
         .whatsapp-sticky:hover {
@@ -211,7 +214,8 @@
             }
 
             .brand img {
-                height: 50px;
+                width: 58px;
+                height: 58px;
             }
 
             nav {
@@ -220,12 +224,22 @@
                 gap: 15px;
             }
 
+            .hero {
+                margin-top: 20px;
+                padding: 0 12px;
+            }
+
             .hero h1 {
                 font-size: 30px;
             }
 
             .hero p {
                 font-size: 16px;
+            }
+
+            .welcome-box {
+                margin: 0 15px;
+                padding: 30px 20px;
             }
         }
     </style>
@@ -239,8 +253,11 @@
         <div class="wrap nav-container">
 
             <a href="index.html" class="brand">
-                <img src="assets/logo.png" alt="Ruchita Graphics Logo">
-                RUCHITA GRAPHICS
+                <img
+                    src="assets/RUCHITA_NEW_LOGO.webp"
+                    alt="Ruchita Graphics Logo">
+
+                <span>RUCHITA GRAPHICS</span>
             </a>
 
             <nav>
@@ -254,19 +271,21 @@
         </div>
     </header>
 
-    <!-- ================= HERO ================= -->
 
-    <div class="hero wrap">
+    <!-- ================= NEW OFFICIAL BANNER ================= -->
+
+    <div class="hero">
 
         <img
-            src="assets/RUCHITA%20GRAPHICS%20WEB%2001.jpg"
-            alt="Main Banner">
+            src="assets/RUCHITA_GRAPHICS_WEB_02.webp"
+            alt="Ruchita Graphics Official Banner">
 
         <h1>RUCHITA GRAPHICS</h1>
 
         <p>SINGLE STEP - SIMPLE SOLUTIONS</p>
 
     </div>
+
 
     <!-- ================= WELCOME ================= -->
 
@@ -290,16 +309,18 @@
 
     </div>
 
+
     <!-- ================= FOOTER ================= -->
 
     <footer>
         <p>&copy; 2026 Ruchita Graphics. All Rights Reserved.</p>
     </footer>
 
+
     <!-- ================= WHATSAPP ================= -->
 
     <a
-        href="https://wa.me"
+        href="https://wa.me/919441536524"
         class="whatsapp-sticky"
         target="_blank"
         rel="noopener noreferrer">
