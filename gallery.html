@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery | Ruchita Graphics</title>
+    <!-- ఒరిజినల్ ఐకాన్స్ కోసం FontAwesome లింక్ -->
+    <link rel="stylesheet" href="https://cloudflare.com">
     <style>
         body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f6f9; color: #333; text-align: center; }
-        
-        /* క్లీన్ బ్రాండ్ హెడర్ - ఎక్స్‌ట్రా చిహ్నాలు లేవు */
         .nav-bar { background-color: #002060; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; color: white; }
-        .logo { font-size: 22px; font-weight: bold; color: white; letter-spacing: 1px; }
-        .nav-links a { color: white; text-decoration: none; margin-left: 20px; font-weight: 500; transition: 0.3s; }
-        .nav-links a:hover { color: #FFD700; }
+        .logo { font-size: 22px; font-weight: bold; }
+        .nav-links a { color: white; text-decoration: none; margin-left: 20px; font-weight: 500; }
         
         /* లేటెస్ట్ అఫీషియల్ బ్యానర్ స్టైల్ */
         .banner-container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
@@ -28,7 +27,7 @@
         
         /* బాటమ్ యాక్షన్ బటన్స్ */
         .div-btns { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin: 40px 0; }
-        .btn { display: inline-flex; align-items: center; justify-content: center; width: 220px; height: 50px; color: white; font-weight: bold; text-decoration: none; border-radius: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: 0.3s; font-size: 16px; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; width: 220px; height: 50px; color: white; font-weight: bold; text-decoration: none; border-radius: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: 0.3s; font-size: 16px; }
         .btn-blue { background-color: #1a73e8; }
         .btn-green { background-color: #28a745; }
         .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 12px rgba(0,0,0,0.15); }
@@ -39,7 +38,6 @@
 <body>
 
     <div class="nav-bar">
-        <!-- కేవలం మన అఫీషియల్ బ్రాండ్ నేమ్ మాత్రమే ఇక్కడ ఉంచాను -->
         <div class="logo">RUCHITA GRAPHICS</div>
         <div class="nav-links">
             <a href="index.html">Home</a>
@@ -50,7 +48,7 @@
         </div>
     </div>
 
-    <!-- మీ అఫీషియల్ బ్యానర్ చిత్రం -->
+    <!-- మీరు మార్చిన కొత్త పేరు "ruchita_graphics_services.webp" ఇక్కడ అప్‌డేట్ చేశాను -->
     <div class="banner-container">
         <img src="Assets/ruchita_graphics_services.webp" alt="Ruchita Graphics Official Services Banner" class="banner-img" onerror="this.src='assets/ruchita_graphics_services.webp'">
     </div>
@@ -70,7 +68,7 @@
         <div class="gallery-card">
             <img src="Assets/conika_minolts_buzhub_c226.webp" alt="Konica Minolta bizhub C226" onerror="this.src='assets/conika_minolts_buzhub_c226.webp'">
             <div class="caption-box">
-                <h4>ప్రీమియం మльటీకలర్ డిజిటల్ ప్రెస్</h4>
+                <h4>ప్రీమియం మల్టీకలర్ డిజిటల్ ప్రెస్</h4>
                 <p>Premium Multicolor Digital Press (Model C226)</p>
             </div>
         </div>
@@ -112,10 +110,14 @@
         </div>
     </div>
 
-    <!-- బాటమ్ యాక్షన్ బటన్స్ - క్లీన్ & సాలిడ్ స్టైల్ -->
+    <!-- బాటమ్ యాక్షన్ బటన్స్ - ఒరిజినల్ ఐకాన్స్ తో -->
     <div class="div-btns">
-        <a href="tel:7799036524" class="btn btn-blue">Call Now</a>
-        <a href="https://wa.me" class="btn btn-green" target="_blank">WhatsApp Chat</a>
+        <a href="tel:7799036524" class="btn btn-blue">
+            <i class="fa-solid fa-phone"></i> Call Now
+        </a>
+        <a href="https://wa.me" class="btn btn-green" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp Chat
+        </a>
     </div>
 
     <!-- ఫుటర్ సెక్షన్ -->
