@@ -4,301 +4,392 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery | Ruchita Graphics</title>
-    <!-- ఒరిజినల్ ఐకాన్స్ కోసం FontAwesome లింక్ -->
-    <link rel="stylesheet" href="https://cloudflare.com">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <style>
-    body {
-        font-family: 'Segoe UI', Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f6f9;
-        color: #333;
-        text-align: center;
-    }
+        * {
+            box-sizing: border-box;
+        }
 
-    /* HEADER */
-    header {
-        background-color: #002060;
-        width: 100%;
-    }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f9;
+            color: #333;
+            text-align: center;
+        }
 
-    .wrap {
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
+        /* ================= HEADER ================= */
 
-    .nav-container {
-        min-height: 80px;
-        padding: 0 30px;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+        header {
+            width: 100%;
+            background-color: #002060;
+        }
 
-    .brand {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        color: white;
-        text-decoration: none;
-        font-size: 22px;
-        font-weight: bold;
-        white-space: nowrap;
-    }
+        .wrap {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-    .brand img {
-        height: 55px;
-        width: auto;
-        display: block;
-        object-fit: contain;
-    }
-
-    nav {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-    }
-
-    nav a {
-        color: white;
-        text-decoration: none;
-        font-weight: 500;
-        padding: 5px 0;
-    }
-
-    nav a:hover,
-    nav a.active {
-        border-bottom: 2px solid white;
-    }
-
-    /* BANNER */
-    .banner-container {
-        max-width: 1100px;
-        margin: 30px auto;
-        padding: 0 20px;
-    }
-
-    .banner-img {
-        width: 100%;
-        height: auto;
-        border-radius: 12px;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-    }
-
-    /* GALLERY */
-    .gallery-container {
-        max-width: 1200px;
-        margin: 40px auto;
-        padding: 0 20px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 30px;
-    }
-
-    .gallery-card {
-        background: white;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-        overflow: hidden;
-        width: 340px;
-        transition: 0.3s;
-        border: 1px solid #e1e8ed;
-    }
-
-    .gallery-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.12);
-    }
-
-    .gallery-card img {
-        width: 100%;
-        height: 230px;
-        object-fit: contain;
-        background: #fff;
-        padding: 10px;
-        box-sizing: border-box;
-    }
-
-    .gallery-card .caption-box {
-        padding: 15px;
-        background: #f8fafc;
-        border-top: 1px solid #edf2f7;
-    }
-
-    .gallery-card h4 {
-        margin: 0 0 5px 0;
-        color: #002060;
-        font-size: 18px;
-        font-weight: bold;
-    }
-
-    .gallery-card p {
-        margin: 0;
-        color: #64748b;
-        font-size: 14px;
-        font-weight: 500;
-    }
-
-    /* BUTTONS */
-    .div-btns {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        flex-wrap: wrap;
-        margin: 40px 0;
-    }
-
-    .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        width: 220px;
-        height: 50px;
-        color: white;
-        font-weight: bold;
-        text-decoration: none;
-        border-radius: 30px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        transition: 0.3s;
-        font-size: 16px;
-    }
-
-    .btn-blue {
-        background-color: #1a73e8;
-    }
-
-    .btn-green {
-        background-color: #28a745;
-    }
-
-    .btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-    }
-
-    /* FOOTER */
-    footer {
-        text-align: center;
-        padding: 20px;
-        background: #002060;
-        color: white;
-        margin-top: 60px;
-    }
-
-    /* MOBILE */
-    @media (max-width: 768px) {
         .nav-container {
-            flex-direction: column;
-            gap: 15px;
-            padding: 15px 20px;
+            min-height: 80px;
+            padding: 10px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .brand {
-            font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: bold;
+            white-space: nowrap;
         }
 
         .brand img {
-            height: 50px;
+            height: 55px;
+            width: auto;
+            display: block;
+            object-fit: contain;
         }
 
         nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 0;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav a:hover,
+        nav a.active {
+            border-bottom: 2px solid white;
+        }
+
+        /* ================= BANNER ================= */
+
+        .banner-container {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .banner-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+
+        /* ================= TITLE ================= */
+
+        .section-title {
+            margin-top: 25px;
+            margin-bottom: 8px;
+            color: #222;
+        }
+
+        .section-subtitle {
+            color: #64748b;
+            font-size: 16px;
+            margin-top: 0;
+        }
+
+        /* ================= GALLERY ================= */
+
+        .gallery-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
+            gap: 30px;
         }
-    }
-</style>
+
+        .gallery-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            overflow: hidden;
+            width: 340px;
+            transition: 0.3s;
+            border: 1px solid #e1e8ed;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 230px;
+            object-fit: contain;
+            background: #fff;
+            padding: 10px;
+            display: block;
+        }
+
+        .gallery-card .caption-box {
+            padding: 15px;
+            background: #f8fafc;
+            border-top: 1px solid #edf2f7;
+        }
+
+        .gallery-card h4 {
+            margin: 0 0 5px 0;
+            color: #002060;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .gallery-card p {
+            margin: 0;
+            color: #64748b;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* ================= BUTTONS ================= */
+
+        .div-btns {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 220px;
+            height: 50px;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: 0.3s;
+            font-size: 16px;
+        }
+
+        .btn-blue {
+            background-color: #1a73e8;
+        }
+
+        .btn-green {
+            background-color: #28a745;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #002060;
+            color: white;
+            margin-top: 60px;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 768px) {
+
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px 20px;
+            }
+
+            .brand {
+                font-size: 20px;
+            }
+
+            .brand img {
+                height: 50px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .gallery-card {
+                width: 100%;
+                max-width: 340px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-    <div class="nav-bar">
-        <div class="logo">RUCHITA GRAPHICS</div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="gallery.html" style="border-bottom: 2px solid white; padding-bottom: 5px;">Gallery</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="contact.html">Contact</a>
+    <!-- ================= HEADER ================= -->
+
+    <header>
+        <div class="wrap nav-container">
+
+            <a href="index.html" class="brand">
+                <img src="assets/logo.png" alt="Ruchita Graphics Logo">
+                RUCHITA GRAPHICS
+            </a>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="gallery.html" class="active">Gallery</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
         </div>
-    </div>
+    </header>
 
-    <!-- మీరు మార్చిన కొత్త పేరు "ruchita_graphics_services.webp" ఇక్కడ అప్‌డేట్ చేశాను -->
+    <!-- ================= BANNER ================= -->
+
     <div class="banner-container">
-        <img src="Assets/ruchita_graphics_services.webp" alt="Ruchita Graphics Official Services Banner" class="banner-img" onerror="this.src='assets/ruchita_graphics_services.webp'">
+        <img
+            src="Assets/ruchita_graphics_services.webp"
+            alt="Ruchita Graphics Official Services Banner"
+            class="banner-img"
+            onerror="this.src='assets/ruchita_graphics_services.webp'">
     </div>
 
-    <h2>Our Technical Setup & Machinery</h2>
-    <p style="color: #64748b; font-size: 16px;">Take a look inside our high-end multicolor printing press and digital lab.</p><div class="gallery-container">
-        <!-- 1. కోనికా ఫ్లెక్స్ ప్రింటింగ్ మెషిన్ -->
+    <!-- ================= TITLE ================= -->
+
+    <h2 class="section-title">Our Technical Setup & Machinery</h2>
+
+    <p class="section-subtitle">
+        Take a look inside our high-end multicolor printing press and digital lab.
+    </p>
+
+    <!-- ================= GALLERY ================= -->
+
+    <div class="gallery-container">
+
+        <!-- 1 -->
         <div class="gallery-card">
-            <img src="Assets/konica-flex-printing-machine.webp" alt="Flex Printing Machine" onerror="this.src='assets/konica-flex-printing-machine.webp'">
+            <img
+                src="Assets/konica-flex-printing-machine.webp"
+                alt="Flex Printing Machine"
+                onerror="this.src='assets/konica-flex-printing-machine.webp'">
+
             <div class="caption-box">
                 <h4>భారీ ఫ్లెక్స్ & వినైల్ ప్రింటింగ్</h4>
                 <p>Heavy Flex & Vinyl Banner Printing</p>
             </div>
         </div>
 
-        <!-- 2. కోనికా మినోల్టా బిజ్‌హబ్ C226 -->
+        <!-- 2 -->
         <div class="gallery-card">
-            <img src="Assets/conika_minolts_buzhub_c226.webp" alt="Konica Minolta bizhub C226" onerror="this.src='assets/conika_minolts_buzhub_c226.webp'">
+            <img
+                src="Assets/conika_minolts_buzhub_c226.webp"
+                alt="Konica Minolta bizhub C226"
+                onerror="this.src='assets/conika_minolts_buzhub_c226.webp'">
+
             <div class="caption-box">
                 <h4>ప్రీమియం మల్టీకలర్ డిజిటల్ ప్రెస్</h4>
                 <p>Premium Multicolor Digital Press (Model C226)</p>
             </div>
         </div>
 
-        <!-- 3. కోనికా మినోల్టా బిజ్‌హబ్ C226 (ఇండోర్ వ్యూ) -->
+        <!-- 3 -->
         <div class="gallery-card">
-            <img src="Assets/conika_minolts_buzhub_c226_i.webp" alt="Konica Minolta Indoor View" onerror="this.src='assets/conika_minolts_buzhub_c226_i.webp'">
+            <img
+                src="Assets/conika_minolts_buzhub_c226_i.webp"
+                alt="Konica Minolta Indoor View"
+                onerror="this.src='assets/conika_minolts_buzhub_c226_i.webp'">
+
             <div class="caption-box">
                 <h4>డిజిటల్ కలర్ ల్యాబ్ సెటప్</h4>
                 <p>High-End Color Press Production</p>
             </div>
         </div>
 
-        <!-- 4. డీలక్స్ ఆఫ్‌సెట్ ప్రింటింగ్ ప్రెస్ -->
+        <!-- 4 -->
         <div class="gallery-card">
-            <img src="Assets/Deluxe-2-in-1-Sheet-Fed-Offset-Machine.webp" alt="Heavy Offset Printing" onerror="this.src='assets/Deluxe-2-in-1-Sheet-Fed-Offset-Machine.webp'">
+            <img
+                src="Assets/Deluxe-2-in-1-Sheet-Fed-Offset-Machine.webp"
+                alt="Heavy Offset Printing"
+                onerror="this.src='assets/Deluxe-2-in-1-Sheet-Fed-Offset-Machine.webp'">
+
             <div class="caption-box">
                 <h4>భారీ ఆఫ్‌సెట్ ప్రింటింగ్ (బిల్ బుక్స్)</h4>
                 <p>Deluxe Sheet-Fed Heavy Offset Machine</p>
             </div>
         </div>
 
-        <!-- 5. కానన్ ఇమేజ్‌రన్నర్ అడ్వాన్స్ ప్రింటర్ -->
+        <!-- 5 -->
         <div class="gallery-card">
-            <img src="Assets/Canon%20ImageRUNNER%20ADVANCE_4545_digitr_multifunctio_printer.webp" alt="Canon Mono Prints" onerror="this.src='assets/Canon%20ImageRUNNER%20ADVANCE_4545_digitr_multifunctio_printer.webp'">
+            <img
+                src="Assets/Canon%20ImageRUNNER%20ADVANCE_4545_digitr_multifunctio_printer.webp"
+                alt="Canon Mono Prints"
+                onerror="this.src='assets/Canon%20ImageRUNNER%20ADVANCE_4545_digitr_multifunctio_printer.webp'">
+
             <div class="caption-box">
                 <h4>డిజిటల్ జిరాక్స్ & స్పీడ్ మోనో ప్రింట్స్</h4>
                 <p>Canon ImageRUNNER ADVANCE (4545)</p>
             </div>
         </div>
 
-        <!-- 6. ఎప్సన్ కలర్ ఇకోట్యాంక్ ప్రింటర్ -->
+        <!-- 6 -->
         <div class="gallery-card">
-            <img src="Assets/epson%20printer.webp" alt="High-Quality Photo Prints" onerror="this.src='assets/epson%20printer.webp'">
+            <img
+                src="Assets/epson%20printer.webp"
+                alt="High-Quality Photo Prints"
+                onerror="this.src='assets/epson%20printer.webp'">
+
             <div class="caption-box">
                 <h4>ఫోటో ప్రింట్లు & ఐడి కార్డ్స్</h4>
                 <p>Epson EcoTank Color Printing</p>
             </div>
         </div>
+
     </div>
 
-    <!-- బాటమ్ యాక్షన్ బటన్స్ - ఒరిజినల్ ఐకాన్స్ తో -->
+    <!-- ================= BUTTONS ================= -->
+
     <div class="div-btns">
+
         <a href="tel:7799036524" class="btn btn-blue">
-            <i class="fa-solid fa-phone"></i> Call Now
+            <i class="fa-solid fa-phone"></i>
+            Call Now
         </a>
+
         <a href="https://wa.me" class="btn btn-green" target="_blank">
-            <i class="fa-brands fa-whatsapp"></i> WhatsApp Chat
+            <i class="fa-brands fa-whatsapp"></i>
+            WhatsApp Chat
         </a>
+
     </div>
 
-    <!-- ఫుటర్ సెక్షన్ -->
+    <!-- ================= FOOTER ================= -->
+
     <footer>
         <p>&copy; 2026 Ruchita Graphics. All Rights Reserved.</p>
     </footer>
