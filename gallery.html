@@ -4,15 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery | Ruchita Graphics</title>
-    <!-- మిగతా పేజీలలో పర్ఫెక్ట్‌గా పనిచేస్తున్న పాత FontAwesome 4.7.0 లింక్ ఇక్కడ కనెక్ట్ చేసాను -->
-    <link rel="stylesheet" href="https://cloudflare.com">
     <style>
         body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f6f9; color: #333; text-align: center; }
         
-        /* హెడర్ లోగో మరియు ఐకాన్ స్టైల్ */
+        /* క్లీన్ బ్రాండ్ హెడర్ - ఎక్స్‌ట్రా చిహ్నాలు లేవు */
         .nav-bar { background-color: #002060; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; color: white; }
-        .logo { font-size: 22px; font-weight: bold; display: flex; align-items: center; gap: 8px; }
-        .logo i { color: #FFD700; font-size: 24px; } /* ప్రొఫెషనల్ గోల్డెన్ ప్రింటర్ ఐకాన్ */
+        .logo { font-size: 22px; font-weight: bold; color: white; letter-spacing: 1px; }
         .nav-links a { color: white; text-decoration: none; margin-left: 20px; font-weight: 500; transition: 0.3s; }
         .nav-links a:hover { color: #FFD700; }
         
@@ -31,7 +28,7 @@
         
         /* బాటమ్ యాక్షన్ బటన్స్ */
         .div-btns { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin: 40px 0; }
-        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; width: 220px; height: 50px; color: white; font-weight: bold; text-decoration: none; border-radius: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: 0.3s; font-size: 16px; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; width: 220px; height: 50px; color: white; font-weight: bold; text-decoration: none; border-radius: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: 0.3s; font-size: 16px; }
         .btn-blue { background-color: #1a73e8; }
         .btn-green { background-color: #28a745; }
         .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 12px rgba(0,0,0,0.15); }
@@ -42,8 +39,8 @@
 <body>
 
     <div class="nav-bar">
-        <!-- మిగతా పేజీల లాంటి క్లీన్ ఐకాన్ స్టైల్ `fa fa-print` ఇక్కడ అప్‌డేట్ చేశాను -->
-        <div class="logo"><i class="fa fa-print"></i> RUCHITA GRAPHICS</div>
+        <!-- కేవలం మన అఫీషియల్ బ్రాండ్ నేమ్ మాత్రమే ఇక్కడ ఉంచాను -->
+        <div class="logo">RUCHITA GRAPHICS</div>
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
@@ -73,7 +70,7 @@
         <div class="gallery-card">
             <img src="Assets/conika_minolts_buzhub_c226.webp" alt="Konica Minolta bizhub C226" onerror="this.src='assets/conika_minolts_buzhub_c226.webp'">
             <div class="caption-box">
-                <h4>ప్రీమియం మల్టీకలర్ డిజిటల్ ప్రెస్</h4>
+                <h4>ప్రీమియం మльటీకలర్ డిజిటల్ ప్రెస్</h4>
                 <p>Premium Multicolor Digital Press (Model C226)</p>
             </div>
         </div>
@@ -100,7 +97,7 @@
         <div class="gallery-card">
             <img src="Assets/Canon%20ImageRUNNER%20ADVANCE_4545_digitr_multifunctio_printer.webp" alt="Canon Mono Prints" onerror="this.src='assets/Canon%20ImageRUNNER%20ADVANCE_4545_digitr_multifunctio_printer.webp'">
             <div class="caption-box">
-                <h4>డిజిటల్ జిరాక్స్ & స్ピーడ్ మోనో ప్రింట్స్</h4>
+                <h4>డిజిటల్ జిరాక్స్ & స్పీడ్ మోనో ప్రింట్స్</h4>
                 <p>Canon ImageRUNNER ADVANCE (4545)</p>
             </div>
         </div>
@@ -109,20 +106,16 @@
         <div class="gallery-card">
             <img src="Assets/epson%20printer.webp" alt="High-Quality Photo Prints" onerror="this.src='assets/epson%20printer.webp'">
             <div class="caption-box">
-                <h4>фоటో ప్రింట్లు & ఐడి కార్డ్స్</h4>
+                <h4>ఫోటో ప్రింట్లు & ఐడి కార్డ్స్</h4>
                 <p>Epson EcoTank Color Printing</p>
             </div>
         </div>
     </div>
 
-    <!-- బాటమ్ యాక్షన్ బటన్స్ - పాత వెర్షన్ ఐకాన్స్ తో -->
+    <!-- బాటమ్ యాక్షన్ బటన్స్ - క్లీన్ & సాలిడ్ స్టైల్ -->
     <div class="div-btns">
-        <a href="tel:7799036524" class="btn btn-blue">
-            <i class="fa fa-phone"></i> Call Now
-        </a>
-        <a href="https://wa.me" class="btn btn-green" target="_blank">
-            <i class="fa fa-whatsapp"></i> WhatsApp Chat
-        </a>
+        <a href="tel:7799036524" class="btn btn-blue">Call Now</a>
+        <a href="https://wa.me" class="btn btn-green" target="_blank">WhatsApp Chat</a>
     </div>
 
     <!-- ఫుటర్ సెక్షన్ -->
