@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="te">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery | Ruchita Graphics</title>
+
+    <title>Services | Ruchita Graphics</title>
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
         * {
@@ -22,7 +24,9 @@
             text-align: center;
         }
 
-        /* ================= HEADER ================= */
+        /* =========================
+           HEADER - SAME AS GALLERY
+        ========================== */
 
         header {
             width: 100%;
@@ -80,132 +84,115 @@
             border-bottom: 2px solid white;
         }
 
-        /* ================= BANNER ================= */
 
-        .banner-container {
-            max-width: 1100px;
-            margin: 30px auto;
+        /* =========================
+           SERVICES TITLE
+        ========================== */
+
+        .services-heading {
+            padding: 40px 20px 20px;
+        }
+
+        .services-heading h1 {
+            margin: 0 0 10px;
+            font-size: 34px;
+            color: #002060;
+            font-weight: 700;
+        }
+
+        .services-heading p {
+            margin: 0 auto;
+            max-width: 850px;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+
+        /* =========================
+           SERVICE BOXES
+        ========================== */
+
+        .services-container {
+            width: 100%;
+            max-width: 1150px;
+            margin: 25px auto 60px;
             padding: 0 20px;
         }
 
-        .banner-img {
+        .service-box {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 10px;
+            margin-bottom: 30px;
+
+            border: 1px solid #e1e6ec;
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.10);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .service-box:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 14px 32px rgba(0, 0, 0, 0.16);
+        }
+
+        .service-box img {
             width: 100%;
             height: auto;
             display: block;
-            border-radius: 12px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+
+            border-radius: 9px;
         }
 
-        /* ================= TITLE ================= */
 
-        .section-title {
-            margin-top: 25px;
-            margin-bottom: 8px;
-            color: #222;
-        }
+        /* =========================
+           WHATSAPP BUTTON
+        ========================== */
 
-        .section-subtitle {
-            color: #64748b;
-            font-size: 16px;
-            margin-top: 0;
-        }
+        .whatsapp-float {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
 
-        /* ================= GALLERY ================= */
+            width: 58px;
+            height: 58px;
 
-        .gallery-container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
+            background: #25D366;
+            color: white;
+
+            border-radius: 50%;
+
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-        }
-
-        .gallery-card {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-            overflow: hidden;
-            width: 340px;
-            transition: 0.3s;
-            border: 1px solid #e1e8ed;
-        }
-
-        .gallery-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.12);
-        }
-
-        .gallery-card img {
-            width: 100%;
-            height: 230px;
-            object-fit: contain;
-            background: #fff;
-            padding: 10px;
-            display: block;
-        }
-
-        .gallery-card .caption-box {
-            padding: 15px;
-            background: #f8fafc;
-            border-top: 1px solid #edf2f7;
-        }
-
-        .gallery-card h4 {
-            margin: 0 0 5px 0;
-            color: #002060;
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        .gallery-card p {
-            margin: 0;
-            color: #64748b;
-            font-size: 14px;
-            font-weight: 500;
-        }
-
-        /* ================= BUTTONS ================= */
-
-        .div-btns {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin: 40px 0;
-        }
-
-        .btn {
-            display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            width: 220px;
-            height: 50px;
-            color: white;
-            font-weight: bold;
+
             text-decoration: none;
-            border-radius: 30px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: 0.3s;
-            font-size: 16px;
+
+            font-size: 30px;
+
+            box-shadow:
+                0 5px 18px rgba(0, 0, 0, 0.25);
+
+            z-index: 9999;
+
+            transition: transform 0.25s ease;
         }
 
-        .btn-blue {
-            background-color: #1a73e8;
+        .whatsapp-float:hover {
+            transform: scale(1.1);
         }
 
-        .btn-green {
-            background-color: #28a745;
-        }
 
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-        }
-
-        /* ================= FOOTER ================= */
+        /* =========================
+           FOOTER - SAME AS GALLERY
+        ========================== */
 
         footer {
             text-align: center;
@@ -215,7 +202,14 @@
             margin-top: 60px;
         }
 
-        /* ================= MOBILE ================= */
+        footer p {
+            margin: 0;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================== */
 
         @media (max-width: 768px) {
 
@@ -239,159 +233,215 @@
                 gap: 15px;
             }
 
-            .gallery-card {
-                width: 100%;
-                max-width: 340px;
+            .services-heading {
+                padding: 30px 15px 15px;
+            }
+
+            .services-heading h1 {
+                font-size: 28px;
+            }
+
+            .services-heading p {
+                font-size: 15px;
+            }
+
+            .services-container {
+                padding: 0 12px;
+                margin-top: 20px;
+            }
+
+            .service-box {
+                padding: 6px;
+                margin-bottom: 20px;
+                border-radius: 10px;
+            }
+
+            .whatsapp-float {
+                width: 52px;
+                height: 52px;
+                right: 16px;
+                bottom: 16px;
+                font-size: 27px;
             }
         }
+
+
+        @media (max-width: 480px) {
+
+            .brand {
+                font-size: 18px;
+            }
+
+            .brand img {
+                height: 45px;
+            }
+
+            nav {
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            .services-heading h1 {
+                font-size: 25px;
+            }
+        }
+
     </style>
 </head>
 
+
 <body>
 
-    <!-- ================= HEADER ================= -->
+    <!-- =========================
+         HEADER
+         EXACT SAME AS GALLERY
+    ========================== -->
 
     <header>
         <div class="wrap nav-container">
 
             <a href="index.html" class="brand">
-                <img src="assets/logo.png" alt="Ruchita Graphics Logo">
+                <img src="assets/logo.png"
+                     alt="Ruchita Graphics Logo">
+
                 RUCHITA GRAPHICS
             </a>
 
             <nav>
                 <a href="index.html">Home</a>
-                <a href="services.html">Services</a>
-                <a href="gallery.html" class="active">Gallery</a>
-                <a href="portfolio.html">Portfolio</a>
-                <a href="contact.html">Contact</a>
+
+                <a href="services.html" class="active">
+                    Services
+                </a>
+
+                <a href="gallery.html">
+                    Gallery
+                </a>
+
+                <a href="portfolio.html">
+                    Portfolio
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
             </nav>
 
         </div>
     </header>
 
-    <!-- ================= BANNER ================= -->
 
-    <div class="banner-container">
-        <img
-            src="Assets/ruchita_graphics_services.webp"
-            alt="Ruchita Graphics Official Services Banner"
-            class="banner-img"
-            onerror="this.src='assets/ruchita_graphics_services.webp'">
-    </div>
+    <!-- =========================
+         SERVICES HEADING
+    ========================== -->
 
-    <!-- ================= TITLE ================= -->
+    <section class="services-heading">
 
-    <h2 class="section-title">Our Technical Setup & Machinery</h2>
+        <h1>Our Printing &amp; Designing Services</h1>
 
-    <p class="section-subtitle">
-        Take a look inside our high-end multicolor printing press and digital lab.
-    </p>
+        <p>
+            Single Step - Simple Solutions for all your personal
+            and corporate branding needs.
+        </p>
 
-    <!-- ================= GALLERY ================= -->
+    </section>
 
-    <div class="gallery-container">
 
-        <!-- 1 -->
-        <div class="gallery-card">
-            <img
-                src="Assets/konica-flex-printing-machine.webp"
-                alt="Flex Printing Machine"
-                onerror="this.src='assets/konica-flex-printing-machine.webp'">
+    <!-- =========================
+         SIX PREMIUM SERVICE BOXES
+    ========================== -->
 
-            <div class="caption-box">
-                <h4>భారీ ఫ్లెక్స్ & వినైల్ ప్రింటింగ్</h4>
-                <p>Heavy Flex & Vinyl Banner Printing</p>
-            </div>
+    <main class="services-container">
+
+        <!-- BOX 1 -->
+        <div class="service-box">
+
+            <img src="assets/box-1.webp"
+                 alt="Creative Graphics Designing">
+
         </div>
 
-        <!-- 2 -->
-        <div class="gallery-card">
-            <img
-                src="Assets/conika_minolts_buzhub_c226.webp"
-                alt="Konica Minolta bizhub C226"
-                onerror="this.src='assets/conika_minolts_buzhub_c226.webp'">
 
-            <div class="caption-box">
-                <h4>ప్రీమియం మల్టీకలర్ డిజిటల్ ప్రెస్</h4>
-                <p>Premium Multicolor Digital Press (Model C226)</p>
-            </div>
+        <!-- BOX 2 -->
+        <div class="service-box">
+
+            <img src="assets/box-2.webp"
+                 alt="Digital, Laser, Prints and Xerox"
+                 loading="lazy">
+
         </div>
 
-        <!-- 3 -->
-        <div class="gallery-card">
-            <img
-                src="Assets/conika_minolts_buzhub_c226_i.webp"
-                alt="Konica Minolta Indoor View"
-                onerror="this.src='assets/conika_minolts_buzhub_c226_i.webp'">
 
-            <div class="caption-box">
-                <h4>డిజిటల్ కలర్ ల్యాబ్ సెటప్</h4>
-                <p>High-End Color Press Production</p>
-            </div>
+        <!-- BOX 3 -->
+        <div class="service-box">
+
+            <img src="assets/box-3.webp"
+                 alt="Flex, Banner, Vinyl and Lighting Boards"
+                 loading="lazy">
+
         </div>
 
-        <!-- 4 -->
-        <div class="gallery-card">
-            <img
-                src="Assets/Deluxe-2-in-1-Sheet-Fed-Offset-Machine.webp"
-                alt="Heavy Offset Printing"
-                onerror="this.src='assets/Deluxe-2-in-1-Sheet-Fed-Offset-Machine.webp'">
 
-            <div class="caption-box">
-                <h4>భారీ ఆఫ్‌సెట్ ప్రింటింగ్ (బిల్ బుక్స్)</h4>
-                <p>Deluxe Sheet-Fed Heavy Offset Machine</p>
-            </div>
+        <!-- BOX 4 -->
+        <div class="service-box">
+
+            <img src="assets/box-4.webp"
+                 alt="Calendars, Visiting Cards and Advertising Materials"
+                 loading="lazy">
+
         </div>
 
-        <!-- 5 -->
-        <div class="gallery-card">
-            <img
-                src="Assets/Canon%20ImageRUNNER%20ADVANCE_4545_digitr_multifunctio_printer.webp"
-                alt="Canon Mono Prints"
-                onerror="this.src='assets/Canon%20ImageRUNNER%20ADVANCE_4545_digitr_multifunctio_printer.webp'">
 
-            <div class="caption-box">
-                <h4>డిజిటల్ జిరాక్స్ & స్పీడ్ మోనో ప్రింట్స్</h4>
-                <p>Canon ImageRUNNER ADVANCE (4545)</p>
-            </div>
+        <!-- BOX 5 -->
+        <div class="service-box">
+
+            <img src="assets/box-5.webp"
+                 alt="Bill Books, Letter Heads and Corporate Registers"
+                 loading="lazy">
+
         </div>
 
-        <!-- 6 -->
-        <div class="gallery-card">
-            <img
-                src="Assets/epson%20printer.webp"
-                alt="High-Quality Photo Prints"
-                onerror="this.src='assets/epson%20printer.webp'">
 
-            <div class="caption-box">
-                <h4>ఫోటో ప్రింట్లు & ఐడి కార్డ్స్</h4>
-                <p>Epson EcoTank Color Printing</p>
-            </div>
+        <!-- BOX 6 -->
+        <div class="service-box">
+
+            <img src="assets/box-6.webp"
+                 alt="Social Media Posters and MP4 Video Editing"
+                 loading="lazy">
+
         </div>
 
-    </div>
+    </main>
 
-    <!-- ================= BUTTONS ================= -->
 
-    <div class="div-btns">
+    <!-- =========================
+         WHATSAPP
+    ========================== -->
 
-        <a href="tel:7799036524" class="btn btn-blue">
-            <i class="fa-solid fa-phone"></i>
-            Call Now
-        </a>
+    <a href="https://wa.me/917799036524"
+       class="whatsapp-float"
+       target="_blank"
+       aria-label="Chat with Ruchita Graphics on WhatsApp">
 
-        <a href="https://wa.me" class="btn btn-green" target="_blank">
-            <i class="fa-brands fa-whatsapp"></i>
-            WhatsApp Chat
-        </a>
+        <i class="fa-brands fa-whatsapp"></i>
 
-    </div>
+    </a>
 
-    <!-- ================= FOOTER ================= -->
+
+    <!-- =========================
+         FOOTER
+         SAME AS GALLERY
+    ========================== -->
 
     <footer>
-        <p>&copy; 2026 Ruchita Graphics. All Rights Reserved.</p>
+
+        <p>
+            &copy; 2026 Ruchita Graphics. All Rights Reserved.
+        </p>
+
     </footer>
 
 </body>
