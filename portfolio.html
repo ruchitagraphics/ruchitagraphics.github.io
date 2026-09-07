@@ -31,7 +31,10 @@
             padding: 0 20px;
         }
 
-        /* MASTER HEADER */
+        /* =========================
+           MASTER HEADER
+        ========================== */
+
         header {
             width: 100%;
             background-color: #002060;
@@ -82,7 +85,11 @@
             border-bottom: 2px solid white;
         }
 
-        /* PORTFOLIO CONTENT */
+
+        /* =========================
+           PORTFOLIO CONTENT
+        ========================== */
+
         .section-title {
             text-align: center;
             margin: 40px 0;
@@ -115,70 +122,146 @@
             box-shadow: 0 8px 25px rgba(0,0,0,0.05);
         }
 
-        /* ORDER / CONTACT BUTTON */
+
+        /* =========================
+           PAGE NAVIGATION
+           LEFT + RIGHT PARALLEL
+        ========================== */
+
+        .page-navigation {
+            width: 100%;
+            max-width: 1160px;
+            margin: 10px auto 20px;
+            padding: 0 20px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+
+        /* =========================
+           PREVIOUS PAGE - GRAY
+        ========================== */
+
+        .previous-page {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            min-width: 220px;
+            height: 50px;
+
+            padding: 0 25px;
+
+            background-color: #6b7280;
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: bold;
+            font-size: 16px;
+
+            border-radius: 30px;
+
+            box-shadow:
+                0 4px 6px rgba(0,0,0,0.12);
+
+            transition: 0.3s;
+        }
+
+        .previous-page:hover {
+            transform: translateY(-2px);
+
+            background-color: #4b5563;
+
+            box-shadow:
+                0 6px 12px rgba(0,0,0,0.18);
+        }
+
+
+        /* =========================
+           ORDER / CONTACT BUTTON
+        ========================== */
+
         .contact-btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
+
             min-width: 250px;
-            padding: 14px 30px;
-            margin: 0 auto 20px;
+            height: 50px;
+
+            padding: 0 30px;
+
             background: #f39c12;
             color: white;
+
             text-decoration: none;
+
             font-weight: 700;
             font-size: 16px;
+
             border-radius: 30px;
-            box-shadow: 0 5px 10px rgba(243,156,18,0.25);
+
+            box-shadow:
+                0 5px 10px rgba(243,156,18,0.25);
+
             transition: 0.3s;
         }
 
         .contact-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 16px rgba(243,156,18,0.32);
+
+            box-shadow:
+                0 8px 16px rgba(243,156,18,0.32);
         }
 
-        .contact-btn-wrap {
-            text-align: center;
-            margin-bottom: 20px;
+
+        /* =========================
+           WHATSAPP FLOATING BUTTON
+        ========================== */
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+
+            z-index: 9999;
+
+            width: 60px;
+            height: 60px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: #25d366;
+
+            border-radius: 50%;
+
+            box-shadow:
+                2px 4px 12px rgba(0,0,0,0.3);
+
+            transition:
+                transform 0.3s ease;
         }
 
-     /* PREVIOUS PAGE BUTTON */
-
-.previous-page-wrap {
-    text-align: left;
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
-
-.previous-page {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 220px;
-    height: 50px;
-    padding: 0 25px;
-    background-color: #6b7280;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-    border-radius: 30px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.12);
-    transition: 0.3s;
-}
-
-.previous-page:hover {
-    transform: translateY(-2px);
-    background-color: #4b5563;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.18);
-}
-
-        .previous-page:hover {
-            transform: translateX(-6px);
+        .whatsapp-float:hover {
+            transform: scale(1.1);
         }
 
-        /* MASTER FOOTER */
+        .whatsapp-float svg {
+            width: 34px;
+            height: 34px;
+        }
+
+
+        /* =========================
+           MASTER FOOTER
+        ========================== */
+
         footer {
             background: #002060;
             color: white;
@@ -192,7 +275,11 @@
             margin: 0;
         }
 
-        /* MASTER MOBILE HEADER */
+
+        /* =========================
+           MOBILE
+        ========================== */
+
         @media (max-width: 768px) {
 
             .nav-container {
@@ -216,88 +303,174 @@
                 gap: 15px;
             }
 
-            .contact-btn {
-                width: 90%;
-                min-width: 0;
+            .page-navigation {
+                padding: 0 15px;
+                gap: 10px;
             }
 
-            .previous-page-wrap {
-                margin-left: 5px;
+            .previous-page,
+            .contact-btn {
+                min-width: 0;
+                width: 48%;
+                height: 48px;
+                padding: 0 10px;
+                font-size: 14px;
             }
         }
+
+
+        @media (max-width: 480px) {
+
+            .brand {
+                font-size: 18px;
+            }
+
+            .brand img {
+                height: 45px;
+                width: 45px;
+            }
+
+            nav {
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            .previous-page,
+            .contact-btn {
+                font-size: 13px;
+            }
+        }
+
     </style>
 </head>
 
+
 <body>
 
-    <!-- MASTER HEADER -->
+    <!-- =========================
+         MASTER HEADER
+    ========================== -->
+
     <header>
+
         <div class="wrap nav-container">
 
             <a href="index.html" class="brand">
-                <img src="assets/RUCHITA_NEW_LOGO.webp" alt="Logo">
+
+                <img
+                    src="assets/RUCHITA_NEW_LOGO.webp"
+                    alt="Logo">
+
                 <span>RUCHITA GRAPHICS</span>
+
             </a>
 
+
             <nav>
-                <a href="index.html">Home</a>
-                <a href="services.html">Services</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="portfolio.html" class="active">Portfolio</a>
-                <a href="contact.html">Contact</a>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <a href="gallery.html">
+                    Gallery
+                </a>
+
+                <a href="portfolio.html" class="active">
+                    Portfolio
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
             </nav>
 
         </div>
+
     </header>
 
 
-    <!-- PORTFOLIO CONTENT -->
+    <!-- =========================
+         PORTFOLIO CONTENT
+    ========================== -->
+
     <div class="wrap">
 
         <div class="section-title">
-            <h1>Our Featured Work</h1>
-            <p>Take a look at some of our templates and recently completed projects.</p>
+
+            <h1>
+                Our Featured Work
+            </h1>
+
+            <p>
+                Take a look at some of our templates and recently completed projects.
+            </p>
+
         </div>
 
 
         <div class="portfolio-gallery">
 
-            <img src="assets/RGFX%20NEW%20YEAR%20CALENDARS.jpg"
-                 alt="Featured Calendar Work">
+            <img
+                src="assets/RGFX%20NEW%20YEAR%20CALENDARS.jpg"
+                alt="Featured Calendar Work">
 
             <!-- కొత్తగా యాడ్ చేసే ఫోటోలను భవిష్యత్తులో ఈ కింద లైన్ లో యాడ్ చేసుకోవచ్చు -->
 
         </div>
 
 
-        <!-- ORDER / CONTACT US -->
-        <div class="contact-btn-wrap">
-            <a href="contact.html" class="contact-btn">
-                ORDER / CONTACT US&nbsp; →
-            </a>
-        </div>
+        <!-- =========================
+             PAGE NAVIGATION
+             LEFT + RIGHT PARALLEL
+        ========================== -->
 
+        <div class="page-navigation">
 
-        <!-- ONLY PREVIOUS PAGE -->
-        <div class="previous-page-wrap">
+            <!-- LEFT -->
             <a href="gallery.html" class="previous-page">
+
                 ← PREVIOUS PAGE
+
             </a>
+
+
+            <!-- RIGHT -->
+            <a href="contact.html" class="contact-btn">
+
+                ORDER / CONTACT US&nbsp; →
+
+            </a>
+
         </div>
 
 
-        <!-- WHATSAPP FLOATING BUTTON -->
-        <a href="https://wa.me"
-           style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; width: 60px; height: 60px; transition: transform 0.3s ease; display: flex; justify-content: center; align-items: center; background-color: #25d366; border-radius: 50%; box-shadow: 2px 4px 12px rgba(0,0,0,0.3);"
-           target="_blank"
-           rel="noopener noreferrer">
+        <!-- =========================
+             WHATSAPP FLOATING BUTTON
+        ========================== -->
 
-            <svg viewBox="0 0 24 24"
-                 fill="white"
-                 style="width: 34px; height: 34px;"
-                 xmlns="http://www.w3.org/2000/svg">
+        <a
+            href="https://wa.me"
+            class="whatsapp-float"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Chat on WhatsApp">
+
+            <svg
+                viewBox="0 0 24 24"
+                fill="white"
+                xmlns="http://www.w3.org/2000/svg">
 
                 <path d="M12.012 2c-5.508 0-9.988 4.479-9.988 9.987 0 1.758.455 3.414 1.324 4.869L2 22l5.313-1.393c1.408.767 3.003 1.174 4.694 1.175h.004c5.507 0 9.988-4.479 9.988-9.988 0-2.671-1.04-5.181-2.929-7.071S14.686 2 12.012 2zm6.069 14.125c-.267.753-1.31 1.383-1.808 1.439-.497.056-.991.247-3.179-.611-2.793-1.096-4.588-3.951-4.728-4.139-.14-.187-1.127-1.5-.127-2.863 0-1.363.714-2.032.968-2.308.254-.276.554-.345.739-.345.185 0 .369.001.531.009.171.008.4-.065.626.478.226.543.774 1.889.841 2.026.067.137.112.297.021.479-.092.181-.138.297-.274.456-.137.159-.287.355-.411.476-.137.135-.281.282-.121.556.16.274.71 1.171 1.521 1.892.651.58 1.201.761 1.372.846.171.085.271.07.371-.046.1-.116.428-.499.542-.669.115-.17.23-.142.388-.083.158.059 1.002.473 1.174.558.171.085.286.128.329.202.043.074.043.431-.224 1.184z"/>
+
             </svg>
 
         </a>
@@ -305,9 +478,16 @@
     </div>
 
 
-    <!-- MASTER FOOTER -->
+    <!-- =========================
+         MASTER FOOTER
+    ========================== -->
+
     <footer>
-        <p>&copy; 2026 Ruchita Graphics. All Rights Reserved.</p>
+
+        <p>
+            &copy; 2026 Ruchita Graphics. All Rights Reserved.
+        </p>
+
     </footer>
 
 </body>
