@@ -194,6 +194,34 @@
 
 
         /* =========================
+           NEXT PAGE BUTTON
+           SAME BLUE STYLE AS INDEX
+        ========================== */
+
+        .next-page {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 250px;
+            padding: 14px 30px;
+            margin-top: 22px;
+            background: #1a73e8;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            border-radius: 30px;
+            box-shadow: 0 5px 10px rgba(26,115,232,0.25);
+            transition: 0.3s;
+        }
+
+        .next-page:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(26,115,232,0.32);
+        }
+
+
+        /* =========================
            FOOTER - MASTER FROM INDEX
         ========================== */
 
@@ -267,6 +295,11 @@
                 right: 16px;
                 bottom: 16px;
                 font-size: 27px;
+            }
+
+            .next-page {
+                width: 90%;
+                min-width: 0;
             }
         }
 
@@ -446,7 +479,17 @@
 
     </a>
 
-<a href="gallery.html" class="explore-btn">Explore Our Gallery →</a>
+
+    <!-- =========================
+         NEXT PAGE
+         ONLY REQUIRED CHANGE
+    ========================== -->
+
+    <a href="gallery.html" class="next-page">
+        VISIT OUR GALLERY&nbsp; →
+    </a>
+
+
     <!-- =========================
          FOOTER
          MASTER FROM INDEX.HTML
