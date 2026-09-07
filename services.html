@@ -191,16 +191,26 @@
 
 
         /* =========================
-           PREVIOUS PAGE - GRAY
+           PAGE NAVIGATION
+           LEFT + RIGHT SAME LINE
         ========================== */
 
-        .previous-page-wrap {
+        .page-navigation {
             width: 100%;
             max-width: 1150px;
             margin: 0 auto 20px;
             padding: 0 20px;
-            text-align: left;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
         }
+
+
+        /* =========================
+           PREVIOUS PAGE - GRAY
+        ========================== */
 
         .previous-page {
             display: inline-flex;
@@ -248,10 +258,9 @@
             justify-content: center;
 
             min-width: 250px;
+            height: 50px;
 
-            padding: 14px 30px;
-
-            margin-top: 0;
+            padding: 0 30px;
 
             background: #1a73e8;
             color: white;
@@ -353,17 +362,21 @@
                 font-size: 27px;
             }
 
-            .previous-page-wrap {
-                padding: 0 20px;
+
+            /* MOBILE PAGE NAVIGATION */
+
+            .page-navigation {
+                padding: 0 15px;
+                gap: 10px;
             }
 
-            .previous-page {
-                width: 220px;
-            }
-
+            .previous-page,
             .next-page {
-                width: 90%;
                 min-width: 0;
+                width: 48%;
+                height: 48px;
+                padding: 0 10px;
+                font-size: 14px;
             }
         }
 
@@ -389,6 +402,11 @@
 
             .services-heading h1 {
                 font-size: 25px;
+            }
+
+            .previous-page,
+            .next-page {
+                font-size: 13px;
             }
         }
 
@@ -542,27 +560,24 @@
 
 
     <!-- =========================
-         PREVIOUS PAGE
-         SERVICES → HOME
+         PAGE NAVIGATION
+         LEFT + RIGHT PARALLEL
     ========================== -->
 
-    <div class="previous-page-wrap">
+    <div class="page-navigation">
 
+        <!-- LEFT -->
         <a href="index.html" class="previous-page">
             ← PREVIOUS PAGE
         </a>
 
+
+        <!-- RIGHT -->
+        <a href="gallery.html" class="next-page">
+            VISIT OUR GALLERY&nbsp; →
+        </a>
+
     </div>
-
-
-    <!-- =========================
-         NEXT PAGE
-         SERVICES → GALLERY
-    ========================== -->
-
-    <a href="gallery.html" class="next-page">
-        VISIT OUR GALLERY&nbsp; →
-    </a>
 
 
     <!-- =========================
