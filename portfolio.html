@@ -4,48 +4,242 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Portfolio | Ruchita Graphics</title>
+
     <style>
         :root { --main: #16a34a; --ink: #0f172a; --bg: #f8fafc; }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, sans-serif; }
-        body { background: var(--bg); color: var(--ink); line-height: 1.6; }
-        .wrap { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        header { background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
-        .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 22px; text-decoration: none; color: var(--ink); }
-        .brand img { height: 45px; width: auto; object-fit: contain; }
-        nav a { text-decoration: none; color: #475569; font-weight: 600; margin-left: 24px; transition: 0.2s; }
-        nav a:hover, nav a.active { color: var(--main); }
-        .section-title { text-align: center; margin: 40px 0; }
-        .section-title h1 { font-size: 32px; font-weight: 800; margin-bottom: 10px; }
-        .section-title p { color: #64748b; }
-        .portfolio-gallery { display: flex; flex-direction: column; align-items: center; gap: 30px; margin-bottom: 40px; }
-        .portfolio-gallery img { width: 100%; max-width: 950px; height: auto; object-fit: contain; border-radius: 16px; box-shadow: 0 8px 25px rgba(0,0,0,0.05); }
-        footer { background: #0f172a; color: #cbd5e1; text-align: center; padding: 20px; margin-top: 60px; font-size: 14px; }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--ink);
+            line-height: 1.6;
+        }
+
+        .wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* =========================
+           MASTER HEADER
+           ========================= */
+
+        header {
+            width: 100%;
+            background-color: #002060;
+        }
+
+        .nav-container {
+            min-height: 90px;
+            padding: 10px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .brand img {
+            height: 65px;
+            width: 65px;
+            display: block;
+            object-fit: contain;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 0;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav a:hover,
+        nav a.active {
+            border-bottom: 2px solid white;
+        }
+
+
+        /* =========================
+           PORTFOLIO CONTENT
+           ========================= */
+
+        .section-title {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .section-title h1 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #64748b;
+        }
+
+        .portfolio-gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .portfolio-gallery img {
+            width: 100%;
+            max-width: 950px;
+            height: auto;
+            object-fit: contain;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+        }
+
+
+        /* =========================
+           MASTER FOOTER
+           ========================= */
+
+        footer {
+            background: #002060;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+            font-size: 14px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+
+        /* =========================
+           MASTER MOBILE HEADER
+           ========================= */
+
+        @media (max-width: 768px) {
+
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px 20px;
+            }
+
+            .brand {
+                font-size: 20px;
+            }
+
+            .brand img {
+                width: 58px;
+                height: 58px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+        }
     </style>
 </head>
+
 <body>
+
+    <!-- =========================
+         MASTER HEADER
+         ========================= -->
+
     <header>
         <div class="wrap nav-container">
-            <a href="index.html" class="brand"><img src="assets/logo.png" alt="Logo"> RUCHITA GRAPHICS</a>
+
+            <a href="index.html" class="brand">
+                <img src="assets/RUCHITA_NEW_LOGO.webp" alt="Logo">
+                <span>RUCHITA GRAPHICS</span>
+            </a>
+
             <nav>
                 <a href="index.html">Home</a>
                 <a href="services.html">Services</a>
+                <a href="gallery.html">Gallery</a>
                 <a href="portfolio.html" class="active">Portfolio</a>
                 <a href="contact.html">Contact</a>
             </nav>
+
         </div>
     </header>
+
+
+    <!-- =========================
+         ORIGINAL PORTFOLIO CONTENT
+         ========================= -->
+
     <div class="wrap">
-        <div class="section-title"><h1>Our Featured Work</h1><p>Take a look at some of our templates and recently completed projects.</p></div>
-        <div class="portfolio-gallery">
-            <img src="assets/RGFX%20NEW%20YEAR%20CALENDARS.jpg" alt="Featured Calendar Work">
-            <!-- కొత్తగా యాడ్ చేసే ఫోటోలను భవిష్యత్తులో ఈ కింద లైన్ లో యాడ్ చేసుకోవచ్చు -->
+
+        <div class="section-title">
+            <h1>Our Featured Work</h1>
+            <p>Take a look at some of our templates and recently completed projects.</p>
         </div>
-    <a href="https://wa.me" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; width: 60px; height: 60px; transition: transform 0.3s ease; display: flex; justify-content: center; align-items: center; background-color: #25d366; border-radius: 50%; box-shadow: 2px 4px 12px rgba(0,0,0,0.3);" target="_blank" rel="noopener noreferrer">
-    <svg viewBox="0 0 24 24" fill="white" style="width: 34px; height: 34px;" xmlns="http://w3.org">
-        <path d="M12.012 2c-5.508 0-9.988 4.479-9.988 9.987 0 1.758.455 3.414 1.324 4.869L2 22l5.313-1.393c1.408.767 3.003 1.174 4.694 1.175h.004c5.507 0 9.988-4.479 9.988-9.988 0-2.671-1.04-5.181-2.929-7.071S14.686 2 12.012 2zm6.069 14.125c-.267.753-1.31 1.383-1.808 1.439-.497.056-.991.247-3.179-.611-2.793-1.096-4.588-3.951-4.728-4.139-.14-.187-1.127-1.5-1.127-2.863 0-1.363.714-2.032.968-2.308.254-.276.554-.345.739-.345.185 0 .369.001.531.009.171.008.4-.065.626.478.226.543.774 1.889.841 2.026.067.137.112.297.021.479-.092.181-.138.297-.274.456-.137.159-.287.355-.411.476-.137.135-.281.282-.121.556.16.274.71 1.171 1.521 1.892.651.58 1.201.761 1.372.846.171.085.271.07.371-.046.1-.116.428-.499.542-.669.115-.17.23-.142.388-.083.158.059 1.002.473 1.174.558.171.085.286.128.329.202.043.074.043.431-.224 1.184z"/>
-    </svg>
-</a>
-    <footer><p>&copy; 2026 Ruchita Graphics. All Rights Reserved.</p></footer>
+
+        <div class="portfolio-gallery">
+
+            <img src="assets/RGFX%20NEW%20YEAR%20CALENDARS.jpg"
+                 alt="Featured Calendar Work">
+
+            <!-- కొత్తగా యాడ్ చేసే ఫోటోలను భవిష్యత్తులో ఈ కింద లైన్ లో యాడ్ చేసుకోవచ్చు -->
+
+        </div>
+
+
+        <a href="https://wa.me"
+           style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; width: 60px; height: 60px; transition: transform 0.3s ease; display: flex; justify-content: center; align-items: center; background-color: #25d366; border-radius: 50%; box-shadow: 2px 4px 12px rgba(0,0,0,0.3);"
+           target="_blank"
+           rel="noopener noreferrer">
+
+            <svg viewBox="0 0 24 24"
+                 fill="white"
+                 style="width: 34px; height: 34px;"
+                 xmlns="http://w3.org">
+
+                <path d="M12.012 2c-5.508 0-9.988 4.479-9.988 9.987 0 1.758.455 3.414 1.324 4.869L2 22l5.313-1.393c1.408.767 3.003 1.174 4.694 1.175h.004c5.507 0 9.988-4.479 9.988-9.988 0-2.671-1.04-5.181-2.929-7.071S14.686 2 12.012 2zm6.069 14.125c-.267.753-1.31 1.383-1.808 1.439-.497.056-.991.247-3.179-.611-2.793-1.096-4.588-3.951-4.728-4.139-.14-.187-1.127-1.5-1.127-2.863 0-1.363.714-2.032.968-2.308.254-.276.554-.345.739-.345.185 0 .369.001.531.009.171.008.4-.065.626.478.226.543.774 1.889.841 2.026.067.137.112.297.021.479-.092.181-.138.297-.274.456-.137.159-.287.355-.411.476-.137.135-.281.282-.121.556.16.274.71 1.171 1.521 1.892.651.58 1.201.761 1.372.846.171.085.271.07.371-.046.1-.116.428-.499.542-.669.115-.17.23-.142.388-.083.158.059 1.002.473 1.174.558.171.085.286.128.329.202.043.074.043.431-.224 1.184z"/>
+
+            </svg>
+
+        </a>
+
+    </div>
+
+
+    <!-- =========================
+         MASTER FOOTER
+         ========================= -->
+
+    <footer>
+        <p>&copy; 2026 Ruchita Graphics. All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>
