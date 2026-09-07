@@ -25,7 +25,7 @@
         }
 
         /* =========================
-           HEADER - MASTER FROM INDEX
+           HEADER
         ========================== */
 
         header {
@@ -87,7 +87,6 @@
 
         /* =========================
            SERVICES TITLE
-           ORIGINAL CONTENT - UNCHANGED
         ========================== */
 
         .services-heading {
@@ -112,7 +111,6 @@
 
         /* =========================
            SERVICE BOXES
-           ORIGINAL CONTENT - UNCHANGED
         ========================== */
 
         .services-container {
@@ -156,7 +154,6 @@
 
         /* =========================
            WHATSAPP BUTTON
-           ORIGINAL - UNCHANGED
         ========================== */
 
         .whatsapp-float {
@@ -194,35 +191,94 @@
 
 
         /* =========================
+           PREVIOUS PAGE - GRAY
+        ========================== */
+
+        .previous-page-wrap {
+            width: 100%;
+            max-width: 1150px;
+            margin: 0 auto 20px;
+            padding: 0 20px;
+            text-align: left;
+        }
+
+        .previous-page {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            min-width: 220px;
+            height: 50px;
+
+            padding: 0 25px;
+
+            background-color: #6b7280;
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: bold;
+            font-size: 16px;
+
+            border-radius: 30px;
+
+            box-shadow:
+                0 4px 6px rgba(0,0,0,0.12);
+
+            transition: 0.3s;
+        }
+
+        .previous-page:hover {
+            transform: translateY(-2px);
+
+            background-color: #4b5563;
+
+            box-shadow:
+                0 6px 12px rgba(0,0,0,0.18);
+        }
+
+
+        /* =========================
            NEXT PAGE BUTTON
-           SAME BLUE STYLE AS INDEX
         ========================== */
 
         .next-page {
             display: inline-flex;
             align-items: center;
             justify-content: center;
+
             min-width: 250px;
+
             padding: 14px 30px;
-            margin-top: 22px;
+
+            margin-top: 0;
+
             background: #1a73e8;
             color: white;
+
             text-decoration: none;
+
             font-weight: 700;
             font-size: 16px;
+
             border-radius: 30px;
-            box-shadow: 0 5px 10px rgba(26,115,232,0.25);
+
+            box-shadow:
+                0 5px 10px rgba(26,115,232,0.25);
+
             transition: 0.3s;
         }
 
         .next-page:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 16px rgba(26,115,232,0.32);
+
+            box-shadow:
+                0 8px 16px rgba(26,115,232,0.32);
         }
 
 
         /* =========================
-           FOOTER - MASTER FROM INDEX
+           FOOTER
         ========================== */
 
         footer {
@@ -297,6 +353,14 @@
                 font-size: 27px;
             }
 
+            .previous-page-wrap {
+                padding: 0 20px;
+            }
+
+            .previous-page {
+                width: 220px;
+            }
+
             .next-page {
                 width: 90%;
                 min-width: 0;
@@ -336,7 +400,6 @@
 
     <!-- =========================
          HEADER
-         MASTER FROM INDEX.HTML
     ========================== -->
 
     <header>
@@ -382,7 +445,6 @@
 
     <!-- =========================
          SERVICES HEADING
-         ORIGINAL - UNCHANGED
     ========================== -->
 
     <section class="services-heading">
@@ -399,7 +461,6 @@
 
     <!-- =========================
          SIX PREMIUM SERVICE BOXES
-         ORIGINAL - UNCHANGED
     ========================== -->
 
     <main class="services-container">
@@ -467,12 +528,12 @@
 
     <!-- =========================
          WHATSAPP
-         ORIGINAL - UNCHANGED
     ========================== -->
 
     <a href="https://wa.me/917799036524"
        class="whatsapp-float"
        target="_blank"
+       rel="noopener noreferrer"
        aria-label="Chat with Ruchita Graphics on WhatsApp">
 
         <i class="fa-brands fa-whatsapp"></i>
@@ -481,8 +542,22 @@
 
 
     <!-- =========================
+         PREVIOUS PAGE
+         SERVICES → HOME
+    ========================== -->
+
+    <div class="previous-page-wrap">
+
+        <a href="index.html" class="previous-page">
+            ← PREVIOUS PAGE
+        </a>
+
+    </div>
+
+
+    <!-- =========================
          NEXT PAGE
-         ONLY REQUIRED CHANGE
+         SERVICES → GALLERY
     ========================== -->
 
     <a href="gallery.html" class="next-page">
@@ -492,7 +567,6 @@
 
     <!-- =========================
          FOOTER
-         MASTER FROM INDEX.HTML
     ========================== -->
 
     <footer>
