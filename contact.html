@@ -80,7 +80,7 @@ nav a.active {
     border-bottom: 3px solid white;
 }
 
-/* ================= PAGE ================= */
+/* ================= PAGE BANNER ================= */
 
 .page-banner {
     background: #002060;
@@ -123,26 +123,64 @@ nav a.active {
 .contact-card h3 {
     color: #002060;
     font-size: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
+
+/* ================= CONTACT ITEMS ================= */
 
 .contact-item {
-    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 22px;
+    padding: 5px 0;
 }
 
-.contact-item strong {
+.contact-icon {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+.phone-icon {
+    background: #1a73e8;
+}
+
+.whatsapp-icon {
+    background: #25d366;
+}
+
+.email-icon {
+    background: #d81b60;
+}
+
+.website-icon {
+    background: #00bcd4;
+}
+
+.contact-details strong {
     display: block;
     color: #002060;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
+    font-size: 15px;
 }
 
-.contact-item a {
+.contact-details a {
     color: #1a73e8;
     text-decoration: none;
     word-break: break-word;
+    font-size: 15px;
 }
 
-.contact-item a:hover {
+.contact-details a:hover {
     text-decoration: underline;
 }
 
@@ -217,6 +255,30 @@ nav a.active {
     box-shadow: 0 6px 14px rgba(26,115,232,0.25);
 }
 
+/* ================= BACK TO HOME ================= */
+
+.back-home {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 220px;
+    padding: 13px 28px;
+    margin: 5px auto 0;
+    background: #6c757d;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    border-radius: 30px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.back-home:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.20);
+}
+
 /* ================= FOOTER ================= */
 
 footer {
@@ -224,14 +286,14 @@ footer {
     color: white;
     text-align: center;
     padding: 22px 15px;
-    margin-top: 50px;
+    margin-top: 35px;
 }
 
 footer p {
     font-size: 14px;
 }
 
-/* ================= WHATSAPP FLOAT ================= */
+/* ================= FLOATING WHATSAPP ================= */
 
 .whatsapp-float {
     position: fixed;
@@ -327,6 +389,18 @@ footer p {
     .contact-section {
         padding: 0 12px;
     }
+
+    .contact-icon {
+        width: 42px;
+        height: 42px;
+        min-width: 42px;
+        font-size: 20px;
+    }
+
+    .back-home {
+        width: 90%;
+        min-width: 0;
+    }
 }
 </style>
 </head>
@@ -339,10 +413,12 @@ footer p {
     <div class="nav-container">
 
         <div class="logo-area">
+
             <img src="assets/RUCHITA_NEW_LOGO.webp"
                  alt="Ruchita Graphics Logo">
 
             <h1>RUCHITA GRAPHICS</h1>
+
         </div>
 
         <nav>
@@ -360,8 +436,13 @@ footer p {
 <!-- ================= PAGE BANNER ================= -->
 
 <section class="page-banner">
+
     <h2>Contact Us</h2>
-    <p>We are here to help you with all your printing &amp; designing needs.</p>
+
+    <p>
+        We are here to help you with all your printing &amp; designing needs.
+    </p>
+
 </section>
 
 
@@ -371,61 +452,123 @@ footer p {
 
     <div class="contact-grid">
 
-        <!-- CONTACT INFORMATION -->
+
+        <!-- ================= LEFT BOX ================= -->
 
         <div class="contact-card">
 
             <h3>Get In Touch</h3>
 
-            <div class="contact-item">
-                <strong>📞 Call Us</strong>
-                <a href="tel:+919441536524">
-                    +91 94415 36524
-                </a>
-            </div>
+
+            <!-- PHONE -->
 
             <div class="contact-item">
-                <strong>💬 WhatsApp</strong>
-                <a href="https://wa.me"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    Chat on WhatsApp
-                </a>
+
+                <div class="contact-icon phone-icon">
+                    ☎
+                </div>
+
+                <div class="contact-details">
+
+                    <strong>Phone</strong>
+
+                    <a href="tel:+919441536524">
+                        +91 94415 36524
+                    </a>
+
+                </div>
+
             </div>
 
-            <div class="contact-item">
-                <strong>✉️ Email</strong>
-                <a href="mailto:ruchitagraphics@gmail.com">
-                    ruchitagraphics@gmail.com
-                </a>
-            </div>
+
+            <!-- WHATSAPP -->
 
             <div class="contact-item">
-                <strong>🌐 Website</strong>
-                <a href="https://github.io"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    ruchitagraphics.github.io
-                </a>
+
+                <div class="contact-icon whatsapp-icon">
+                    ☎
+                </div>
+
+                <div class="contact-details">
+
+                    <strong>WhatsApp</strong>
+
+                    <a href="https://wa.me"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Chat on WhatsApp
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <div class="contact-item">
+
+                <div class="contact-icon email-icon">
+                    ✉
+                </div>
+
+                <div class="contact-details">
+
+                    <strong>Email</strong>
+
+                    <a href="mailto:ruchitagraphics@gmail.com">
+                        ruchitagraphics@gmail.com
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- WEBSITE -->
+
+            <div class="contact-item">
+
+                <div class="contact-icon website-icon">
+                    🌐
+                </div>
+
+                <div class="contact-details">
+
+                    <strong>Website</strong>
+
+                    <a href="https://github.io"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        ruchitagraphics.github.io
+                    </a>
+
+                </div>
+
             </div>
 
         </div>
 
 
-        <!-- LOCATION -->
+        <!-- ================= RIGHT LOCATION BOX ================= -->
 
         <div class="contact-card">
 
             <h3>Our Location</h3>
 
+
             <div class="location-address">
+
                 <strong>📍 Address:</strong><br>
+
                 H.No. 4-44/B2, Beside Bus Station,
                 Opp: Small Gate, Ghanpur Stn.,
                 Jangaon Dist. Telangana-506 144
+
             </div>
 
-            <!-- EXISTING GOOGLE MAP -->
+
+            <!-- EXISTING MAP -->
 
             <div class="map-container">
 
@@ -443,24 +586,39 @@ footer p {
 
             <div class="button-area">
 
-                <!-- WHATSAPP - SAME -->
+
+                <!-- WHATSAPP -->
 
                 <a href="https://wa.me"
                    target="_blank"
                    rel="noopener noreferrer"
                    class="whatsapp-btn">
+
                     💬 WhatsApp Chat
+
                 </a>
 
 
-                <!-- ONLY BLUE GOOGLE MAPS BUTTON -->
-                <!-- DIRECT DIRECTIONS TO CORRECT LOCATION -->
+                <!-- BLUE GOOGLE MAPS BUTTON -->
+                <!-- DIRECT DIRECTIONS -->
 
                 <a href="https://www.google.com/maps/dir/?api=1&destination=17.853397117646065,79.37116098590161"
                    target="_blank"
                    rel="noopener noreferrer"
                    class="maps-btn">
+
                     📍 Open Google Maps
+
+                </a>
+
+
+                <!-- BACK TO HOME -->
+
+                <a href="index.html"
+                   class="back-home">
+
+                    ⌂ BACK TO HOME
+
                 </a>
 
             </div>
@@ -475,7 +633,11 @@ footer p {
 <!-- ================= FOOTER ================= -->
 
 <footer>
-    <p>© 2026 Ruchita Graphics. All Rights Reserved.</p>
+
+    <p>
+        © 2026 Ruchita Graphics. All Rights Reserved.
+    </p>
+
 </footer>
 
 
@@ -486,7 +648,9 @@ footer p {
    rel="noopener noreferrer"
    class="whatsapp-float"
    aria-label="WhatsApp">
+
     💬
+
 </a>
 
 </body>
