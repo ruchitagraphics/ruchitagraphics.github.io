@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Gallery | Ruchita Graphics</title>
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
         * {
@@ -36,7 +38,7 @@
         }
 
         .nav-container {
-            min-height: 80px;
+            min-height: 90px;
             padding: 10px 30px;
             display: flex;
             justify-content: space-between;
@@ -46,7 +48,7 @@
         .brand {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             color: white;
             text-decoration: none;
             font-size: 22px;
@@ -55,8 +57,8 @@
         }
 
         .brand img {
-            height: 55px;
-            width: auto;
+            height: 65px;
+            width: 65px;
             display: block;
             object-fit: contain;
         }
@@ -80,6 +82,7 @@
             border-bottom: 2px solid white;
         }
 
+
         /* ================= BANNER ================= */
 
         .banner-container {
@@ -96,6 +99,7 @@
             box-shadow: 0 8px 24px rgba(0,0,0,0.15);
         }
 
+
         /* ================= TITLE ================= */
 
         .section-title {
@@ -109,6 +113,7 @@
             font-size: 16px;
             margin-top: 0;
         }
+
 
         /* ================= GALLERY ================= */
 
@@ -166,6 +171,7 @@
             font-weight: 500;
         }
 
+
         /* ================= BUTTONS ================= */
 
         .div-btns {
@@ -205,15 +211,22 @@
             box-shadow: 0 6px 12px rgba(0,0,0,0.15);
         }
 
+
         /* ================= FOOTER ================= */
 
         footer {
-            text-align: center;
-            padding: 20px;
             background: #002060;
             color: white;
+            text-align: center;
+            padding: 20px;
             margin-top: 60px;
+            font-size: 14px;
         }
+
+        footer p {
+            margin: 0;
+        }
+
 
         /* ================= MOBILE ================= */
 
@@ -230,7 +243,8 @@
             }
 
             .brand img {
-                height: 50px;
+                width: 58px;
+                height: 58px;
             }
 
             nav {
@@ -244,8 +258,10 @@
                 max-width: 340px;
             }
         }
+
     </style>
 </head>
+
 
 <body>
 
@@ -255,38 +271,66 @@
         <div class="wrap nav-container">
 
             <a href="index.html" class="brand">
-                <img src="assets/logo.png" alt="Ruchita Graphics Logo">
-                RUCHITA GRAPHICS
+
+                <img
+                    src="assets/RUCHITA_NEW_LOGO.webp"
+                    alt="Ruchita Graphics Logo">
+
+                <span>RUCHITA GRAPHICS</span>
+
             </a>
 
             <nav>
-                <a href="index.html">Home</a>
-                <a href="services.html">Services</a>
-                <a href="gallery.html" class="active">Gallery</a>
-                <a href="portfolio.html">Portfolio</a>
-                <a href="contact.html">Contact</a>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <a href="gallery.html" class="active">
+                    Gallery
+                </a>
+
+                <a href="portfolio.html">
+                    Portfolio
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
             </nav>
 
         </div>
     </header>
 
+
     <!-- ================= BANNER ================= -->
 
     <div class="banner-container">
+
         <img
             src="Assets/ruchita_graphics_services.webp"
             alt="Ruchita Graphics Official Services Banner"
             class="banner-img"
             onerror="this.src='assets/ruchita_graphics_services.webp'">
+
     </div>
+
 
     <!-- ================= TITLE ================= -->
 
-    <h2 class="section-title">Our Technical Setup & Machinery</h2>
+    <h2 class="section-title">
+        Our Technical Setup & Machinery
+    </h2>
 
     <p class="section-subtitle">
         Take a look inside our high-end multicolor printing press and digital lab.
     </p>
+
 
     <!-- ================= GALLERY ================= -->
 
@@ -294,104 +338,166 @@
 
         <!-- 1 -->
         <div class="gallery-card">
+
             <img
                 src="Assets/konica-flex-printing-machine.webp"
                 alt="Flex Printing Machine"
                 onerror="this.src='assets/konica-flex-printing-machine.webp'">
 
             <div class="caption-box">
+
                 <h4>భారీ ఫ్లెక్స్ & వినైల్ ప్రింటింగ్</h4>
-                <p>Heavy Flex & Vinyl Banner Printing</p>
+
+                <p>
+                    Heavy Flex & Vinyl Banner Printing
+                </p>
+
             </div>
+
         </div>
+
 
         <!-- 2 -->
         <div class="gallery-card">
+
             <img
                 src="Assets/conika_minolts_buzhub_c226.webp"
                 alt="Konica Minolta bizhub C226"
                 onerror="this.src='assets/conika_minolts_buzhub_c226.webp'">
 
             <div class="caption-box">
+
                 <h4>ప్రీమియం మల్టీకలర్ డిజిటల్ ప్రెస్</h4>
-                <p>Premium Multicolor Digital Press (Model C226)</p>
+
+                <p>
+                    Premium Multicolor Digital Press (Model C226)
+                </p>
+
             </div>
+
         </div>
+
 
         <!-- 3 -->
         <div class="gallery-card">
+
             <img
                 src="Assets/conika_minolts_buzhub_c226_i.webp"
                 alt="Konica Minolta Indoor View"
                 onerror="this.src='assets/conika_minolts_buzhub_c226_i.webp'">
 
             <div class="caption-box">
+
                 <h4>డిజిటల్ కలర్ ల్యాబ్ సెటప్</h4>
-                <p>High-End Color Press Production</p>
+
+                <p>
+                    High-End Color Press Production
+                </p>
+
             </div>
+
         </div>
+
 
         <!-- 4 -->
         <div class="gallery-card">
+
             <img
                 src="Assets/Deluxe-2-in-1-Sheet-Fed-Offset-Machine.webp"
                 alt="Heavy Offset Printing"
                 onerror="this.src='assets/Deluxe-2-in-1-Sheet-Fed-Offset-Machine.webp'">
 
             <div class="caption-box">
+
                 <h4>భారీ ఆఫ్‌సెట్ ప్రింటింగ్ (బిల్ బుక్స్)</h4>
-                <p>Deluxe Sheet-Fed Heavy Offset Machine</p>
+
+                <p>
+                    Deluxe Sheet-Fed Heavy Offset Machine
+                </p>
+
             </div>
+
         </div>
+
 
         <!-- 5 -->
         <div class="gallery-card">
+
             <img
                 src="Assets/Canon%20ImageRUNNER%20ADVANCE_4545_digitr_multifunctio_printer.webp"
                 alt="Canon Mono Prints"
                 onerror="this.src='assets/Canon%20ImageRUNNER%20ADVANCE_4545_digitr_multifunctio_printer.webp'">
 
             <div class="caption-box">
+
                 <h4>డిజిటల్ జిరాక్స్ & స్పీడ్ మోనో ప్రింట్స్</h4>
-                <p>Canon ImageRUNNER ADVANCE (4545)</p>
+
+                <p>
+                    Canon ImageRUNNER ADVANCE (4545)
+                </p>
+
             </div>
+
         </div>
+
 
         <!-- 6 -->
         <div class="gallery-card">
+
             <img
                 src="Assets/epson%20printer.webp"
                 alt="High-Quality Photo Prints"
                 onerror="this.src='assets/epson%20printer.webp'">
 
             <div class="caption-box">
+
                 <h4>ఫోటో ప్రింట్లు & ఐడి కార్డ్స్</h4>
-                <p>Epson EcoTank Color Printing</p>
+
+                <p>
+                    Epson EcoTank Color Printing
+                </p>
+
             </div>
+
         </div>
 
     </div>
+
 
     <!-- ================= BUTTONS ================= -->
 
     <div class="div-btns">
 
         <a href="tel:7799036524" class="btn btn-blue">
+
             <i class="fa-solid fa-phone"></i>
+
             Call Now
+
         </a>
 
-        <a href="https://wa.me" class="btn btn-green" target="_blank">
+
+        <a href="https://wa.me"
+           class="btn btn-green"
+           target="_blank">
+
             <i class="fa-brands fa-whatsapp"></i>
+
             WhatsApp Chat
+
         </a>
 
     </div>
 
+
     <!-- ================= FOOTER ================= -->
 
     <footer>
-        <p>&copy; 2026 Ruchita Graphics. All Rights Reserved.</p>
+
+        <p>
+            &copy; 2026 Ruchita Graphics. All Rights Reserved.
+        </p>
+
     </footer>
 
 </body>
