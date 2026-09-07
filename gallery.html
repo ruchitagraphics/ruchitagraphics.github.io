@@ -179,7 +179,7 @@
             justify-content: center;
             gap: 15px;
             flex-wrap: wrap;
-            margin: 40px 0;
+            margin: 40px 0 25px;
         }
 
         .btn {
@@ -212,6 +212,31 @@
         }
 
 
+        /* ================= PORTFOLIO BUTTON ================= */
+
+        .portfolio-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 250px;
+            padding: 14px 30px;
+            margin: 0 auto 20px;
+            background: #8e44ad;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            border-radius: 30px;
+            box-shadow: 0 5px 10px rgba(142,68,173,0.25);
+            transition: 0.3s;
+        }
+
+        .portfolio-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(142,68,173,0.32);
+        }
+
+
         /* ================= FOOTER ================= */
 
         footer {
@@ -219,7 +244,7 @@
             color: white;
             text-align: center;
             padding: 20px;
-            margin-top: 60px;
+            margin-top: 40px;
             font-size: 14px;
         }
 
@@ -256,6 +281,11 @@
             .gallery-card {
                 width: 100%;
                 max-width: 340px;
+            }
+
+            .portfolio-btn {
+                width: 90%;
+                min-width: 0;
             }
         }
 
@@ -488,6 +518,13 @@
         </a>
 
     </div>
+
+
+    <!-- ================= PORTFOLIO NAVIGATION ================= -->
+
+    <a href="portfolio.html" class="portfolio-btn">
+        SEE OUR PORTFOLIO&nbsp; →
+    </a>
 
 
     <!-- ================= FOOTER ================= -->
