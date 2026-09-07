@@ -1,494 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Ruchita Graphics</title>
-
-    <style>
-        :root {
-            --main: #16a34a;
-            --ink: #0f172a;
-            --bg: #f8fafc;
-            --blue: #2563eb;
-            --blue-light: #eff6ff;
-            --green-light: #f0fdf4;
-            --silver-light: #f1f5f9;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', system-ui, sans-serif;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background: var(--bg);
-            color: var(--ink);
-            line-height: 1.6;
-        }
-
-        .wrap {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* =========================
-           MASTER HEADER
-           ========================= */
-
-        header {
-            width: 100%;
-            background-color: #002060;
-        }
-
-        .nav-container {
-            min-height: 90px;
-            padding: 10px 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            color: white;
-            text-decoration: none;
-            font-size: 22px;
-            font-weight: bold;
-            white-space: nowrap;
-        }
-
-        .brand img {
-            height: 65px;
-            width: 65px;
-            display: block;
-            object-fit: contain;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 8px 0;
-            border-bottom: 2px solid transparent;
-            margin-left: 0;
-            margin-right: 0;
-            font-size: inherit;
-        }
-
-        nav a:hover,
-        nav a.active {
-            border-bottom: 2px solid white;
-            color: white;
-        }
-
-        /* =========================
-           PAGE TITLE
-           ========================= */
-
-        .section-title {
-            text-align: center;
-            margin: 40px 0;
-        }
-
-        .section-title h1 {
-            font-size: 36px;
-            font-weight: 800;
-            margin-bottom: 10px;
-        }
-
-        .section-title p {
-            color: #64748b;
-            font-size: 18px;
-        }
-
-        /* =========================
-           CONTACT GRID
-           ========================= */
-
-        .contact-map-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            align-items: stretch;
-            margin-bottom: 40px;
-        }
-
-        .contact-info-card,
-        .location-clean-card {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 16px;
-            padding: 30px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            text-align: center;
-        }
-
-        .contact-info-card h3,
-        .location-clean-card h3 {
-            font-size: 26px;
-            margin-bottom: 25px;
-            font-weight: 800;
-            color: var(--ink);
-        }
-
-        /* CLICK BOX */
-
-        .click-box {
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-            margin-bottom: 15px;
-            text-align: left;
-            background: #fff;
-            overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
-        }
-
-        .click-btn {
-            display: block;
-            width: 100%;
-            padding: 15px;
-            font-size: 18px;
-            font-weight: 700;
-            color: #334155;
-            cursor: pointer;
-            background: #f8fafc;
-            outline: none;
-            border: none;
-            transition: 0.2s;
-        }
-
-        .click-box[open] .click-btn {
-            border-bottom: 1px solid #e2e8f0;
-            background: #f1f5f9;
-            color: var(--ink);
-        }
-
-        /* ICON SYSTEM */
-
-        .metal-icon {
-            display: inline-flex !important;
-            justify-content: center;
-            align-items: center;
-            width: 48px;
-            height: 48px;
-            min-width: 48px;
-            border-radius: 50%;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
-        }
-
-        .metal-icon svg {
-            width: 26px !important;
-            height: 26px !important;
-            display: block !important;
-        }
-
-        .icon-phone {
-            background: var(--blue-light) !important;
-            border: 1px solid #bfdbfe !important;
-        }
-
-        .icon-wa {
-            background: #e8f5e9 !important;
-            border: 2px solid #c8e6c9 !important;
-        }
-
-        .icon-email {
-            background: #ffebee !important;
-            border: 1px solid #ffcdd2 !important;
-        }
-
-        .icon-web {
-            background: #e3f2fd !important;
-            border: 1px solid #bbdefb !important;
-        }
-
-        /* CONTENT */
-
-        .click-content {
-            padding: 18px;
-            background: #fff;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .click-content a {
-            color: var(--ink);
-            text-decoration: none;
-            word-break: break-all;
-            font-size: 20px;
-            font-weight: 700;
-        }
-
-        .click-content a:hover {
-            color: var(--main);
-        }
-
-        /* ADDRESS */
-
-        .address-text {
-            text-align: left;
-            font-size: 21px;
-            color: #0f172a;
-            padding: 15px 0;
-            line-height: 1.8;
-            font-weight: 700;
-        }
-
-        .address-text span {
-            font-weight: 900;
-            color: var(--main);
-        }
-
-        /* MAP BOX */
-
-        .map-box {
-            width: 100%;
-            height: 280px;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid #e2e8f0;
-            background: #e5e7eb;
-            margin: 20px 0;
-        }
-
-        .map-box iframe {
-            width: 100% !important;
-            height: 100% !important;
-            border: 0 !important;
-        }
-
-        /* BUTTONS */
-
-        .btns {
-            display: flex;
-            gap: 12px;
-            margin-top: 20px;
-            justify-content: center;
-        }
-
-        .btn-wa {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 9px;
-            padding: 14px 25px;
-            border-radius: 999px;
-            background: #16a34a;
-            color: white;
-            font-weight: 800;
-            text-decoration: none;
-            box-shadow: 0 4px 6px rgba(22,163,74,0.15);
-            text-align: center;
-            width: 100%;
-            font-size: 18px;
-            transition: 0.2s;
-        }
-
-        .btn-wa:hover {
-            background: #15803d;
-        }
-
-        .btn-wa svg {
-            width: 22px;
-            height: 22px;
-        }
-
-        .btn-map-link {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 9px;
-            padding: 14px 25px;
-            border-radius: 999px;
-            background: #2563eb;
-            color: white;
-            font-weight: 800;
-            text-decoration: none;
-            box-shadow: 0 4px 6px rgba(37,99,235,0.15);
-            text-align: center;
-            width: 100%;
-            transition: 0.2s;
-            font-size: 18px;
-        }
-
-        .btn-map-link:hover {
-            background: #1d4ed8;
-        }
-
-        .btn-map-link svg {
-            width: 20px;
-            height: 20px;
-        }
-
-        /* NEW NAVIGATION BUTTON */
-
-        .btn-directions {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 9px;
-            padding: 14px 25px;
-            border-radius: 999px;
-            background: #f39c12;
-            color: white;
-            font-weight: 800;
-            text-decoration: none;
-            box-shadow: 0 4px 8px rgba(243,156,18,0.20);
-            text-align: center;
-            width: 100%;
-            max-width: 320px;
-            transition: 0.2s;
-            font-size: 18px;
-            margin-top: 10px;
-        }
-
-        .btn-directions:hover {
-            background: #d68910;
-            transform: translateY(-2px);
-        }
-
-        .btn-directions svg {
-            width: 21px;
-            height: 21px;
-        }
-
-        /* FLOATING WHATSAPP */
-
-        .whatsapp-float {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            width: 60px;
-            height: 60px;
-            background-color: #25d366;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 2px 4px 12px rgba(0,0,0,0.3);
-            z-index: 9999;
-            transition: transform 0.3s ease;
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-        }
-
-        /* =========================
-           MASTER FOOTER
-           ========================= */
-
-        footer {
-            background: #002060;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 60px;
-            font-size: 14px;
-        }
-
-        footer p {
-            margin: 0;
-        }
-
-        /* =========================
-           MASTER MOBILE HEADER
-           ========================= */
-
-        @media(max-width: 768px) {
-
-            .nav-container {
-                flex-direction: column;
-                gap: 15px;
-                padding: 15px 20px;
-            }
-
-            .brand {
-                font-size: 20px;
-            }
-
-            .brand img {
-                width: 58px;
-                height: 58px;
-            }
-
-            nav {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 15px;
-            }
-
-            nav a {
-                margin-left: 0;
-                margin-right: 0;
-            }
-
-            .contact-map-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .section-title h1 {
-                font-size: 30px;
-            }
-
-            .contact-info-card,
-            .location-clean-card {
-                padding: 22px;
-            }
-
-            .whatsapp-float {
-                width: 55px;
-                height: 55px;
-                right: 18px;
-                bottom: 18px;
-            }
-
-            .click-content a {
-                font-size: 18px;
-            }
-
-            .address-text {
-                font-size: 18px;
-            }
-
-            .btn-directions {
-                width: 100%;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+      content="Contact Ruchita Graphics for graphic designing, digital printing, flex printing, banners and printing services in Ghanpur Station, Telangana.">
+
+<title>Contact Us | Ruchita Graphics</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8fafc;
+    color: #0f172a;
+    line-height: 1.6;
+}
+
+/* ================= HEADER ================= */
+
+header {
+    background: #002060;
+    color: white;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    min-height: 90px;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-area img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+.logo-area h1 {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 8px 0;
+}
+
+nav a:hover {
+    opacity: 0.85;
+}
+
+nav a.active {
+    border-bottom: 3px solid white;
+}
+
+/* ================= PAGE ================= */
+
+.page-banner {
+    background: #002060;
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.page-banner h2 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.page-banner p {
+    font-size: 17px;
+    opacity: 0.95;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-section {
+    max-width: 1100px;
+    margin: 45px auto;
+    padding: 0 20px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.contact-card {
+    background: white;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.contact-card h3 {
+    color: #002060;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    margin-bottom: 18px;
+}
+
+.contact-item strong {
+    display: block;
+    color: #002060;
+    margin-bottom: 4px;
+}
+
+.contact-item a {
+    color: #1a73e8;
+    text-decoration: none;
+    word-break: break-word;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* ================= LOCATION ================= */
+
+.location-address {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.map-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 14px;
+    margin-bottom: 18px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 330px;
+    border: 0;
+    display: block;
+}
+
+/* ================= BUTTONS ================= */
+
+.button-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.whatsapp-btn {
+    background: #25d366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    width: 100%;
+    max-width: 320px;
+    transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+    transform: translateY(-2px);
+}
+
+.maps-btn {
+    background-color: #1a73e8;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    font-weight: bold;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.maps-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(26,115,232,0.25);
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #002060;
+    color: white;
+    text-align: center;
+    padding: 22px 15px;
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* ================= WHATSAPP FLOAT ================= */
+
+.whatsapp-float {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 58px;
+    height: 58px;
+    background: #25d366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 28px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+    z-index: 999;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .nav-container {
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px 20px;
+    }
+
+    .logo-area img {
+        width: 58px;
+        height: 58px;
+    }
+
+    .logo-area h1 {
+        font-size: 21px;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .page-banner h2 {
+        font-size: 28px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+        padding: 22px;
+    }
+
+    .map-container iframe {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .logo-area img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .logo-area h1 {
+        font-size: 19px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .page-banner {
+        padding: 35px 15px;
+    }
+
+    .page-banner h2 {
+        font-size: 25px;
+    }
+
+    .contact-section {
+        padding: 0 12px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-<!-- =========================
-     MASTER HEADER
-     ========================= -->
+<!-- ================= HEADER ================= -->
 
 <header>
-    <div class="wrap nav-container">
+    <div class="nav-container">
 
-        <a href="index.html" class="brand">
-            <img src="assets/RUCHITA_NEW_LOGO.webp" alt="Ruchita Graphics Logo">
-            <span>RUCHITA GRAPHICS</span>
-        </a>
+        <div class="logo-area">
+            <img src="assets/RUCHITA_NEW_LOGO.webp"
+                 alt="Ruchita Graphics Logo">
+
+            <h1>RUCHITA GRAPHICS</h1>
+        </div>
 
         <nav>
             <a href="index.html">Home</a>
@@ -502,108 +357,111 @@
 </header>
 
 
-<div class="section-title wrap">
-    <h1>Contact Us</h1>
-    <p>Get in touch with us for any inquiries or support.</p>
-</div>
+<!-- ================= PAGE BANNER ================= -->
+
+<section class="page-banner">
+    <h2>Contact Us</h2>
+    <p>We are here to help you with all your printing &amp; designing needs.</p>
+</section>
 
 
-<div class="wrap contact-map-grid">
+<!-- ================= CONTACT SECTION ================= -->
 
-    <div class="contact-info-card">
+<section class="contact-section">
 
-        <h3>Our Contact Info</h3>
+    <div class="contact-grid">
 
-        <!-- CALL US BOX -->
+        <!-- CONTACT INFORMATION -->
 
-        <div class="click-box" open>
+        <div class="contact-card">
 
-            <button class="click-btn">Call Us</button>
+            <h3>Get In Touch</h3>
 
-            <div class="click-content">
+            <div class="contact-item">
+                <strong>📞 Call Us</strong>
+                <a href="tel:+919441536524">
+                    +91 94415 36524
+                </a>
+            </div>
 
-                <span class="metal-icon icon-phone">
+            <div class="contact-item">
+                <strong>💬 WhatsApp</strong>
+                <a href="https://wa.me"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Chat on WhatsApp
+                </a>
+            </div>
 
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://w3.org">
-                        <path d="M21.97 18.33C21.97 18.69 21.89 19.06 21.72 19.42C21.55 19.78 21.33 20.12 21.04 20.44C20.55 20.98 20.01 21.37 19.4 21.62C18.8 21.87 18.15 22 17.45 22C16.43 22 15.34 21.76 14.19 21.27C13.04 20.78 11.89 20.12 10.75 19.29C9.6 18.45 8.51 17.52 7.47 16.49C6.44 15.45 5.51 14.36 4.68 13.22C3.86 12.08 3.2 10.94 2.72 9.81C2.24 8.67 2 7.58 2 6.55C2 5.86 2.12 5.21 2.36 4.61C2.6 4 2.98 3.44 3.51 2.94C4.15 2.31 4.85 2 5.59 2C5.87 2 6.15 2.06 6.4 2.18C6.66 2.3 6.89 2.48 7.07 2.74L9.39 6.01C9.57 6.26 9.7 6.49 9.78 6.72C9.86 6.95 9.9 7.16 9.9 7.37C9.9 7.63 9.83 7.89 9.69 8.14C9.56 8.39 9.37 8.64 9.13 8.9L8.41 9.64C8.31 9.74 8.26 9.86 8.26 10.01C8.26 10.09 8.28 10.17 8.31 10.25C8.43 10.49 8.62 10.8 8.88 11.16C9.15 11.52 9.47 11.92 9.84 12.35C10.21 12.78 10.63 13.22 11.08 13.67C11.54 14.12 11.98 14.53 12.42 14.9C12.85 15.26 13.25 15.57 13.62 15.83C13.98 16.08 14.28 16.26 14.53 16.37C14.6 16.4 14.67 16.42 14.75 16.42C14.91 16.42 15.03 16.36 15.14 16.25L15.85 15.52C16.12 15.26 16.37 15.07 16.62 14.93C16.88 14.79 17.14 14.72 17.41 14.72C17.62 14.72 17.83 14.76 18.06 14.84C18.29 14.92 18.52 15.06 18.77 15.24L21.28 17.03C21.54 17.22 21.71 17.43 21.81 17.67C21.92 17.91 21.97 18.13 21.97 18.33Z" stroke="#2563eb" stroke-width="2" stroke-miterlimit="10"/>
-                    </svg>
+            <div class="contact-item">
+                <strong>✉️ Email</strong>
+                <a href="mailto:ruchitagraphics@gmail.com">
+                    ruchitagraphics@gmail.com
+                </a>
+            </div>
 
-                </span>
-
-                <a href="tel:+919441536524">+91 94415 36524</a>
-
+            <div class="contact-item">
+                <strong>🌐 Website</strong>
+                <a href="https://github.io"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    ruchitagraphics.github.io
+                </a>
             </div>
 
         </div>
 
 
-        <!-- WHATSAPP BOX -->
+        <!-- LOCATION -->
 
-        <div class="click-box" open>
+        <div class="contact-card">
 
-            <button class="click-btn">WhatsApp Chat</button>
+            <h3>Our Location</h3>
 
-            <div class="click-content">
+            <div class="location-address">
+                <strong>📍 Address:</strong><br>
+                H.No. 4-44/B2, Beside Bus Station,
+                Opp: Small Gate, Ghanpur Stn.,
+                Jangaon Dist. Telangana-506 144
+            </div>
 
-                <span class="metal-icon icon-wa">
+            <!-- EXISTING GOOGLE MAP -->
 
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://w3.org">
+            <div class="map-container">
 
-                        <path d="M12 2C6.48 2 2 6.48 2 12C2 13.92 2.54 15.71 3.48 17.24L2 22L6.92 20.64C8.39 21.51 10.14 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2Z" fill="#16a34a"/>
-
-                        <path d="M12.012 5c-3.854 0-6.99 3.136-6.99 6.99 0 1.23.318 2.387.874 3.405L5 19l3.719-.974A6.953 6.953 0 0 0 12.012 19c3.854 0 6.99-3.136 6.99-6.99s-3.136-6.99-6.99-6.99zm4.248 9.887c-.187.527-.917.968-1.265 1.007-.348.039-.694.173-2.225-.428-1.955-.767-3.21-2.766-3.308-2.897-.098-.131-.789-1.05-.789-2.004 0-.954.5-1.422.678-1.615.178-.193.388-.241.517-.241.13 0 .258.001.372.006.12.006.28-.046.438.335.158.38.542 1.322.589 1.418.047.096.078.208.015.335-.064.127-.096.208-.192.319-.096.111-.201.248-.288.333-.096.094-.197.197-.085.389.112.192.497.82 1.065 1.324.456.406.84.533.96.592.12.06.19-.05.26-.13a2.95 2.95 0 0 0 .38-.519c.08-.119.16-.1.27-.058.11.041.701.331.821.39.12.06.2.09.23.14.03.053.03.302-.157.829z" fill="white"/>
-
-                    </svg>
-
-                </span>
-
-                <a href="https://wa.me" target="_blank">Chat on WhatsApp</a>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!4v1788465010340!6m8!1m7!1sfuAHx1LB-RFWxEeTfn5m3A!2m2!1d17.85337160625901!2d79.37106856179473!3f118.31835278235323!4f9.907620506610897!5f0.7820865974627469"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
 
             </div>
 
-        </div>
+
+            <!-- BUTTONS -->
+
+            <div class="button-area">
+
+                <!-- WHATSAPP - SAME -->
+
+                <a href="https://wa.me"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="whatsapp-btn">
+                    💬 WhatsApp Chat
+                </a>
 
 
-        <!-- EMAIL BOX -->
+                <!-- ONLY BLUE GOOGLE MAPS BUTTON -->
+                <!-- DIRECT DIRECTIONS TO CORRECT LOCATION -->
 
-        <div class="click-box" open>
-
-            <div class="click-content">
-
-                <span class="metal-icon icon-email">
-
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://w3.org">
-                        <path d="M22 4H2C0.9 4 0 4.9 0 6V18C0 19.1 0.9 20 2 20H22C23.1 20 24 19.1 24 18V6C24 4.9 23.1 4 22 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" fill="#ef4444"/>
-                    </svg>
-
-                </span>
-
-                <a href="mailto:ruchitagraphics@gmail.com">ruchitagraphics@gmail.com</a>
-
-            </div>
-
-        </div>
-
-
-        <!-- WEB BOX -->
-
-        <div class="click-box" open>
-
-            <div class="click-content">
-
-                <span class="metal-icon icon-web">
-
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://w3.org">
-
-                        <circle cx="12" cy="12" r="10" stroke="#3b82f6" stroke-width="2"/>
-                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="#3b82f6" stroke-width="2"/>
-                        <path d="M2 12h20" stroke="#3b82f6" stroke-width="2"/>
-
-                    </svg>
-
-                </span>
-
-                <a href="https://github.io" target="_blank">ruchitagraphics.github.io</a>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=17.853397117646065,79.37116098590161"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="maps-btn">
+                    📍 Open Google Maps
+                </a>
 
             </div>
 
@@ -611,113 +469,24 @@
 
     </div>
 
-
-    <!-- LOCATION CARD -->
-
-    <div class="location-clean-card">
-
-        <h3>Our Location</h3>
-
-        <p class="address-text">
-            <span>Address:</span>
-            H.No. 4-44/B2, Beside Bus Station, Opp: Small Gate, Ghanpur Stn., Jangaon Dist. Telangana-506 144
-        </p>
+</section>
 
 
-        <!-- EXISTING GOOGLE MAP -->
-
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!4v1788465010340!6m8!1m7!1sfuAHx1LB-RFWxEeTfn5m3A!2m2!1d17.85337160625901!2d79.37106856179473!3f118.31835278235323!4f9.907620506610897!5f0.7820865974627469"
-            width="600"
-            height="450"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin">
-        </iframe>
-
-
-        <div class="div-btns">
-
-            <!-- EXISTING WHATSAPP BUTTON -->
-
-            <a href="https://wa.me"
-               class="btn-wa"
-               target="_blank">
-
-                <svg viewBox="0 0 24 24"
-                     fill="white"
-                     style="width:20px; height:20px; vertical-align:middle; margin-right:5px;">
-
-                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.316 1.592 5.433.002 9.85-4.415 9.853-9.85.002-2.634-1.02-5.11-2.885-6.978-1.864-1.867-4.341-2.895-6.973-2.896-5.437 0-9.854 4.416-9.857 9.852-.001 2.03.541 3.569 1.535 5.232l-.994 3.63 3.705-.972zm11.233-6.558c-.3-.149-1.772-.875-2.046-.975-.274-.1-.474-.149-.674.15-.2.299-.774.975-.949 1.174-.175.199-.349.224-.649.075-.3-.149-1.266-.467-2.41-1.487-.89-.794-1.49-1.774-1.664-2.073-.175-.299-.019-.461.13-.61.135-.133.3-.349.45-.523.15-.174.2-.299.3-.499.1-.2.05-.374-.025-.523-.075-.15-.674-1.622-.924-2.222-.243-.585-.49-.506-.674-.515-.174-.008-.374-.01-.574-.01s-.524.075-.798.374c-.275.299-1.047 1.022-1.047 2.492 0 1.47 1.072 2.888 1.222 3.087.15.199 2.11 3.222 5.11 4.516.713.308 1.27.492 1.704.63.716.228 1.368.196 1.883.118.574-.088 1.772-.724 2.022-1.42.25-.697.25-1.294.175-1.42-.075-.125-.275-.199-.575-.349z"/>
-
-                </svg>
-
-                WhatsApp Chat
-
-            </a>
-
-
-            <!-- EXISTING GOOGLE MAPS BUTTON -->
-
-            <a href="https://www.google.com/maps/dir/?api=1&destination=17.853397117646065,79.37116098590161"
-   target="_blank"
-   rel="noopener noreferrer"
-   style="background-color: #1a73e8; color: white; padding: 10px 20px; border-radius: 30px; text-decoration: none; display: inline-flex; align-items: center; font-weight: bold; margin-top: 10px; width: 100%; max-width: 320px; justify-content: center; box-sizing: border-box;">
-    📍 Open Google Maps
-</a>
-
-
-            <!-- NEW NAVIGATION / DIRECTIONS BUTTON -->
-
-            href="https://www.google.com/maps/dir/?api=1&destination=17.85339863569554, 79.37116258075265"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="btn-directions">
-
-                <svg viewBox="0 0 24 24"
-                     fill="white">
-
-                    <path d="M21.71 11.29l-9-9a1 1 0 0 0-1.42 0l-9 9a1 1 0 0 0 0 1.42l9 9a1 1 0 0 0 1.42 0l9-9a1 1 0 0 0 0-1.42zM13 17h-2v-5H8l4-4 4 4h-3v5z"/>
-
-                </svg>
-
-                GET DIRECTIONS / NAVIGATE
-
-            </a>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-<!-- =========================
-     MASTER FOOTER
-     ========================= -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
-    <p>&copy; 2026 Ruchita Graphics. All Rights Reserved.</p>
+    <p>© 2026 Ruchita Graphics. All Rights Reserved.</p>
 </footer>
 
 
-<!-- FLOATING WHATSAPP BUTTON -->
+<!-- ================= FLOATING WHATSAPP ================= -->
 
 <a href="https://wa.me"
-   class="whatsapp-float"
    target="_blank"
-   rel="noopener noreferrer">
-
-    <svg viewBox="0 0 24 24"
-         fill="white"
-         style="width:34px; height:34px;"
-         xmlns="http://w3.org">
-
-        <path d="M12.012 2c-5.508 0-9.988 4.479-9.988 9.987 0 1.758.455 3.414 1.324 4.869L2 22l5.313-1.393c1.408.767 3.003 1.174 4.694 1.175h.004c5.507 0 9.988-4.479 9.988-9.988 0-2.671-1.04-5.181-2.929-7.071S14.686 2 12.012 2zm6.069 14.125c-.267.753-1.31 1.383-1.808 1.439-.497.056-.991.247-3.179-.611-2.793-1.096-4.588-3.951-4.728-4.139-.14-.187-1.127-1.5-.127-2.863 0-1.363.714-2.032.968-2.308.254-.276.554-.345.739-.345.185 0 .369.001.531.009.171.008.4-.065.626.478.226.543.774 1.889.841 2.026.067.137.112.297.021.479-.092.181-.138.297-.274.456-.137.159-.287.355-.411.476-.137.135-.281.282-.121.556.16.274.71 1.171 1.521 1.892.651.58 1.201.761 1.372.846.171.085.271.07.371-.046.1-.116.428-.499.542-.669.115-.17.23-.142.388-.083.158.059 1.002.473 1.174.558.171.085.286.128.329.202.043.074.043.431-.224 1.184z"/>
-
-    </svg>
-
+   rel="noopener noreferrer"
+   class="whatsapp-float"
+   aria-label="WhatsApp">
+    💬
 </a>
 
 </body>
